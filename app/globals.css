@@ -1,26 +1,33 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8fafc;
+  --foreground: #0f172a;
+
+  /* CP AXTRA Corporate Colors */
+  --cpx-blue: #0055A6;
+  --cpx-blue-dark: #003D7A;
+  --cpx-blue-light: #E8F1FA;
+  --cpx-gold: #FDB913;
+  --cpx-gold-dark: #E5A500;
+  --cpx-gold-light: #FFF8E1;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-cpx-blue: var(--cpx-blue);
+  --color-cpx-blue-dark: var(--cpx-blue-dark);
+  --color-cpx-blue-light: var(--cpx-blue-light);
+  --color-cpx-gold: var(--cpx-gold);
+  --color-cpx-gold-dark: var(--cpx-gold-dark);
+  --color-cpx-gold-light: var(--cpx-gold-light);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }

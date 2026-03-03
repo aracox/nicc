@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: nicc-postgres
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: nicc
+      POSTGRES_PASSWORD: nicc_local_pass
+      POSTGRES_DB: nicc_db
+    volumes:
+      - nicc_pgdata:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer:latest
+    container_name: nicc-adminer
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+
+volumes:
+  nicc_pgdata:

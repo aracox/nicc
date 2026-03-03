@@ -1,0 +1,146 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum UserRole {
+  ADMIN
+  EDITOR
+  VIEWER
+}
+
+enum RestaurantStatus {
+  ONBOARDED
+  PENDING
+  INACTIVE
+}
+
+enum UploadSource {
+  POS_EXPORT
+  PAPER
+}
+
+enum UploadStatus {
+  RECEIVED
+  PROCESSING
+  COMPLETED
+  FAILED
+}
+
+enum ReportStatus {
+  DRAFT
+  PUBLISHED
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String
+  role      UserRole @default(VIEWER)
+  createdAt DateTime @default(now())
+
+  @@map("users")
+}
+
+model Restaurant {
+  id        String           @id @default(cuid())
+  name      String
+  foodType  String
+  province  String
+  district  String
+  status    RestaurantStatus @default(PENDING)
+  createdAt DateTime         @default(now())
+
+  menuItems      MenuItem[]
+  menuMappings   MenuDishMapping[]
+  uploads        Upload[]
+  insightReports InsightReport[]
+
+  @@map("restaurants")
+}
+
+model MenuItem {
+  id           String   @id @default(cuid())
+  restaurantId String
+  name         String
+  category     String
+  createdAt    DateTime @default(now())
+
+  restaurant   Restaurant      @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
+  menuMappings MenuDishMapping[]
+
+  @@map("menu_items")
+}
+
+model StandardDish {
+  id          String   @id @default(cuid())
+  name        String
+  cuisineType String
+  createdAt   DateTime @default(now())
+
+  ingredients  RecipeIngredient[]
+  menuMappings MenuDishMapping[]
+
+  @@map("standard_dishes")
+}
+
+model RecipeIngredient {
+  id              String   @id @default(cuid())
+  standardDishId  String
+  ingredientName  String
+  qty             Float
+  unit            String
+  createdAt       DateTime @default(now())
+
+  standardDish StandardDish @relation(fields: [standardDishId], references: [id], onDelete: Cascade)
+
+  @@map("recipe_ingredients")
+}
+
+model MenuDishMapping {
+  id               String @id @default(cuid())
+  restaurantId     String
+  menuItemId       String
+  standardDishId   String
+  portionMultiplier Float  @default(1.0)
+  createdAt        DateTime @default(now())
+
+  restaurant   Restaurant   @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
+  menuItem     MenuItem     @relation(fields: [menuItemId], references: [id], onDelete: Cascade)
+  standardDish StandardDish @relation(fields: [standardDishId], references: [id], onDelete: Cascade)
+
+  @@map("menu_dish_mappings")
+}
+
+model Upload {
+  id           String       @id @default(cuid())
+  restaurantId String
+  source       UploadSource
+  status       UploadStatus @default(RECEIVED)
+  fileKey      String
+  receivedAt   DateTime     @default(now())
+  processedAt  DateTime?
+  errorMessage String?
+
+  restaurant Restaurant @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
+
+  @@map("uploads")
+}
+
+model InsightReport {
+  id           String       @id @default(cuid())
+  restaurantId String
+  periodStart  DateTime
+  periodEnd    DateTime
+  status       ReportStatus @default(DRAFT)
+  payloadJson  Json
+  createdAt    DateTime     @default(now())
+
+  restaurant Restaurant @relation(fields: [restaurantId], references: [id], onDelete: Cascade)
+
+  @@map("insight_reports")
+}
