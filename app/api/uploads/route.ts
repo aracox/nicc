@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { z } from "zod/v4";
-import { uploads, restaurants } from "@/lib/mock-data";
+export const dynamic = "force-dynamic";
+import { z } from "zod";
+import { getMockData, saveMockData } from "@/lib/mock-data";
 
 const createSchema = z.object({
   restaurantId: z.string().min(1),
@@ -11,14 +12,24 @@ const createSchema = z.object({
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = request.nextUrl;
-    const status = searchParams.get("status");
     const restaurantId = searchParams.get("restaurantId");
 
-    let filtered = [...uploads];
-    if (status) filtered = filtered.filter((u) => u.status === status);
-    if (restaurantId) filtered = filtered.filter((u) => u.restaurantId === restaurantId);
+    const data = getMockData();
+    let filtered = [...data.uploads];
 
-    return NextResponse.json(filtered);
+    if (restaurantId) {
+      filtered = filtered.filter((u) => u.restaurantId === restaurantId);
+    }
+
+    const result = filtered.map((u) => {
+      const restaurant = data.restaurants.find((r) => r.id === u.restaurantId);
+      return {
+        ...u,
+        restaurant: restaurant ? { id: restaurant.id, name: restaurant.name } : { id: u.restaurantId, name: "Unknown" },
+      };
+    });
+
+    return NextResponse.json(result);
   } catch (error) {
     console.error("GET /api/uploads error:", error);
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
@@ -37,9 +48,11 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const restaurant = restaurants.find((r) => r.id === parsed.data.restaurantId);
+    const data = getMockData();
+    const restaurant = data.restaurants.find((r) => r.id === parsed.data.restaurantId);
+    
     const newUpload = {
-      id: `upl-${String(uploads.length + 1).padStart(3, "0")}`,
+      id: `upl-${String(data.uploads.length + 1).padStart(3, "0")}`,
       ...parsed.data,
       status: "RECEIVED" as const,
       receivedAt: new Date().toISOString(),
@@ -51,7 +64,9 @@ export async function POST(request: NextRequest) {
       },
     };
 
-    uploads.push(newUpload);
+    data.uploads.push(newUpload);
+    saveMockData(data);
+    
     return NextResponse.json(newUpload, { status: 201 });
   } catch (error) {
     console.error("POST /api/uploads error:", error);

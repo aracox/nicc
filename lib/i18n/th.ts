@@ -22,6 +22,7 @@ const th: Translations = {
     createdAt: "วันที่สร้าง",
     error: "ข้อผิดพลาด",
     errorDbDown: "โหลดข้อมูลไม่สำเร็จ กรุณาตรวจสอบว่าฐานข้อมูลกำลังทำงาน",
+    logout: "ออกจากระบบ",
   },
   nav: {
     dashboard: "แดชบอร์ด",

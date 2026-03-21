@@ -1,41 +1,44 @@
 import { NextRequest, NextResponse } from "next/server";
-import { z } from "zod/v4";
-import { restaurants, menuItems, uploads, insightReports } from "@/lib/mock-data";
+export const dynamic = "force-dynamic";
+import { z } from "zod";
+import { getMockData, saveMockData } from "@/lib/mock-data";
 
 const createSchema = z.object({
   name: z.string().min(1),
-  foodType: z.string().min(1),
-  province: z.string().min(1),
-  district: z.string().min(1),
+  shopNumber: z.string().min(1),
+  customerNo: z.string().min(1),
+  foodCourtId: z.string().optional(),
   status: z.enum(["ONBOARDED", "PENDING", "INACTIVE"]).optional(),
 });
 
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = request.nextUrl;
-    const province = searchParams.get("province");
     const status = searchParams.get("status");
+    const foodCourtId = searchParams.get("foodCourtId");
     const q = searchParams.get("q");
 
-    let filtered = [...restaurants];
+    const data = getMockData();
+    let filtered = [...data.restaurants];
 
-    if (province) filtered = filtered.filter((r) => r.province === province);
     if (status) filtered = filtered.filter((r) => r.status === status);
+    if (foodCourtId) filtered = filtered.filter((r) => r.foodCourtId === foodCourtId);
     if (q) {
       const lower = q.toLowerCase();
       filtered = filtered.filter(
         (r) =>
           r.name.toLowerCase().includes(lower) ||
-          r.foodType.toLowerCase().includes(lower)
+          r.shopNumber?.toLowerCase().includes(lower) ||
+          r.customerNo?.toLowerCase().includes(lower)
       );
     }
 
     const result = filtered.map((r) => ({
       ...r,
       _count: {
-        menuItems: menuItems.filter((mi) => mi.restaurantId === r.id).length,
-        uploads: uploads.filter((u) => u.restaurantId === r.id).length,
-        insightReports: insightReports.filter((ir) => ir.restaurantId === r.id).length,
+        menuItems: data.menuItems.filter((mi) => mi.restaurantId === r.id).length,
+        uploads: data.uploads.filter((u) => u.restaurantId === r.id).length,
+        insightReports: data.insightReports.filter((ir) => ir.restaurantId === r.id).length,
       },
     }));
 
@@ -58,14 +61,17 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    const data = getMockData();
     const newRestaurant = {
-      id: `rest-${String(restaurants.length + 1).padStart(3, "0")}`,
+      id: `rest-${String(data.restaurants.length + 1).padStart(3, "0")}`,
       ...parsed.data,
       status: parsed.data.status ?? ("PENDING" as const),
       createdAt: new Date().toISOString(),
     };
 
-    restaurants.push(newRestaurant);
+    data.restaurants.push(newRestaurant as any);
+    saveMockData(data);
+
     return NextResponse.json(newRestaurant, { status: 201 });
   } catch (error) {
     console.error("POST /api/restaurants error:", error);

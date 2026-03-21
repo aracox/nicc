@@ -46,15 +46,29 @@ model User {
   @@map("users")
 }
 
-model Restaurant {
-  id        String           @id @default(cuid())
-  name      String
-  foodType  String
-  province  String
-  district  String
-  status    RestaurantStatus @default(PENDING)
-  createdAt DateTime         @default(now())
+model FoodCourt {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  createdAt DateTime @default(now())
 
+  restaurants Restaurant[]
+
+  @@map("food_courts")
+}
+
+model Restaurant {
+  id          String           @id @default(cuid())
+  foodCourtId String?
+  name        String
+  shopNumber  String?          // From CSV 'เลขร้านค้า'
+  customerNo  String?          // From CSV 'หมายเลขลูกค้า'
+  foodType    String?          // Made optional for new format
+  province    String?          // Made optional for new format
+  district    String?          // Made optional for new format
+  status      RestaurantStatus @default(PENDING)
+  createdAt   DateTime         @default(now())
+
+  foodCourt      FoodCourt?       @relation(fields: [foodCourtId], references: [id], onDelete: SetNull)
   menuItems      MenuItem[]
   menuMappings   MenuDishMapping[]
   uploads        Upload[]

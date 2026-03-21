@@ -1,17 +1,28 @@
 import { NextRequest, NextResponse } from "next/server";
-import { insightReports } from "@/lib/mock-data";
+export const dynamic = "force-dynamic";
+import { getMockData } from "@/lib/mock-data";
 
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = request.nextUrl;
     const restaurantId = searchParams.get("restaurantId");
-    const status = searchParams.get("status");
 
-    let filtered = [...insightReports];
-    if (restaurantId) filtered = filtered.filter((r) => r.restaurantId === restaurantId);
-    if (status) filtered = filtered.filter((r) => r.status === status);
+    const data = getMockData();
+    let filtered = [...data.insightReports];
 
-    return NextResponse.json(filtered);
+    if (restaurantId) {
+      filtered = filtered.filter((ir) => ir.restaurantId === restaurantId);
+    }
+
+    const result = filtered.map((ir) => {
+      const restaurant = data.restaurants.find((r) => r.id === ir.restaurantId);
+      return {
+        ...ir,
+        restaurant: restaurant ? { id: restaurant.id, name: restaurant.name } : { id: ir.restaurantId, name: "Unknown" },
+      };
+    });
+
+    return NextResponse.json(result);
   } catch (error) {
     console.error("GET /api/insights error:", error);
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });

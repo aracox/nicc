@@ -42,15 +42,15 @@ export function DataTable<T>({
   });
 
   return (
-    <div className="overflow-x-auto rounded-lg border border-slate-200">
+    <div className="overflow-x-auto rounded-lg border border-slate-200 max-h-[480px] overflow-y-auto">
       <table className="min-w-full divide-y divide-slate-200">
-        <thead className="bg-cpx-blue-light">
+        <thead className="bg-cpx-blue-light sticky top-0 z-10 shadow-sm">
           {table.getHeaderGroups().map((hg) => (
             <tr key={hg.id}>
               {hg.headers.map((header) => (
                 <th
                   key={header.id}
-                  className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-cpx-blue-dark cursor-pointer select-none"
+                  className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-cpx-blue-dark cursor-pointer select-none bg-cpx-blue-light"
                   onClick={header.column.getToggleSortingHandler()}
                 >
                   <div className="flex items-center gap-1">

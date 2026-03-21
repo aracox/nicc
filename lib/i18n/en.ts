@@ -20,6 +20,7 @@ const en = {
     createdAt: "Created",
     error: "Error",
     errorDbDown: "Failed to load data. Make sure the database is running.",
+    logout: "Logout",
   },
   nav: {
     dashboard: "Dashboard",

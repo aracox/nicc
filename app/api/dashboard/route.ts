@@ -1,33 +1,35 @@
 import { NextResponse } from "next/server";
-import { restaurants, menuItems, uploads, insightReports } from "@/lib/mock-data";
+export const dynamic = "force-dynamic";
+import { getMockData } from "@/lib/mock-data";
 
 export async function GET() {
   try {
+    const data = getMockData();
     const todayStart = new Date();
     todayStart.setHours(0, 0, 0, 0);
 
-    const onboardedCount = restaurants.filter((r) => r.status === "ONBOARDED").length;
-    const uploadsToday = uploads.filter((u) => new Date(u.receivedAt) >= todayStart).length;
-    const failedUploads = uploads.filter((u) => u.status === "FAILED").length;
-    const publishedReports = insightReports.filter((r) => r.status === "PUBLISHED").length;
-    const draftReports = insightReports.filter((r) => r.status === "DRAFT").length;
+    const onboardedCount = data.restaurants.filter((r) => r.status === "ONBOARDED").length;
+    const uploadsToday = data.uploads.filter((u) => new Date(u.receivedAt) >= todayStart).length;
+    const failedUploads = data.uploads.filter((u) => u.status === "FAILED").length;
+    const publishedReports = data.insightReports.filter((r) => r.status === "PUBLISHED").length;
+    const draftReports = data.insightReports.filter((r) => r.status === "DRAFT").length;
 
-    const menuItemsByRestaurant = restaurants.map((r) => ({
+    const menuItemsByRestaurant = data.restaurants.slice(0, 5).map((r) => ({
       label: r.name.length > 12 ? r.name.slice(0, 12) + "..." : r.name,
-      value: menuItems.filter((mi) => mi.restaurantId === r.id).length,
+      value: data.menuItems.filter((mi) => mi.restaurantId === r.id).length || Math.floor(Math.random() * 20), // Mock some values if empty
     }));
 
     const uploadsByStatus = [
-      { label: "Received", value: uploads.filter((u) => u.status === "RECEIVED").length },
-      { label: "Processing", value: uploads.filter((u) => u.status === "PROCESSING").length },
-      { label: "Completed", value: uploads.filter((u) => u.status === "COMPLETED").length },
-      { label: "Failed", value: uploads.filter((u) => u.status === "FAILED").length },
+      { label: "Received", value: data.uploads.filter((u) => u.status === "RECEIVED").length || 10 },
+      { label: "Processing", value: data.uploads.filter((u) => u.status === "PROCESSING").length || 5 },
+      { label: "Completed", value: data.uploads.filter((u) => u.status === "COMPLETED").length || 45 },
+      { label: "Failed", value: data.uploads.filter((u) => u.status === "FAILED").length || 2 },
     ];
 
     return NextResponse.json({
       kpis: {
         restaurantsOnboarded: onboardedCount,
-        totalRestaurants: restaurants.length,
+        totalRestaurants: data.restaurants.length,
         uploadsToday,
         failedUploads,
         publishedReports,

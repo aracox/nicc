@@ -5,9 +5,9 @@ import { getMockData } from "@/lib/mock-data";
 export async function GET(_request: NextRequest) {
   try {
     const data = getMockData();
-    return NextResponse.json(data.standardDishes);
+    return NextResponse.json(data.foodCourts);
   } catch (error) {
-    console.error("GET /api/recipes error:", error);
+    console.error("GET /api/food-courts error:", error);
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }

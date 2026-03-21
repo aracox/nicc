@@ -1,6 +1,8 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useI18n, type Locale } from "@/lib/i18n";
+import { useState } from "react";
 
 interface TopHeaderProps {
   sidebarCollapsed: boolean;
@@ -8,9 +10,26 @@ interface TopHeaderProps {
 
 export function TopHeader({ sidebarCollapsed }: TopHeaderProps) {
   const { t, locale, setLocale } = useI18n();
+  const router = useRouter();
+  const [isLoggingOut, setIsLoggingOut] = useState(false);
 
   const toggleLocale = () => {
     setLocale(locale === "en" ? "th" : ("en" as Locale));
+  };
+
+  const handleLogout = async () => {
+    setIsLoggingOut(true);
+    try {
+      const res = await fetch("/api/auth/logout", { method: "POST" });
+      if (res.ok) {
+        router.push("/login");
+        router.refresh();
+      }
+    } catch (error) {
+      console.error("Logout failed", error);
+    } finally {
+      setIsLoggingOut(false);
+    }
   };
 
   return (
@@ -33,7 +52,23 @@ export function TopHeader({ sidebarCollapsed }: TopHeaderProps) {
           </svg>
           {locale === "en" ? "TH" : "EN"}
         </button>
-        <div className="h-8 w-8 rounded-full bg-cpx-blue flex items-center justify-center text-xs font-bold text-white">
+
+        <button
+          onClick={handleLogout}
+          disabled={isLoggingOut}
+          className="flex items-center gap-2 rounded-md bg-slate-50 border border-slate-200 px-3 py-1.5 text-xs font-semibold text-slate-600 transition-all hover:bg-red-50 hover:text-red-600 hover:border-red-100 disabled:opacity-50"
+        >
+          {isLoggingOut ? (
+            <div className="h-3 w-3 animate-spin rounded-full border-2 border-red-600 border-t-transparent" />
+          ) : (
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+            </svg>
+          )}
+          <span>{t.common.logout}</span>
+        </button>
+
+        <div className="h-8 w-8 rounded-full bg-cpx-blue flex items-center justify-center text-xs font-bold text-white ring-2 ring-white shadow-sm">
           A
         </div>
       </div>

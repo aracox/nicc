@@ -29,7 +29,7 @@ export function Select({
       )}
       <select
         id={selectId}
-        className={`rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:border-cpx-blue focus:outline-none focus:ring-1 focus:ring-cpx-blue ${className}`}
+        className={`rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:border-cpx-blue focus:outline-none focus:ring-1 focus:ring-cpx-blue transition-colors ${className}`}
         {...props}
       >
         {placeholder && (

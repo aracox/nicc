@@ -1,26 +1,26 @@
 import { NextRequest, NextResponse } from "next/server";
-import { insightReports } from "@/lib/mock-data";
+export const dynamic = "force-dynamic";
+import { getMockData, saveMockData } from "@/lib/mock-data";
 
-export async function PATCH(
+export async function POST(
   _request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     const { id } = await params;
+    const data = getMockData();
+    const idx = data.insightReports.findIndex((r) => r.id === id);
 
-    const report = insightReports.find((r) => r.id === id);
-    if (!report) {
+    if (idx === -1) {
       return NextResponse.json({ error: "Report not found" }, { status: 404 });
     }
 
-    if (report.status === "PUBLISHED") {
-      return NextResponse.json({ error: "Report is already published" }, { status: 400 });
-    }
+    data.insightReports[idx].status = "PUBLISHED";
+    saveMockData(data);
 
-    report.status = "PUBLISHED";
-    return NextResponse.json(report);
+    return NextResponse.json(data.insightReports[idx]);
   } catch (error) {
-    console.error("PATCH /api/insights/[id]/publish error:", error);
+    console.error("POST /api/insights/[id]/publish error:", error);
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }
