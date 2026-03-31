@@ -5,6 +5,7 @@ import {
   getCoreRowModel,
   getSortedRowModel,
   getFilteredRowModel,
+  getPaginationRowModel,
   useReactTable,
   type ColumnDef,
   type SortingState,
@@ -39,59 +40,91 @@ export function DataTable<T>({
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
+    initialState: {
+      pagination: {
+        pageSize: 15,
+      },
+    },
   });
 
   return (
-    <div className="overflow-x-auto rounded-lg border border-slate-200 max-h-[480px] overflow-y-auto">
-      <table className="min-w-full divide-y divide-slate-200">
-        <thead className="bg-cpx-blue-light sticky top-0 z-10 shadow-sm">
-          {table.getHeaderGroups().map((hg) => (
-            <tr key={hg.id}>
-              {hg.headers.map((header) => (
-                <th
-                  key={header.id}
-                  className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-cpx-blue-dark cursor-pointer select-none bg-cpx-blue-light"
-                  onClick={header.column.getToggleSortingHandler()}
-                >
-                  <div className="flex items-center gap-1">
-                    {header.isPlaceholder
-                      ? null
-                      : flexRender(header.column.columnDef.header, header.getContext())}
-                    {header.column.getIsSorted() === "asc" && " \u2191"}
-                    {header.column.getIsSorted() === "desc" && " \u2193"}
-                  </div>
-                </th>
-              ))}
-            </tr>
-          ))}
-        </thead>
-        <tbody className="divide-y divide-slate-100 bg-white">
-          {table.getRowModel().rows.length === 0 ? (
-            <tr>
-              <td
-                colSpan={columns.length}
-                className="px-4 py-8 text-center text-sm text-slate-500"
-              >
-                {t.common.noData}
-              </td>
-            </tr>
-          ) : (
-            table.getRowModel().rows.map((row) => (
-              <tr
-                key={row.id}
-                className={`${onRowClick ? "cursor-pointer hover:bg-cpx-blue-light/50" : ""}`}
-                onClick={() => onRowClick?.(row.original)}
-              >
-                {row.getVisibleCells().map((cell) => (
-                  <td key={cell.id} className="whitespace-nowrap px-4 py-3 text-sm text-slate-700">
-                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                  </td>
+    <div className="space-y-4">
+      <div className="overflow-x-auto rounded-lg border border-slate-200">
+        <table className="min-w-full divide-y divide-slate-200">
+          <thead className="bg-cpx-blue-light sticky top-0 z-10 shadow-sm">
+            {table.getHeaderGroups().map((hg) => (
+              <tr key={hg.id}>
+                {hg.headers.map((header) => (
+                  <th
+                    key={header.id}
+                    className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-cpx-blue-dark cursor-pointer select-none bg-cpx-blue-light"
+                    onClick={header.column.getToggleSortingHandler()}
+                  >
+                    <div className="flex items-center gap-1">
+                      {header.isPlaceholder
+                        ? null
+                        : flexRender(header.column.columnDef.header, header.getContext())}
+                      {header.column.getIsSorted() === "asc" && " \u2191"}
+                      {header.column.getIsSorted() === "desc" && " \u2193"}
+                    </div>
+                  </th>
                 ))}
               </tr>
-            ))
-          )}
-        </tbody>
-      </table>
+            ))}
+          </thead>
+          <tbody className="divide-y divide-slate-100 bg-white">
+            {table.getRowModel().rows.length === 0 ? (
+              <tr>
+                <td
+                  colSpan={columns.length}
+                  className="px-4 py-8 text-center text-sm text-slate-500"
+                >
+                  {t.common.noData}
+                </td>
+              </tr>
+            ) : (
+              table.getRowModel().rows.map((row) => (
+                <tr
+                  key={row.id}
+                  className={`${onRowClick ? "cursor-pointer hover:bg-cpx-blue-light/50" : ""}`}
+                  onClick={() => onRowClick?.(row.original)}
+                >
+                  {row.getVisibleCells().map((cell) => (
+                    <td key={cell.id} className="whitespace-nowrap px-4 py-3 text-sm text-slate-700">
+                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                    </td>
+                  ))}
+                </tr>
+              ))
+            )}
+          </tbody>
+        </table>
+      </div>
+      
+      {/* Pagination Controls */}
+      <div className="flex items-center justify-between px-2">
+        <div className="text-sm text-slate-500">
+          Page {table.getState().pagination.pageIndex + 1} of{" "}
+          {table.getPageCount() || 1}
+        </div>
+        <div className="flex gap-2">
+          <button
+            className="rounded px-3 py-1 text-sm font-medium border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 disabled:opacity-50 disabled:cursor-not-allowed"
+            onClick={() => table.previousPage()}
+            disabled={!table.getCanPreviousPage()}
+          >
+            Previous
+          </button>
+          <button
+            className="rounded px-3 py-1 text-sm font-medium border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 disabled:opacity-50 disabled:cursor-not-allowed"
+            onClick={() => table.nextPage()}
+            disabled={!table.getCanNextPage()}
+          >
+            Next
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRef } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { apiFetch } from "@/lib/api";
 import { Card } from "@/components/card";
@@ -39,6 +40,11 @@ export default function RecipesPage() {
     { ingredientName: "", qty: 0, unit: "" },
   ]);
   const [expandedId, setExpandedId] = useState<string | null>(null);
+  const [isImporting, setIsImporting] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Layout protects this route; we assume logged-in user is admin for this mock
+  const isAdmin = true;
 
   const { data: dishes = [], isLoading } = useQuery({
     queryKey: ["recipes"],
@@ -64,6 +70,26 @@ export default function RecipesPage() {
     },
   });
 
+  const deleteMutation = useMutation({
+    mutationFn: (recipeId: string) =>
+      apiFetch(`/api/recipes/${recipeId}`, {
+        method: "DELETE",
+      }),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["recipes"] });
+    },
+    onError: () => {
+      alert(t.recipes.deleteFailed);
+    }
+  });
+
+  const handleDelete = (recipeId: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (window.confirm(t.recipes.confirmDelete)) {
+      deleteMutation.mutate(recipeId);
+    }
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const validIngredients = ingredients.filter(
@@ -83,13 +109,73 @@ export default function RecipesPage() {
     );
   };
 
+  const handleImportClick = () => {
+    fileInputRef.current?.click();
+  };
+
+  const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setIsImporting(true);
+    try {
+      const text = await file.text();
+      const response = await fetch("/api/recipes/import-json", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          jsonText: text,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Import failed");
+      }
+
+      const result = await response.json();
+      alert(t.recipes.importSuccess.replace("{count}", String(result.count)));
+      
+      queryClient.invalidateQueries({ queryKey: ["recipes"] });
+    } catch (error) {
+      console.error("Import error:", error);
+      alert(t.recipes.importError);
+    } finally {
+      setIsImporting(false);
+      if (fileInputRef.current) fileInputRef.current.value = "";
+    }
+  };
+
   return (
     <div>
       <div className="mb-6 flex items-center justify-between">
         <h2 className="text-xl font-bold text-slate-900">{t.recipes.title}</h2>
-        <Button onClick={() => setShowForm((p) => !p)}>
-          {showForm ? t.common.cancel : t.recipes.addDish}
-        </Button>
+        <div className="flex items-center gap-2">
+          {isAdmin && (
+            <>
+              <input
+                type="file"
+                ref={fileInputRef}
+                className="hidden"
+                accept=".json"
+                onChange={handleFileChange}
+              />
+              <Button
+                variant="secondary"
+                onClick={handleImportClick}
+                isLoading={isImporting}
+                className="flex items-center gap-2"
+              >
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+                </svg>
+                {t.recipes.importJson}
+              </Button>
+            </>
+          )}
+          <Button onClick={() => setShowForm((p) => !p)}>
+            {showForm ? t.common.cancel : t.recipes.addDish}
+          </Button>
+        </div>
       </div>
 
       {showForm && (
@@ -200,12 +286,26 @@ export default function RecipesPage() {
                   <p className="font-medium text-slate-900">{dish.name}</p>
                   <p className="text-sm text-slate-500">{dish.cuisineType}</p>
                 </div>
-                <Badge>
-                  {t.recipes.ingredientCount.replace(
-                    "{count}",
-                    String(dish._count.ingredients)
+                <div className="flex items-center gap-4">
+                  <Badge>
+                    {t.recipes.ingredientCount.replace(
+                      "{count}",
+                      String(dish._count.ingredients)
+                    )}
+                  </Badge>
+                  {isAdmin && (
+                    <button
+                      onClick={(e) => handleDelete(dish.id, e)}
+                      disabled={deleteMutation.isPending}
+                      className="text-slate-400 hover:text-red-500 rounded p-1 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                      title={t.recipes.deleteDish}
+                    >
+                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                      </svg>
+                    </button>
                   )}
-                </Badge>
+                </div>
               </div>
               {expandedId === dish.id && (
                 <div className="mt-3 border-t pt-3">

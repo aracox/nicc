@@ -223,7 +223,7 @@
       "id": "rest-hq-001",
       "foodCourtId": "fc-002",
       "name": "ข้าวขาหมู",
-      "shopNumber": "803201",
+      "shopNumber": "903201",
       "customerNo": "25032000131",
       "status": "INACTIVE",
       "createdAt": "2026-03-20T19:09:04.353Z"
@@ -232,7 +232,7 @@
       "id": "rest-hq-002",
       "foodCourtId": "fc-002",
       "name": "ครัวคุณแม่",
-      "shopNumber": "803202",
+      "shopNumber": "903202",
       "customerNo": "25032000072",
       "status": "INACTIVE",
       "createdAt": "2026-03-20T19:09:04.353Z"
@@ -241,7 +241,7 @@
       "id": "rest-hq-003",
       "foodCourtId": "fc-002",
       "name": "ก๋วยเตี๋ยวเนื้อตุ๋น",
-      "shopNumber": "803204",
+      "shopNumber": "903204",
       "customerNo": "25032000091",
       "status": "ONBOARDED",
       "createdAt": "2026-03-20T19:09:04.353Z"
@@ -250,7 +250,7 @@
       "id": "rest-hq-004",
       "foodCourtId": "fc-002",
       "name": "ChouNan",
-      "shopNumber": "803205",
+      "shopNumber": "903205",
       "customerNo": "25032000011",
       "status": "PENDING",
       "createdAt": "2026-03-20T19:09:04.353Z"
@@ -259,7 +259,7 @@
       "id": "rest-hq-005",
       "foodCourtId": "fc-002",
       "name": "ราดหน้า,สุกี้",
-      "shopNumber": "803206",
+      "shopNumber": "903206",
       "customerNo": "565836",
       "status": "ONBOARDED",
       "createdAt": "2026-03-20T19:09:04.353Z"
@@ -268,7 +268,7 @@
       "id": "rest-hq-006",
       "foodCourtId": "fc-002",
       "name": "เจมส์กะเพราถาด",
-      "shopNumber": "803207",
+      "shopNumber": "903207",
       "customerNo": "25032000077",
       "status": "ONBOARDED",
       "createdAt": "2026-03-20T19:09:04.353Z"
@@ -277,7 +277,7 @@
       "id": "rest-hq-007",
       "foodCourtId": "fc-002",
       "name": "ก๋วยเตี๋ยวเรือ",
-      "shopNumber": "803208",
+      "shopNumber": "903208",
       "customerNo": "25032000012",
       "status": "PENDING",
       "createdAt": "2026-03-20T19:09:04.353Z"
@@ -286,7 +286,7 @@
       "id": "rest-hq-008",
       "foodCourtId": "fc-002",
       "name": "ข้าวหมกไก่ย่างบังฟารุก",
-      "shopNumber": "803209",
+      "shopNumber": "903209",
       "customerNo": "25032000065",
       "status": "INACTIVE",
       "createdAt": "2026-03-20T19:09:04.353Z"
@@ -295,7 +295,7 @@
       "id": "rest-hq-009",
       "foodCourtId": "fc-002",
       "name": "ข้าวทิพย์อาหารชุด",
-      "shopNumber": "803210",
+      "shopNumber": "903210",
       "customerNo": "25032000074",
       "status": "ONBOARDED",
       "createdAt": "2026-03-20T19:09:04.353Z"
@@ -304,7 +304,7 @@
       "id": "rest-hq-010",
       "foodCourtId": "fc-002",
       "name": "ก๋วยเตี๋ยวเป็ด",
-      "shopNumber": "803211",
+      "shopNumber": "903211",
       "customerNo": "543983",
       "status": "PENDING",
       "createdAt": "2026-03-20T19:09:04.353Z"
@@ -313,7 +313,7 @@
       "id": "rest-hq-011",
       "foodCourtId": "fc-002",
       "name": "ข้าวผัดกระทะเหล็ก",
-      "shopNumber": "803212",
+      "shopNumber": "903212",
       "customerNo": "538668",
       "status": "INACTIVE",
       "createdAt": "2026-03-20T19:09:04.353Z"
@@ -322,7 +322,7 @@
       "id": "rest-hq-012",
       "foodCourtId": "fc-002",
       "name": "ขนมหวาน น้ำแข็งใส",
-      "shopNumber": "803216",
+      "shopNumber": "903216",
       "customerNo": "25032000139",
       "status": "ONBOARDED",
       "createdAt": "2026-03-20T19:09:04.353Z"
@@ -331,7 +331,7 @@
       "id": "rest-hq-013",
       "foodCourtId": "fc-002",
       "name": "สกายลักค์",
-      "shopNumber": "803217",
+      "shopNumber": "903217",
       "customerNo": "563542",
       "status": "PENDING",
       "createdAt": "2026-03-20T19:09:04.353Z"
@@ -340,7 +340,7 @@
       "id": "rest-hq-014",
       "foodCourtId": "fc-002",
       "name": "ลูกชิ้นทิพย์",
-      "shopNumber": "803218",
+      "shopNumber": "903218",
       "customerNo": "512280",
       "status": "ONBOARDED",
       "createdAt": "2026-03-20T19:09:04.353Z"
@@ -349,7 +349,7 @@
       "id": "rest-hq-015",
       "foodCourtId": "fc-002",
       "name": "The Glass Room",
-      "shopNumber": "803219",
+      "shopNumber": "903219",
       "customerNo": "25032000068",
       "status": "INACTIVE",
       "createdAt": "2026-03-20T19:09:04.353Z"
@@ -358,7 +358,7 @@
       "id": "rest-hq-016",
       "foodCourtId": "fc-002",
       "name": "อาหารนานาชาติ",
-      "shopNumber": "803220",
+      "shopNumber": "903220",
       "customerNo": "25032000117",
       "status": "PENDING",
       "createdAt": "2026-03-20T19:09:04.353Z"
@@ -367,7 +367,7 @@
       "id": "rest-hq-017",
       "foodCourtId": "fc-002",
       "name": "เครื่องดื่มทุกชนิด",
-      "shopNumber": "803221",
+      "shopNumber": "903221",
       "customerNo": "25032000129",
       "status": "ONBOARDED",
       "createdAt": "2026-03-20T19:09:04.353Z"
@@ -376,7 +376,7 @@
       "id": "rest-hq-018",
       "foodCourtId": "fc-002",
       "name": "ก๋วยเตี๋ยวลูกชิ้นปลา",
-      "shopNumber": "803222",
+      "shopNumber": "903222",
       "customerNo": "25032000099",
       "status": "ONBOARDED",
       "createdAt": "2026-03-20T19:09:04.353Z"
@@ -385,7 +385,7 @@
       "id": "rest-hq-019",
       "foodCourtId": "fc-002",
       "name": "จีฟาไฉข้าวมันไก่สิงคโปร์",
-      "shopNumber": "803223",
+      "shopNumber": "903223",
       "customerNo": "25032000090",
       "status": "PENDING",
       "createdAt": "2026-03-20T19:09:04.353Z"
@@ -394,7 +394,7 @@
       "id": "rest-hq-020",
       "foodCourtId": "fc-002",
       "name": "Habu Cha",
-      "shopNumber": "803224",
+      "shopNumber": "903224",
       "customerNo": "25032000073",
       "status": "ONBOARDED",
       "createdAt": "2026-03-20T19:09:04.353Z"
@@ -403,7 +403,7 @@
       "id": "rest-hq-021",
       "foodCourtId": "fc-002",
       "name": "ส้มตำ อาหารอีสาน",
-      "shopNumber": "803225",
+      "shopNumber": "903225",
       "customerNo": "25032000086",
       "status": "ONBOARDED",
       "createdAt": "2026-03-20T19:09:04.353Z"
@@ -412,7 +412,7 @@
       "id": "rest-hq-022",
       "foodCourtId": "fc-002",
       "name": "โทริมารุ คาราอาเกะ",
-      "shopNumber": "803226",
+      "shopNumber": "903226",
       "customerNo": "25032000080",
       "status": "PENDING",
       "createdAt": "2026-03-20T19:09:04.353Z"
@@ -421,13 +421,2998 @@
       "id": "rest-hq-023",
       "foodCourtId": "fc-002",
       "name": "เครื่องดื่มทุกชนิด",
-      "shopNumber": "803227",
+      "shopNumber": "903227",
       "customerNo": "25032000144",
       "status": "ONBOARDED",
       "createdAt": "2026-03-20T19:09:04.353Z"
     }
   ],
-  "menuItems": [],
+  "menuItems": [
+    {
+      "id": "menu-import-1774881098200-0",
+      "restaurantId": "rest-001",
+      "name": "ข้าวขาหมู",
+      "category": "Main",
+      "price": 60,
+      "createdAt": "2026-03-30T14:31:38.199Z"
+    },
+    {
+      "id": "menu-import-1774881098200-1",
+      "restaurantId": "rest-001",
+      "name": "ข้าวหมูกรอบ",
+      "category": "Main",
+      "price": 70,
+      "createdAt": "2026-03-30T14:31:38.199Z"
+    },
+    {
+      "id": "menu-import-1774881098200-2",
+      "restaurantId": "rest-001",
+      "name": "ข้าวขาหมูทุกอย่าง",
+      "category": "Main",
+      "price": 85,
+      "createdAt": "2026-03-30T14:31:38.199Z"
+    },
+    {
+      "id": "menu-import-1774881098200-3",
+      "restaurantId": "rest-001",
+      "name": "ข้าวคากิ",
+      "category": "Main",
+      "price": 70,
+      "createdAt": "2026-03-30T14:31:38.199Z"
+    },
+    {
+      "id": "menu-import-1774881098200-4",
+      "restaurantId": "rest-001",
+      "name": "ขาหมูเปล่า",
+      "category": "Add-On",
+      "price": 150,
+      "createdAt": "2026-03-30T14:31:38.199Z"
+    },
+    {
+      "id": "menu-import-1774881098200-5",
+      "restaurantId": "rest-001",
+      "name": "ขาหมูรวมทุกอย่าง",
+      "category": "Add-On",
+      "price": 200,
+      "createdAt": "2026-03-30T14:31:38.199Z"
+    },
+    {
+      "id": "menu-import-1774881098200-6",
+      "restaurantId": "rest-001",
+      "name": "คากิเปล่า",
+      "category": "Add-On",
+      "price": 100,
+      "createdAt": "2026-03-30T14:31:38.199Z"
+    },
+    {
+      "id": "menu-import-1774881098200-7",
+      "restaurantId": "rest-001",
+      "name": "หมูกรอบเปล่า",
+      "category": "Add-On",
+      "price": 150,
+      "createdAt": "2026-03-30T14:31:38.199Z"
+    },
+    {
+      "id": "menu-import-1774881098200-8",
+      "restaurantId": "rest-001",
+      "name": "เพิ่มพิเศษ",
+      "category": "Add-On",
+      "price": 20,
+      "createdAt": "2026-03-30T14:31:38.199Z"
+    },
+    {
+      "id": "menu-import-1774881098200-9",
+      "restaurantId": "rest-001",
+      "name": "เพิ่มไส้",
+      "category": "Add-On",
+      "price": 20,
+      "createdAt": "2026-03-30T14:31:38.199Z"
+    },
+    {
+      "id": "menu-import-1774881098200-10",
+      "restaurantId": "rest-001",
+      "name": "ข้าวเปล่า/เพิ่มพิเศษ",
+      "category": "Add-On",
+      "price": 10,
+      "createdAt": "2026-03-30T14:31:38.199Z"
+    },
+    {
+      "id": "menu-import-1774881098200-11",
+      "restaurantId": "rest-001",
+      "name": "เพิ่มไข่",
+      "category": "Add-On",
+      "price": 15,
+      "createdAt": "2026-03-30T14:31:38.199Z"
+    },
+    {
+      "id": "menu-import-1774881098200-12",
+      "restaurantId": "rest-001",
+      "name": "ใส่กล่องกลับบ้านเพิ่ม",
+      "category": "Other",
+      "price": 7,
+      "createdAt": "2026-03-30T14:31:38.199Z"
+    },
+    {
+      "id": "menu-import-1774881098200-13",
+      "restaurantId": "rest-001",
+      "name": "หมูกรอบ",
+      "category": "Add-On",
+      "price": 30,
+      "createdAt": "2026-03-30T14:31:38.199Z"
+    },
+    {
+      "id": "menu-import-1774881098200-14",
+      "restaurantId": "rest-001",
+      "name": "Delivery",
+      "category": "Delivery",
+      "price": 10,
+      "createdAt": "2026-03-30T14:31:38.199Z"
+    },
+    {
+      "id": "menu-5dc82ca0-6328-4c4b-b803-84cf0a28565a",
+      "restaurantId": "rest-002",
+      "name": "ข้าวไข่เจียวใส่เครื่อง 2 อย่าง",
+      "category": "Main",
+      "price": 39,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-0458dff7-5694-4d26-ab21-dead9ec2dc40",
+      "restaurantId": "rest-002",
+      "name": "ข้าวกระเพราหมูสับ",
+      "category": "Main",
+      "price": 49,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-9b779599-dceb-43e3-94ad-a118f4daa4c2",
+      "restaurantId": "rest-002",
+      "name": "ข้าวกระเพราหมู / ไก่",
+      "category": "Main",
+      "price": 55,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-49af614f-36a3-4cdc-8acf-e7ea63e21b96",
+      "restaurantId": "rest-002",
+      "name": "ข้าวตามสั่งอื่นๆ",
+      "category": "Main",
+      "price": 65,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-41be8d06-c21a-49a3-9f7b-486033c477fc",
+      "restaurantId": "rest-002",
+      "name": "ข้าวพริกแกง",
+      "category": "Main",
+      "price": 55,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-6502d853-64a6-46e9-a3c4-7fe5dc0c1c9c",
+      "restaurantId": "rest-002",
+      "name": "ข้าวพริกเผา",
+      "category": "Main",
+      "price": 55,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-b8afaf82-8c32-4e15-b2c3-bf5db6f57c83",
+      "restaurantId": "rest-002",
+      "name": "กับข้าว",
+      "category": "Add-On",
+      "price": 59,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-9e9c34a1-8440-4dfe-838e-a603eb36d01c",
+      "restaurantId": "rest-002",
+      "name": "ข้าวไข่เจียว",
+      "category": "Main",
+      "price": 55,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-e5f32877-12e7-4169-9ac3-6e3c0a487fb6",
+      "restaurantId": "rest-002",
+      "name": "กับข้าวตามสั่ง",
+      "category": "Add-On",
+      "price": 89,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-ca2cd0a5-40e0-4aae-98bd-038c7d4bb05b",
+      "restaurantId": "rest-002",
+      "name": "ต้มยำ",
+      "category": "Add-On",
+      "price": 99,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-456b2e19-533f-478b-9396-f37b225a39c0",
+      "restaurantId": "rest-002",
+      "name": "ต้มจืด",
+      "category": "Add-On",
+      "price": 65,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-c71e0dd6-c793-4fab-9045-79ee2bea09b5",
+      "restaurantId": "rest-002",
+      "name": "ยำ",
+      "category": "Add-On",
+      "price": 79,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-17fa5825-4d09-464b-98f8-b9f9eb49e761",
+      "restaurantId": "rest-002",
+      "name": "ไข่ดาว ไข่เจียว",
+      "category": "Add-On",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-222fd5a6-0f07-4a16-b31d-75bc873de232",
+      "restaurantId": "rest-002",
+      "name": "ข้าวเปล่า",
+      "category": "Add-On",
+      "price": 15,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-152ef149-5b91-46b9-a6a1-184d41c54fa9",
+      "restaurantId": "rest-002",
+      "name": "ใส่กล่องกลับบ้านเพิ่ม",
+      "category": "Other",
+      "price": 7,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-cbaf30d4-2f72-4ae9-b64e-a9bfc12fb291",
+      "restaurantId": "rest-002",
+      "name": "พิเศษเพิ่ม",
+      "category": "Add-On",
+      "price": 20,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-30654ab9-581a-4de3-90ed-4408734dcc85",
+      "restaurantId": "rest-002",
+      "name": "Delivery",
+      "category": "Delivery",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-51c9fd32-0e14-4437-8475-bec1edf8dd4f",
+      "restaurantId": "rest-003",
+      "name": "ก๋วยเตี๋ยวลูกชิ้นเนื้อ+เนื้อสด",
+      "category": "Main",
+      "price": 60,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-87f1caf1-ec0c-4ff6-bdec-ac494614f19d",
+      "restaurantId": "rest-003",
+      "name": "ก๋วยเตี๋ยวเนื้อ",
+      "category": "Main",
+      "price": 75,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-820d42ab-3d0a-43ac-b076-629bd4773ad2",
+      "restaurantId": "rest-003",
+      "name": "ก๋วยเตี๋ยวเนื้อสด พิเศษ",
+      "category": "Main",
+      "price": 90,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-2029eb5b-48e0-48e6-906d-d90e7d56fdbf",
+      "restaurantId": "rest-003",
+      "name": "เกาเหลา",
+      "category": "Add-On",
+      "price": 80,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-a2ed092f-208f-46e5-822f-7097fab533c8",
+      "restaurantId": "rest-003",
+      "name": "เกาเหลาพิเศษ",
+      "category": "Add-On",
+      "price": 95,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-3ced01b1-2161-4c3d-a409-baec73b30d14",
+      "restaurantId": "rest-003",
+      "name": "ข้าวเปล่า",
+      "category": "Add-On",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-35937052-0b3f-44e1-8b98-da95c2ceca48",
+      "restaurantId": "rest-003",
+      "name": "ลูกชิ้นเนื้อ",
+      "category": "Add-On",
+      "price": 40,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-1d2bc406-e558-4f01-b91c-d6519a3ebedc",
+      "restaurantId": "rest-003",
+      "name": "เนื้อลวก",
+      "category": "Add-On",
+      "price": 80,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-2d0cbed2-b92c-4c6a-bd08-cfd2d8178fa1",
+      "restaurantId": "rest-003",
+      "name": "เอ็นตุ๋น",
+      "category": "Add-On",
+      "price": 30,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-f565615f-6a3f-491d-a8d9-457c4be70a0b",
+      "restaurantId": "rest-003",
+      "name": "อาหารทานเล่น",
+      "category": "Add-On",
+      "price": 20,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-1e649488-40f9-45bc-a23a-9c7a28b45d60",
+      "restaurantId": "rest-003",
+      "name": "ข้าวกระเพราเนื้อ",
+      "category": "Main",
+      "price": 75,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-cd26747e-da81-40c3-bfa6-00dbf78c7862",
+      "restaurantId": "rest-003",
+      "name": "ข้าวหน้าเนื้อผัดน้ำมันหอย",
+      "category": "Drink",
+      "price": 75,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-d199fe64-f885-43cb-8db2-ef780ae3d789",
+      "restaurantId": "rest-003",
+      "name": "ไข่ดาว",
+      "category": "Add-On",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-47612979-95d7-4819-b277-04ec8afaa2a1",
+      "restaurantId": "rest-003",
+      "name": "ใส่กล่องกลับบ้านเพิ่ม",
+      "category": "Other",
+      "price": 7,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-9f7f1fa8-d5f6-4f53-a630-b27bdc2e3053",
+      "restaurantId": "rest-003",
+      "name": "Delivery",
+      "category": "Delivery",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-3ad022e8-0321-49fa-898c-117fa34fb912",
+      "restaurantId": "rest-004",
+      "name": "เมนูอาหารราคา",
+      "category": "Add-On",
+      "price": 55,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-8c009fb2-74f1-4de4-b500-4a5f314964f5",
+      "restaurantId": "rest-004",
+      "name": "พิเศษเพิ่ม",
+      "category": "Add-On",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-2088135b-e419-4020-ac1e-5121b7201b60",
+      "restaurantId": "rest-004",
+      "name": "พิเศษเพิ่ม 15",
+      "category": "Add-On",
+      "price": 15,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-3148b312-52a9-48ff-a381-0c67c6c9e7e6",
+      "restaurantId": "rest-004",
+      "name": "บริการกลับบ้านเพิ่ม",
+      "category": "Add-On",
+      "price": 8,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-6b512eb7-415a-4053-8e91-c581e0175342",
+      "restaurantId": "rest-004",
+      "name": "Delivery",
+      "category": "Delivery",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-b17cc373-b224-4760-b934-33717bb9652d",
+      "restaurantId": "rest-005",
+      "name": "สุกี้,ราดหน้าเส้นหมี่ หมู",
+      "category": "Add-On",
+      "price": 55,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-ecb7e46f-2cec-4cf3-9020-7c3a543e98c5",
+      "restaurantId": "rest-005",
+      "name": "สุกี้,ราดหน้าเส้นใหญ่ หมู",
+      "category": "Add-On",
+      "price": 55,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-909b6369-6095-4017-b716-9fb0e86fcd65",
+      "restaurantId": "rest-005",
+      "name": "สุกี้,บะหมี่กรอบราดหน้าหมู",
+      "category": "Add-On",
+      "price": 60,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-b367ee94-259d-4f0b-a9a6-b9ba4b68f799",
+      "restaurantId": "rest-005",
+      "name": "สุกี้,เส้นหมี่ราดหน้าทะเล",
+      "category": "Add-On",
+      "price": 60,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-1ebaeac6-8638-4dd0-8be9-5c0fd5dc0fef",
+      "restaurantId": "rest-005",
+      "name": "สุกี้,ราดหน้าเส้นใหญ่ ทะเล",
+      "category": "Add-On",
+      "price": 60,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-68570145-fc84-4536-86c1-f27b2949beef",
+      "restaurantId": "rest-005",
+      "name": "สุกี้,บะหมี่กรอบราดหน้าทะเล",
+      "category": "Add-On",
+      "price": 65,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-7cd74825-4e43-40a7-9ffa-aef2be280c4a",
+      "restaurantId": "rest-005",
+      "name": "สุกี้,ผัดซี้อิ้ว",
+      "category": "Add-On",
+      "price": 60,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-43ea3060-04f4-4210-8692-7cb3b5ee6ff1",
+      "restaurantId": "rest-005",
+      "name": "สุกี้,สุกี้น้ำหมู",
+      "category": "Drink",
+      "price": 55,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-bb04d421-eb90-46ad-90b8-9ca8831e0302",
+      "restaurantId": "rest-005",
+      "name": "สุกี้,สุกี้น้ำทะเล",
+      "category": "Drink",
+      "price": 60,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-e194a82b-5bb2-4b7d-9ad1-3dbc96344185",
+      "restaurantId": "rest-005",
+      "name": "สุกี้,สุกี้ไก่ แห้ง",
+      "category": "Add-On",
+      "price": 60,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-b39c9180-a628-4baf-a7cc-dd3d5eacce60",
+      "restaurantId": "rest-005",
+      "name": "สุกี้,สุกี้หมูแห้ง",
+      "category": "Add-On",
+      "price": 60,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-e498955e-e71e-4b77-8c59-3d99570c6431",
+      "restaurantId": "rest-005",
+      "name": "สุกี้,สุกี้แห้งทะเล",
+      "category": "Add-On",
+      "price": 50,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-924acd81-0930-482d-9046-8ad600e6fb00",
+      "restaurantId": "rest-005",
+      "name": "สุกี้,กระเพาะปลา",
+      "category": "Add-On",
+      "price": 65,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-85e92202-5900-4f03-b5db-53f13f861132",
+      "restaurantId": "rest-005",
+      "name": "สุกี้,พิเศษเพิ่ม",
+      "category": "Add-On",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-31f23ca0-47c9-440c-8bee-8f14ef3ec39a",
+      "restaurantId": "rest-005",
+      "name": "สุกี้,ใส่กล่องกลับบ้านเพิ่ม",
+      "category": "Other",
+      "price": 7,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-9d28a72e-88b7-4528-979d-e3ba31356103",
+      "restaurantId": "rest-005",
+      "name": "สุกี้,ผัดซีอิ๋วทะเล",
+      "category": "Add-On",
+      "price": 65,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-9ba34c5e-194f-4972-8e5d-940337614c21",
+      "restaurantId": "rest-005",
+      "name": "สุกี้,ราดหน้าเส้นกรอบคะน้าหมูฮ่องกง",
+      "category": "Add-On",
+      "price": 75,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-a1835366-d1e4-45b8-882f-6542c2291b77",
+      "restaurantId": "rest-005",
+      "name": "สุกี้,สุกี้ไก่ น้ำ",
+      "category": "Drink",
+      "price": 45,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-a84f5ae4-8a7b-43a0-bd51-890e999a5cc4",
+      "restaurantId": "rest-005",
+      "name": "สุกี้,Delivery",
+      "category": "Add-On",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-3a5ee67d-c22b-4ef0-ab7d-0c0a84dc3666",
+      "restaurantId": "rest-006",
+      "name": "ข้าวกระเพรากุ้ง/หมึก",
+      "category": "Main",
+      "price": 70,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-ac0ad0de-e4dd-4004-86e9-cfce77add097",
+      "restaurantId": "rest-006",
+      "name": "ข้าวกระเพราทะเล",
+      "category": "Main",
+      "price": 75,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-233ef7e7-6f8d-407d-9ecb-362bf5695f1e",
+      "restaurantId": "rest-006",
+      "name": "ข้าวกระเพรารวมมิตร",
+      "category": "Main",
+      "price": 75,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-24766ac3-fb95-47c0-bab7-a76fff2346a6",
+      "restaurantId": "rest-006",
+      "name": "ข้าวราดกระเพรารวมมิตร",
+      "category": "Main",
+      "price": 85,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-d15ad047-7923-41fa-95b9-9b489e5df634",
+      "restaurantId": "rest-006",
+      "name": "ข้าวคะน้าหมู / ไก่",
+      "category": "Main",
+      "price": 60,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-2d15a67d-4e5a-429c-9cd3-f0cf0614bae8",
+      "restaurantId": "rest-006",
+      "name": "ข้าวไก่กระเทียม",
+      "category": "Main",
+      "price": 60,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-68c76871-01d5-4b97-95d4-561bea408435",
+      "restaurantId": "rest-006",
+      "name": "ข้าวหมูกระเทียม",
+      "category": "Main",
+      "price": 60,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-e232c1e0-4c9b-4895-964b-0ea0fde1a5a2",
+      "restaurantId": "rest-006",
+      "name": "ข้าวคะน้าหมูกรอบ",
+      "category": "Main",
+      "price": 70,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-c0ed93ce-0df3-4812-adfe-35715969817f",
+      "restaurantId": "rest-006",
+      "name": "คะน้าทะเลรวม",
+      "category": "Add-On",
+      "price": 75,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-29507704-27bf-484f-90dd-0fd29696930c",
+      "restaurantId": "rest-006",
+      "name": "ข้าวผัดพริกแกงหมู",
+      "category": "Main",
+      "price": 60,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-f58244bb-2fc3-4fff-a27d-50ae895c5821",
+      "restaurantId": "rest-006",
+      "name": "พริกแกงหมูกรอบ",
+      "category": "Add-On",
+      "price": 70,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-311294b7-0380-4062-ac90-9674e5374f20",
+      "restaurantId": "rest-006",
+      "name": "ผัดพริกแกงทะเล",
+      "category": "Add-On",
+      "price": 70,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-69e7f701-8798-46d4-ba44-7b9d6353f190",
+      "restaurantId": "rest-006",
+      "name": "ข้าวเปล่า/ไข่ดาว",
+      "category": "Main",
+      "price": 12,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-54eb8a35-379e-4d22-9463-8b37231b4ae3",
+      "restaurantId": "rest-006",
+      "name": "ไข่เยี่ยวม้า",
+      "category": "Add-On",
+      "price": 15,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-94f1e083-38a9-4b8e-acf9-e0a163d71106",
+      "restaurantId": "rest-006",
+      "name": "ใส่กล่องกลับบ้านเพิ่ม",
+      "category": "Other",
+      "price": 7,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-c4669138-23b4-4b84-9549-4dec1659c9e5",
+      "restaurantId": "rest-006",
+      "name": "Delivery",
+      "category": "Delivery",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-c49bff13-cd66-4514-9635-ed4ea26fed8e",
+      "restaurantId": "rest-006",
+      "name": "ข้าวกระเพราหมู",
+      "category": "Main",
+      "price": 60,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-e22c9c5b-fb26-4d42-a78c-ff7667bf62bb",
+      "restaurantId": "rest-006",
+      "name": "ข้าวกระเพราไก่",
+      "category": "Main",
+      "price": 55,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-85e8013f-de11-4c97-96b2-84c24f6459f6",
+      "restaurantId": "rest-006",
+      "name": "เพิ่มพิเศษ",
+      "category": "Add-On",
+      "price": 15,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-9684d263-fbe5-425a-8a64-cb52e5e75d68",
+      "restaurantId": "rest-006",
+      "name": "ข้าวกระเพราไข่เยี่ยวม้า",
+      "category": "Main",
+      "price": 65,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-f54cd3e2-7dbc-4c5c-9272-cc36a769f8ba",
+      "restaurantId": "rest-006",
+      "name": "ข้าวกระเพราหมูกรอบ",
+      "category": "Main",
+      "price": 70,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-e776ec80-a86c-450b-97c0-f9744d419f50",
+      "restaurantId": "rest-007",
+      "name": "ก๋วยเตี๋ยวเรือ",
+      "category": "Main",
+      "price": 69,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-4cf41aa9-cfee-4b5b-b18c-92287b78b1fc",
+      "restaurantId": "rest-007",
+      "name": "ก๋วยเตี๋ยวเรือ พิเศษ",
+      "category": "Main",
+      "price": 79,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-1dbb65e0-5801-4f8d-837b-20cfc3a2c64d",
+      "restaurantId": "rest-007",
+      "name": "ก๋วยเตี๋ยวน้ำตกหมู",
+      "category": "Drink",
+      "price": 87,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-1b165714-9288-4ea0-ad5a-b967321722f6",
+      "restaurantId": "rest-007",
+      "name": "ก๋วยเตี๋ยวน้ำตก",
+      "category": "Drink",
+      "price": 107,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-38cf7523-396f-4626-a009-7f2616f30b7d",
+      "restaurantId": "rest-007",
+      "name": "ก๋วยเตี๋ยวแห้ง",
+      "category": "Main",
+      "price": 99,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-b2db69e4-ba06-41c5-a098-ca9bbc566c19",
+      "restaurantId": "rest-007",
+      "name": "เกาเหลา",
+      "category": "Add-On",
+      "price": 79,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-56c1eabb-f46d-439c-ad6e-662ab6bf39d6",
+      "restaurantId": "rest-007",
+      "name": "เกาเหลาพิเศษ",
+      "category": "Add-On",
+      "price": 89,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-dfce4e95-7d56-46e0-b470-3f85e0874210",
+      "restaurantId": "rest-007",
+      "name": "เกาเหลาเนื้อ",
+      "category": "Add-On",
+      "price": 109,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-b40ccfa7-693c-42f6-ba04-738681664ff3",
+      "restaurantId": "rest-007",
+      "name": "เมนูชุด",
+      "category": "Add-On",
+      "price": 129,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-fc4baeb2-7032-47f7-bfb5-accd3f0b28ae",
+      "restaurantId": "rest-007",
+      "name": "ชุดน้ำพริก",
+      "category": "Drink",
+      "price": 250,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-d1eccf84-0b30-4f78-ac3f-192d42a22d12",
+      "restaurantId": "rest-007",
+      "name": "เพิ่มพิเศษ",
+      "category": "Add-On",
+      "price": 18,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-6ac7c6d6-7541-4d78-b6a7-83dcde5ed068",
+      "restaurantId": "rest-007",
+      "name": "แคบหมู",
+      "category": "Add-On",
+      "price": 25,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-de33ea57-8abb-48df-a95a-10d16a5e4420",
+      "restaurantId": "rest-007",
+      "name": "ราเมง",
+      "category": "Add-On",
+      "price": 89,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-765d8c34-5e2f-4d5c-82f1-0860a20e86b0",
+      "restaurantId": "rest-007",
+      "name": "ราเมงน้ำ",
+      "category": "Drink",
+      "price": 99,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-398b5648-76e3-4c8d-9378-b0edaffe877f",
+      "restaurantId": "rest-007",
+      "name": "ใส่กล่องกลับบ้านเพิ่ม",
+      "category": "Other",
+      "price": 8,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-68c061c9-4cf0-4e62-94d4-379c8942443e",
+      "restaurantId": "rest-008",
+      "name": "ข้าวหมกไก่",
+      "category": "Main",
+      "price": 55,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-fe01f039-dd39-4071-85c3-a1656fd00522",
+      "restaurantId": "rest-008",
+      "name": "ข้าวไข่เจียว",
+      "category": "Main",
+      "price": 40,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-0b516a53-1f94-44a2-922b-c402d5bf6cbd",
+      "restaurantId": "rest-008",
+      "name": "ข้าวกระเพราไก่",
+      "category": "Main",
+      "price": 49,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-81fed7f9-1e59-4304-b631-5adeb41326b1",
+      "restaurantId": "rest-008",
+      "name": "ข้าวไก่กระเทียม",
+      "category": "Main",
+      "price": 49,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-c9801438-e6cc-47af-9504-e0b2ba92b881",
+      "restaurantId": "rest-008",
+      "name": "ข้าวไก่คั่วพริกเกลือ",
+      "category": "Main",
+      "price": 55,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-d4d46ff8-72f7-462a-82b0-795315886034",
+      "restaurantId": "rest-008",
+      "name": "ข้าวผัดไก่",
+      "category": "Main",
+      "price": 55,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-41763094-1039-4b43-bf63-a6c98daa7d5e",
+      "restaurantId": "rest-008",
+      "name": "ข้าวผัดผงกะหรี่",
+      "category": "Main",
+      "price": 55,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-289d09a6-06c2-4b88-bfdc-df6f30bfeb22",
+      "restaurantId": "rest-008",
+      "name": "ผัดซี้อิ้ว",
+      "category": "Add-On",
+      "price": 55,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-fa3de6c0-31a5-448c-aaf2-ebb8a540521c",
+      "restaurantId": "rest-008",
+      "name": "ราดหน้า",
+      "category": "Add-On",
+      "price": 55,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-ecb3c450-3736-4890-bfbb-e2047da84fc4",
+      "restaurantId": "rest-008",
+      "name": "สปาเก็ตตี้",
+      "category": "Add-On",
+      "price": 55,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-410d70a0-8243-41fc-8e4d-be2bf2e3f083",
+      "restaurantId": "rest-008",
+      "name": "ก๋วยเตี๋ยวคั่วไก่",
+      "category": "Main",
+      "price": 55,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-5b6962f9-d4eb-4bf0-bab1-4c1b51e6fd84",
+      "restaurantId": "rest-008",
+      "name": "สุกี้ไก่",
+      "category": "Add-On",
+      "price": 55,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-591b1cf3-f3df-4984-89f5-6f8195460b7a",
+      "restaurantId": "rest-008",
+      "name": "ผัดไทไก่",
+      "category": "Add-On",
+      "price": 69,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-5d763399-fa3a-4561-bb17-029842e1ba6a",
+      "restaurantId": "rest-008",
+      "name": "ข้าวซอยไก่",
+      "category": "Main",
+      "price": 59,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-09e36c71-5bd4-4aa4-bf3a-a08d1abfb3d5",
+      "restaurantId": "rest-008",
+      "name": "ข้าวซอยเนื้อ",
+      "category": "Main",
+      "price": 79,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-d1cb3d63-4eaa-4353-a584-48c9f603dc1f",
+      "restaurantId": "rest-008",
+      "name": "ไข่ดาว",
+      "category": "Add-On",
+      "price": 15,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-7bb84ba5-0f34-4001-8931-001041fd3a0d",
+      "restaurantId": "rest-008",
+      "name": "ไข่เจียว",
+      "category": "Add-On",
+      "price": 20,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-e22e29e3-6623-4b32-b210-730faec1bfd4",
+      "restaurantId": "rest-008",
+      "name": "ข้าวหมกเปล่า",
+      "category": "Main",
+      "price": 35,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-5a3a90cd-9dd6-4e59-a1e2-df18edd97fa5",
+      "restaurantId": "rest-008",
+      "name": "ข้าวเปล่า(ข้าวหอมมะลิ)",
+      "category": "Main",
+      "price": 15,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-46d129d1-ef04-4a61-aedc-ae294eb707b2",
+      "restaurantId": "rest-008",
+      "name": "เมนูอาหารชุด",
+      "category": "Add-On",
+      "price": 89,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-74141e81-f101-4158-9b9e-2fb93f4f9348",
+      "restaurantId": "rest-008",
+      "name": "Delivery",
+      "category": "Delivery",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-51999b16-2945-49b4-a934-a5d5fc2461a2",
+      "restaurantId": "rest-009",
+      "name": "ข้าวไข่เจียว + แกงเขียวหวาน",
+      "category": "Main",
+      "price": 70,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-40894c30-435d-49f4-b558-6eca33c72c03",
+      "restaurantId": "rest-009",
+      "name": "ข้าวไข่เจียว + แกงเลียง",
+      "category": "Main",
+      "price": 70,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-833e4a26-fdb3-4c35-834c-56fe4e656b46",
+      "restaurantId": "rest-009",
+      "name": "ข้าวไข่เจียว + แกงส้ม",
+      "category": "Main",
+      "price": 70,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-fd640e26-f115-43e0-9dcc-8a003f817738",
+      "restaurantId": "rest-009",
+      "name": "ข้าวไข่เจียว + แกงเห็ด",
+      "category": "Main",
+      "price": 70,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-83569c92-4ff7-467f-bc2f-bbea7cebbc82",
+      "restaurantId": "rest-009",
+      "name": "ข้าวไข่เจียว + แกงป่า",
+      "category": "Main",
+      "price": 70,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-95602de4-4854-463b-b6d4-d48b72be0787",
+      "restaurantId": "rest-009",
+      "name": "ข้าวไข่เจียว + ต้มข่าไก่",
+      "category": "Main",
+      "price": 70,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-3147a2e7-0b4a-4295-aa09-c44622cb4828",
+      "restaurantId": "rest-009",
+      "name": "ข้าวไข่เจียว + ต้มแซ่บ",
+      "category": "Main",
+      "price": 70,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-a4b28d74-9be8-459b-abbb-a680520709cf",
+      "restaurantId": "rest-009",
+      "name": "ข้าวไข่เจียว + ต้มยำ",
+      "category": "Main",
+      "price": 70,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-80f44171-5f53-4dc0-bb37-41c4754dcb6a",
+      "restaurantId": "rest-009",
+      "name": "เซ็ทข้าวไข่เจียว+ต้มจืดเต้าหู้หมูสับ",
+      "category": "Add-On",
+      "price": 70,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-7b83688f-c6a2-4b05-acf1-73482abcb9c6",
+      "restaurantId": "rest-009",
+      "name": "ข้าวไข่เจียวหมูสับ",
+      "category": "Main",
+      "price": 50,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-5e105979-16bd-40e5-9017-72e872b3c448",
+      "restaurantId": "rest-009",
+      "name": "ใส่กล่องกลับบ้านเพิ่ม",
+      "category": "Other",
+      "price": 7,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-404504bd-1ddf-45ee-922c-822968ffdc4f",
+      "restaurantId": "rest-009",
+      "name": "Delivery",
+      "category": "Delivery",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-782600e5-d53d-4fa6-8967-1dc478bbda48",
+      "restaurantId": "rest-010",
+      "name": "ก๋วยเตี๋ยวเป็ดตุ๋น",
+      "category": "Main",
+      "price": 65,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-a4d45525-8102-4f24-af4d-e0042dfb3341",
+      "restaurantId": "rest-010",
+      "name": "เกาเหลาเป็ด",
+      "category": "Add-On",
+      "price": 75,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-f74a43b3-20ea-4aa1-82eb-9f11520994b9",
+      "restaurantId": "rest-010",
+      "name": "ข้าวหน้าเป็ด",
+      "category": "Main",
+      "price": 65,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-3a07cb2d-309f-4037-b23f-844906c89b20",
+      "restaurantId": "rest-010",
+      "name": "ข้าวกระเพราเป็ด",
+      "category": "Main",
+      "price": 75,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-e5f911f3-50ba-4dd3-a34b-078e502273c9",
+      "restaurantId": "rest-010",
+      "name": "มาม่าผัด",
+      "category": "Add-On",
+      "price": 75,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-cf1207d4-f038-47cb-a242-2552728a0d93",
+      "restaurantId": "rest-010",
+      "name": "เป็ดพะโล้",
+      "category": "Add-On",
+      "price": 90,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-00cb0412-684b-4688-9806-6ff14d805638",
+      "restaurantId": "rest-010",
+      "name": "ข้าวเปล่า",
+      "category": "Add-On",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-62e2a7e0-b7ac-4656-8fd8-f88b7cc92c73",
+      "restaurantId": "rest-010",
+      "name": "พิเศษเพิ่ม",
+      "category": "Add-On",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-4b9e8ac5-1ed5-48e9-9999-cf2eb8be6be1",
+      "restaurantId": "rest-010",
+      "name": "ใส่กล่องกลับบ้านเพิ่ม",
+      "category": "Other",
+      "price": 7,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-7b01443d-0279-4873-97af-7f22be57a313",
+      "restaurantId": "rest-010",
+      "name": "บะหมี่เป็ด",
+      "category": "Main",
+      "price": 70,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-5e52c12b-dab6-4bcd-8c1f-9b24c42ad351",
+      "restaurantId": "rest-010",
+      "name": "กระเพราไข่เยี่ยวม้า/กระเพราเป็ด",
+      "category": "Add-On",
+      "price": 100,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-a3d82fd2-2ab1-4533-863f-6e268335086d",
+      "restaurantId": "rest-010",
+      "name": "เครื่องใน",
+      "category": "Add-On",
+      "price": 100,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-2d3070c6-7d8c-4939-819f-5957cdc9a3fd",
+      "restaurantId": "rest-010",
+      "name": "ไข่ต้ม / ไข่ดาว",
+      "category": "Add-On",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-e4ba24d6-24d5-4508-9ad4-65a0bedd2d46",
+      "restaurantId": "rest-010",
+      "name": "Delivery",
+      "category": "Delivery",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-33732d3b-bd50-4c84-8a85-c87a860cd975",
+      "restaurantId": "rest-011",
+      "name": "กับข้าวตามสั่ง",
+      "category": "Add-On",
+      "price": 50,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-c2ae142a-5e6d-44ec-a280-2b36bb460152",
+      "restaurantId": "rest-011",
+      "name": "ต้มยำกุ้ง",
+      "category": "Add-On",
+      "price": 65,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-298fe7d1-3273-4a23-bc32-04e5fc24aa7f",
+      "restaurantId": "rest-011",
+      "name": "ใส่กล่องกลับบ้านเพิ่ม",
+      "category": "Other",
+      "price": 7,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-97aaa290-135f-4441-9276-52cf89421b0a",
+      "restaurantId": "rest-011",
+      "name": "Promotion A",
+      "category": "Add-On",
+      "price": 20,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-df3b1c02-383c-4894-8d8f-972e16acb006",
+      "restaurantId": "rest-011",
+      "name": "ข้าวผัดปลากระป๋อง",
+      "category": "Main",
+      "price": 45,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-7e58ce0b-2844-4910-ad39-fe345e867256",
+      "restaurantId": "rest-011",
+      "name": "ข้าวคั่วพริกเกลือหมูกรอบ / กุ้ง",
+      "category": "Main",
+      "price": 65,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-98546874-0eba-4d4c-ab1f-b85c790db2bc",
+      "restaurantId": "rest-011",
+      "name": "ข้าวตามสั่งอื่นๆ",
+      "category": "Main",
+      "price": 55,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-849946f0-75aa-4b92-8f70-c724c427b8fe",
+      "restaurantId": "rest-011",
+      "name": "เกี๊ยวซ่า",
+      "category": "Add-On",
+      "price": 55,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-34267302-5b9c-4ff1-9c75-d4c3e243c59b",
+      "restaurantId": "rest-011",
+      "name": "ข้าวไข่เจียว + แกงชุด",
+      "category": "Main",
+      "price": 89,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-1fd827cd-d993-4d8c-bf2b-d48df6716910",
+      "restaurantId": "rest-011",
+      "name": "เมนูอาหารชุด",
+      "category": "Add-On",
+      "price": 129,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-ed358d8e-dbb8-4d10-9f7a-1abf7bd832fc",
+      "restaurantId": "rest-011",
+      "name": "ข้าวเปล่า/ ไข่เจียว/ ไข่ดาว",
+      "category": "Main",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-2e050e88-70f1-4cbb-abec-b8814e290b1e",
+      "restaurantId": "rest-011",
+      "name": "ข้าวผัด",
+      "category": "Main",
+      "price": 40,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-27f97316-50a8-42d8-ada8-f39aa9d044d0",
+      "restaurantId": "rest-011",
+      "name": "เมนูโปรโมชั่น",
+      "category": "Add-On",
+      "price": 89,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-8a295ddc-ff8e-4ffd-ba5a-7722f3bf38bf",
+      "restaurantId": "rest-012",
+      "name": "น้ำเต้าหู้นมสด",
+      "category": "Drink",
+      "price": 30,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-615bb7af-cdd6-4068-bcf0-78698bbf88d9",
+      "restaurantId": "rest-012",
+      "name": "เฉาก๊วยน้ำลำไย",
+      "category": "Drink",
+      "price": 35,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-88aaa272-3dfb-491f-baf6-7d2cec1158e9",
+      "restaurantId": "rest-012",
+      "name": "ลอดช่อง",
+      "category": "Add-On",
+      "price": 35,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-5a86cafd-e812-4a44-b8ef-078406aa04e2",
+      "restaurantId": "rest-012",
+      "name": "น้ำแข็งใส",
+      "category": "Drink",
+      "price": 35,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-3bde3dd1-de19-4b73-b54a-36475d506766",
+      "restaurantId": "rest-012",
+      "name": "น้ำแข็งใสพิเศษ",
+      "category": "Drink",
+      "price": 50,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-7d3c1195-f715-4473-9bdd-6031a71779d1",
+      "restaurantId": "rest-012",
+      "name": "ซาลาเปา",
+      "category": "Add-On",
+      "price": 60,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-b108c9fd-cce5-4bdc-93f1-4eae93bf4e25",
+      "restaurantId": "rest-012",
+      "name": "รังนกในน้ำลำไย",
+      "category": "Drink",
+      "price": 99,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-a870c2a2-1d9a-431e-9a26-8b0ecab17608",
+      "restaurantId": "rest-012",
+      "name": "เพิ่มเครื่อง",
+      "category": "Add-On",
+      "price": 15,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-3a85ad5a-ed39-41c5-9e68-28d66cfbf048",
+      "restaurantId": "rest-012",
+      "name": "เพิ่มพิเศษ",
+      "category": "Add-On",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-abd7f572-131a-4ef0-9f9f-7fe6a140fbc1",
+      "restaurantId": "rest-012",
+      "name": "ใส่กล่องกลับบ้านเพิ่ม",
+      "category": "Other",
+      "price": 7,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-85fe2891-31d7-4c15-8bba-b8107db7180d",
+      "restaurantId": "rest-012",
+      "name": "ขนมหวาน",
+      "category": "Drink",
+      "price": 40,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-2b53e0e1-3a6d-4ba1-a704-8a6ad147cc78",
+      "restaurantId": "rest-012",
+      "name": "ขนมหวานอื่นๆ",
+      "category": "Drink",
+      "price": 52,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-3ceb4373-5194-4b06-8037-b829e60fbc2d",
+      "restaurantId": "rest-012",
+      "name": "Delivery",
+      "category": "Delivery",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-612e7f3d-8c56-4896-8b8e-b55223fe21a6",
+      "restaurantId": "rest-013",
+      "name": "มันฝรั่งทอด/ไก่คาราเกะ",
+      "category": "Add-On",
+      "price": 55,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-84022318-4834-4a10-b538-4e081a902997",
+      "restaurantId": "rest-013",
+      "name": "เกี๊ยวซ่า/เกี๊ยวฮังคู",
+      "category": "Add-On",
+      "price": 59,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-54d0b2b0-a124-4f2d-a8d9-bc601e8adc2f",
+      "restaurantId": "rest-013",
+      "name": "ยากิโซบะ",
+      "category": "Add-On",
+      "price": 65,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-213b7c93-6dd9-41ec-8890-6a1b120d4995",
+      "restaurantId": "rest-013",
+      "name": "ข้าวหน้าหมูซีอิ๊ว/ข้าวหน้าหมูกิมจิ",
+      "category": "Main",
+      "price": 69,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-bbdf8775-7a2c-4111-bf43-5dfe6398585d",
+      "restaurantId": "rest-013",
+      "name": "ข้าวหน้าปลาอะเมซิ่ง",
+      "category": "Main",
+      "price": 75,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-625c90d8-eead-4f88-b2dc-2ed8442d46ac",
+      "restaurantId": "rest-013",
+      "name": "ข้าวหน้าหมูตุ๋น",
+      "category": "Main",
+      "price": 75,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-74c5764d-cf84-41b7-b03a-a33bf05ec446",
+      "restaurantId": "rest-013",
+      "name": "ข้าวหน้าหมูซามูไร / ซาบะ",
+      "category": "Main",
+      "price": 80,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-6df84c80-0eab-4f39-81a3-1dc2b42aae9a",
+      "restaurantId": "rest-013",
+      "name": "สเต็กปลาซาบะ/ฟิชแอนด์ชิพ",
+      "category": "Add-On",
+      "price": 80,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-329e17b2-8959-4ec6-a843-a6cb01277adb",
+      "restaurantId": "rest-013",
+      "name": "สเต็กหมูเคเคน/สเต็กหมูกระเทียม",
+      "category": "Add-On",
+      "price": 80,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-72dd2f79-0e91-4c57-ad38-8f3b403b5f05",
+      "restaurantId": "rest-013",
+      "name": "ข้าวแกงกะหรี่ปลาทอด",
+      "category": "Main",
+      "price": 90,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-972129de-f768-4862-a8bf-8b2234ecbd02",
+      "restaurantId": "rest-013",
+      "name": "ข้าวแกงกะหรี่หมู",
+      "category": "Main",
+      "price": 100,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-02f2867f-dec2-40d8-b96e-cd463950e201",
+      "restaurantId": "rest-013",
+      "name": "ไข่ดาว",
+      "category": "Add-On",
+      "price": 12,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-3200f257-4a22-44bd-a1cb-6c824012ec92",
+      "restaurantId": "rest-013",
+      "name": "เพิ่มซอส",
+      "category": "Add-On",
+      "price": 15,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-e1c068eb-765c-4e3b-812a-6f112ebe7e7c",
+      "restaurantId": "rest-013",
+      "name": "ใส่กล่องกลับบ้านเพิ่ม",
+      "category": "Other",
+      "price": 7,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-268485b3-faa8-43ed-b15e-9b89c13b0c0a",
+      "restaurantId": "rest-013",
+      "name": "เมนูพิเศษ",
+      "category": "Add-On",
+      "price": 69,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-348a55e6-650f-496c-b0f6-facd07302a4b",
+      "restaurantId": "rest-013",
+      "name": "Delivery",
+      "category": "Delivery",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-ed915c7c-a5dc-47f7-89b2-d17e3af4076f",
+      "restaurantId": "rest-014",
+      "name": "ลูกชิิ้นหมู ไม้เล็ก 10 ไม้",
+      "category": "Add-On",
+      "price": 100,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-38b7feaa-0ee5-4282-8e26-0d81ab27e477",
+      "restaurantId": "rest-014",
+      "name": "ลูกชิ้นหมู ไม้ใหญ่ 5 ไม้",
+      "category": "Add-On",
+      "price": 100,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-a8206c50-3eaa-4001-9e7b-72aa2d6c0b02",
+      "restaurantId": "rest-014",
+      "name": "ลูกชิ้นเอ็นหมู ไม้เล็ก 10 ไม้",
+      "category": "Add-On",
+      "price": 100,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-f28805f3-006e-48c8-8798-1ed7949cccc5",
+      "restaurantId": "rest-014",
+      "name": "ลูกชิ้นเอ็นหมู ไม้ใหญ่ 5 ไม้",
+      "category": "Add-On",
+      "price": 100,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-817b4e86-5996-4cbe-819a-a89eea013a6c",
+      "restaurantId": "rest-014",
+      "name": "ไส้กรอกหมูรมควันหนังกรอบ 10 ไม้",
+      "category": "Add-On",
+      "price": 100,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-e6a0c542-a860-466c-b662-a038f718dfdd",
+      "restaurantId": "rest-014",
+      "name": "ลูกชิ้นหมูไม้เล็ก",
+      "category": "Add-On",
+      "price": 6,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-5794acf5-f5dd-4a2b-aabb-dbf86656a59a",
+      "restaurantId": "rest-014",
+      "name": "ไส้กรอกหมูรมควันหนังกรอบ",
+      "category": "Add-On",
+      "price": 6,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-a2835cfe-7ac3-4004-8be1-2ec61e080381",
+      "restaurantId": "rest-014",
+      "name": "ลูกชิ้นหมูไม้ใหญ่",
+      "category": "Add-On",
+      "price": 12,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-d0ad1a19-3b98-47ff-8bbf-98eaf529697d",
+      "restaurantId": "rest-014",
+      "name": "ลูกชิ้นเอ็นหมูไม้ใหญ่",
+      "category": "Add-On",
+      "price": 12,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-b10ddd48-9aec-4d63-bc8a-9904a81aa57c",
+      "restaurantId": "rest-014",
+      "name": "น้ำจิ้มสามรส",
+      "category": "Drink",
+      "price": 28,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-70809cd1-7395-4c5b-a329-413391f960f8",
+      "restaurantId": "rest-015",
+      "name": "น้ำดื่ม",
+      "category": "Drink",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-bdcbce88-6d5f-4f13-8ee1-25114a90214e",
+      "restaurantId": "rest-015",
+      "name": "น้ำอัดลม",
+      "category": "Drink",
+      "price": 25,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-fd3dc9c9-5516-45ea-8541-09da6a2a7c7e",
+      "restaurantId": "rest-015",
+      "name": "น้ำสมุนไพร",
+      "category": "Drink",
+      "price": 25,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-485c32ea-8de9-4af7-a32e-3810827f6120",
+      "restaurantId": "rest-015",
+      "name": "น้ำสมุนไพร(2)",
+      "category": "Drink",
+      "price": 35,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-476afe37-68e2-4f1b-98a1-ee4fa1a06e69",
+      "restaurantId": "rest-015",
+      "name": "น้ำสมุนไพร(1)",
+      "category": "Drink",
+      "price": 40,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-e4f9df3b-185d-414e-81f2-4b0f0d067b62",
+      "restaurantId": "rest-015",
+      "name": "น้ำผลไม้สด",
+      "category": "Drink",
+      "price": 40,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-48197da8-5726-4a0b-b066-e86527dd0186",
+      "restaurantId": "rest-015",
+      "name": "น้ำผลไม้สด(2)",
+      "category": "Drink",
+      "price": 50,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-cf2cf488-6df4-4a4a-8b62-0576bf3bc818",
+      "restaurantId": "rest-015",
+      "name": "น้ำผลไม้สด(1)",
+      "category": "Drink",
+      "price": 60,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-e69330b5-0930-45e2-b26b-594df62ae756",
+      "restaurantId": "rest-015",
+      "name": "ชาเย็น",
+      "category": "Drink",
+      "price": 45,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-98af88e8-ed64-4935-b365-47c228f1d3bd",
+      "restaurantId": "rest-015",
+      "name": "กาแฟ",
+      "category": "Drink",
+      "price": 30,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-b1364dba-bc3c-4017-bab8-9a147fc84dbc",
+      "restaurantId": "rest-015",
+      "name": "เมนูกาแฟ",
+      "category": "Drink",
+      "price": 45,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-7006b7fa-badb-4305-87c1-799321fdf79c",
+      "restaurantId": "rest-015",
+      "name": "น้ำผลไม้ปั่น",
+      "category": "Drink",
+      "price": 50,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-b35d688f-2d9c-42da-8970-eef8d8941fad",
+      "restaurantId": "rest-015",
+      "name": "น้ำผลไม้ปั่น(1)",
+      "category": "Drink",
+      "price": 60,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-4a3f8987-1782-4251-aaa8-55d383c38164",
+      "restaurantId": "rest-015",
+      "name": "น้ำผลไม้ปั่น(2)",
+      "category": "Drink",
+      "price": 65,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-a37bf7ec-637e-4b81-9de2-a4bb37562ac1",
+      "restaurantId": "rest-015",
+      "name": "เมนูโซดา",
+      "category": "Drink",
+      "price": 40,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-af8ac7bb-b787-4071-a721-74f065faf8e3",
+      "restaurantId": "rest-015",
+      "name": "น้ำแข็งเปล่า",
+      "category": "Drink",
+      "price": 5,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-69b9bf23-707d-4401-8e8e-eea3d8733387",
+      "restaurantId": "rest-015",
+      "name": "แก้วเปล่า",
+      "category": "Add-On",
+      "price": 3,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-e7634698-cb14-4da4-ad6f-acd30a372b2b",
+      "restaurantId": "rest-015",
+      "name": "เบียร์สิงห์สด",
+      "category": "Drink",
+      "price": 145,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-342eb98e-2ef8-4145-8833-06153d5c4940",
+      "restaurantId": "rest-015",
+      "name": "เบียร์อาซาฮี",
+      "category": "Drink",
+      "price": 160,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-7bc9a966-d4dd-4841-ae74-af98b6366f8c",
+      "restaurantId": "rest-015",
+      "name": "ใส่กล่องกลับบ้านเพิ่ม",
+      "category": "Other",
+      "price": 7,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-9e0497d8-dbf1-42d1-89bd-44a077648128",
+      "restaurantId": "rest-015",
+      "name": "Delivery",
+      "category": "Delivery",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-1c749cc4-0009-4c71-86d6-89533a765dde",
+      "restaurantId": "rest-016",
+      "name": "Dragon Boat",
+      "category": "Add-On",
+      "price": 99,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-8c659904-5828-4951-956d-efb032820fdf",
+      "restaurantId": "rest-016",
+      "name": "Dragon Boat (1)",
+      "category": "Add-On",
+      "price": 89,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-2cf9eb64-c8c7-4e1a-a136-97ffa4df24f8",
+      "restaurantId": "rest-016",
+      "name": "Dragon Boat (2)",
+      "category": "Add-On",
+      "price": 104,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-b487cafd-9c94-47c3-b348-0236109e3acc",
+      "restaurantId": "rest-016",
+      "name": "Dragon Boat (3)",
+      "category": "Add-On",
+      "price": 65,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-89abedcf-875a-4992-b952-bed626dfbe1d",
+      "restaurantId": "rest-016",
+      "name": "Dragon Boat (4)",
+      "category": "Add-On",
+      "price": 79,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-2d6eb3ea-0eab-4909-bc9c-19bb7472d64a",
+      "restaurantId": "rest-016",
+      "name": "Dragon Boat (5)",
+      "category": "Add-On",
+      "price": 120,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-0d41cd02-748d-4013-acb8-6e2e0ed16bb1",
+      "restaurantId": "rest-016",
+      "name": "เพิ่ม Topping",
+      "category": "Add-On",
+      "price": 5,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-f25d7f5b-51bd-4ad2-acd8-2fa6ecc7aa26",
+      "restaurantId": "rest-016",
+      "name": "Delivery",
+      "category": "Delivery",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-bf5a0001-14f7-4308-a8c6-63bbf5ce4113",
+      "restaurantId": "rest-017",
+      "name": "น้ำปั่น",
+      "category": "Drink",
+      "price": 65,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-894f62fb-784c-44b1-8502-e4e4f86bce07",
+      "restaurantId": "rest-017",
+      "name": "เมนูโซดา",
+      "category": "Drink",
+      "price": 55,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-0f784276-5efa-4714-a44f-081a6bbfbb3f",
+      "restaurantId": "rest-017",
+      "name": "น้ำอัดลม 22 ออนซ์",
+      "category": "Drink",
+      "price": 30,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-d283544a-ee84-4ae0-b630-5aea50fa7631",
+      "restaurantId": "rest-017",
+      "name": "น้ำผลไม้",
+      "category": "Drink",
+      "price": 25,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-6c190a28-208a-4e0e-a295-ddce9e43d412",
+      "restaurantId": "rest-017",
+      "name": "ชานม",
+      "category": "Drink",
+      "price": 45,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-57295b77-19b3-4899-b31b-1f0bf2e97d17",
+      "restaurantId": "rest-017",
+      "name": "ชาผลไม้",
+      "category": "Drink",
+      "price": 50,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-d71374b6-49e3-4f8d-8673-40930b3b0ec4",
+      "restaurantId": "rest-017",
+      "name": "น้ำแข็งเปล่า",
+      "category": "Drink",
+      "price": 3,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-1639fb07-730c-4a9f-aab9-aa8a2ca87682",
+      "restaurantId": "rest-017",
+      "name": "น้ำเปล่า",
+      "category": "Drink",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-d7896724-6e65-4173-8ace-6494c348d33c",
+      "restaurantId": "rest-017",
+      "name": "Promotion A",
+      "category": "Add-On",
+      "price": 100,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-966ac6e2-fed5-48e7-ab00-9abc3e777b45",
+      "restaurantId": "rest-017",
+      "name": "กาแฟเย็น",
+      "category": "Drink",
+      "price": 35,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-b4ed118c-200a-4974-a356-c3b8802bb4f2",
+      "restaurantId": "rest-017",
+      "name": "กาแฟร้อน",
+      "category": "Drink",
+      "price": 30,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-80f1664c-b894-4e65-8cdc-6bf8849ee610",
+      "restaurantId": "rest-017",
+      "name": "เบียร์",
+      "category": "Drink",
+      "price": 65,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-207f7abd-6611-46c2-bb3a-9210dcd43a40",
+      "restaurantId": "rest-017",
+      "name": "เพิ่มพิเศษ",
+      "category": "Add-On",
+      "price": 5,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-cf099467-a9bc-49fb-8e64-ea0ec3e1456b",
+      "restaurantId": "rest-017",
+      "name": "น้ำอัดลม",
+      "category": "Drink",
+      "price": 35,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-642b2a69-7257-4ffd-bad2-ec92b9973a18",
+      "restaurantId": "rest-017",
+      "name": "อาหารว่าง",
+      "category": "Add-On",
+      "price": 25,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-6d780b4b-a95a-4d6f-8f56-e50186634289",
+      "restaurantId": "rest-017",
+      "name": "น้ำอัดลม 16 ออนซ์",
+      "category": "Drink",
+      "price": 25,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-6e7b771e-fa63-44a4-88f8-28e1822e9e04",
+      "restaurantId": "rest-017",
+      "name": "Delivery",
+      "category": "Delivery",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-b0e69414-69c6-437b-84da-2c7ea1c55ae1",
+      "restaurantId": "rest-018",
+      "name": "ก๋วยเตี๋ยวลูกชิ้น",
+      "category": "Main",
+      "price": 60,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-5cd0303e-84b2-4499-85cf-62e5bee240c6",
+      "restaurantId": "rest-018",
+      "name": "ก๋วยเตี๋ยวเย็นตาโฟ",
+      "category": "Main",
+      "price": 65,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-eeb70186-469e-4e64-a01d-00ba29acda56",
+      "restaurantId": "rest-018",
+      "name": "ก๋วยเตี๋ยวแห้งต้มยำ",
+      "category": "Main",
+      "price": 65,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-ac4b6938-2592-4794-805b-16de56781fa6",
+      "restaurantId": "rest-018",
+      "name": "ก๋วยเตี๋ยวเส้นปลา",
+      "category": "Main",
+      "price": 70,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-ea7519e1-6f6b-4942-a866-7801ae3881c4",
+      "restaurantId": "rest-018",
+      "name": "เส้นปลาน้ำ/แห้ง/ต้มยำ",
+      "category": "Drink",
+      "price": 70,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-e07c1812-4ca2-4ac2-918c-13e1d2a6c019",
+      "restaurantId": "rest-018",
+      "name": "วุ้นเส้นต้มยำ",
+      "category": "Add-On",
+      "price": 65,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-9e32bf08-0669-4392-8ca3-69d6ab62d557",
+      "restaurantId": "rest-018",
+      "name": "ก๋วยจั๊บ",
+      "category": "Add-On",
+      "price": 65,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-94672a09-840b-4106-809d-1adc583778d2",
+      "restaurantId": "rest-018",
+      "name": "เกาเหลาเลือดหมู",
+      "category": "Add-On",
+      "price": 75,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-34ca1233-128c-4243-b345-77093fe79f42",
+      "restaurantId": "rest-018",
+      "name": "เกาเหลา + ข้าวเปล่า",
+      "category": "Add-On",
+      "price": 75,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-336a4801-f390-4306-82a5-d4f6bd541bfb",
+      "restaurantId": "rest-018",
+      "name": "เกี๊ยวทอด",
+      "category": "Add-On",
+      "price": 55,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-ae3d47de-fdd5-4f2c-b4a5-b0b68674660f",
+      "restaurantId": "rest-018",
+      "name": "เพิ่มพิเศษ",
+      "category": "Add-On",
+      "price": 15,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-0ee34497-bfc0-41d4-a656-86bcfcfbf546",
+      "restaurantId": "rest-018",
+      "name": "Delivery",
+      "category": "Delivery",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-bf918a50-e760-40d4-877c-c4baea43ad30",
+      "restaurantId": "rest-019",
+      "name": "ข้าวมันไก่",
+      "category": "Main",
+      "price": 55,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-560c8ff8-5e5c-413d-9aed-f6a45433f9dd",
+      "restaurantId": "rest-019",
+      "name": "ข้าวมันไก่ทอด",
+      "category": "Main",
+      "price": 60,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-96d32b2e-a4d3-4d1d-9534-b40f0f1d0742",
+      "restaurantId": "rest-019",
+      "name": "ข้าวมันไก่ทูอินวันธรรมดา",
+      "category": "Main",
+      "price": 75,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-0781f426-5d66-4994-98e9-c70a394ac6d3",
+      "restaurantId": "rest-019",
+      "name": "ข้าวยำไก่ทอด",
+      "category": "Main",
+      "price": 70,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-2d4fa6f1-aa03-49fa-af09-bbd2dc4bc6ca",
+      "restaurantId": "rest-019",
+      "name": "ไก่ต้มสับ",
+      "category": "Add-On",
+      "price": 115,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-5c8fa3a9-ee08-44ef-89cb-1f3addb0cdee",
+      "restaurantId": "rest-019",
+      "name": "ไก่ทอดสับ",
+      "category": "Add-On",
+      "price": 125,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-d9ce5161-f954-48cc-9b42-b41f314e0629",
+      "restaurantId": "rest-019",
+      "name": "ไก่สับ 2 อย่าง",
+      "category": "Add-On",
+      "price": 135,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-28e71ab8-f6bd-4e11-bb3b-f1e20b284e1a",
+      "restaurantId": "rest-019",
+      "name": "ไก่ต้ม",
+      "category": "Add-On",
+      "price": 45,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-4bafa6d9-5915-419d-aba8-56a6ee253f14",
+      "restaurantId": "rest-019",
+      "name": "ไก่ทอดชิ้น",
+      "category": "Add-On",
+      "price": 45,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-65ed31c6-346b-40f2-8115-a50aff3968c1",
+      "restaurantId": "rest-019",
+      "name": "ข้าวมันเปล่า",
+      "category": "Main",
+      "price": 15,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-61da03f3-26e4-4c89-989e-1da16ebffa38",
+      "restaurantId": "rest-019",
+      "name": "เพิ่มพิเศษ",
+      "category": "Add-On",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-1c4fd635-6dad-42c0-b70b-db1510cc763c",
+      "restaurantId": "rest-019",
+      "name": "ใส่กล่องกลับบ้านเพิ่ม",
+      "category": "Other",
+      "price": 7,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-29548fff-8448-4f44-ad26-e57468db12a0",
+      "restaurantId": "rest-019",
+      "name": "Delivery",
+      "category": "Delivery",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-5f36106b-8fc2-4e97-b922-74d3b396d652",
+      "restaurantId": "rest-020",
+      "name": "ชานมไต้หวัน",
+      "category": "Drink",
+      "price": 19,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-60bbba7d-024d-4fdf-b121-6f7d28198106",
+      "restaurantId": "rest-020",
+      "name": "ชาผลไม้",
+      "category": "Drink",
+      "price": 19,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-8b7ec3b9-c13e-42c6-9926-aeec468122da",
+      "restaurantId": "rest-020",
+      "name": "ชานม",
+      "category": "Drink",
+      "price": 24,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-61914db5-1cee-45e0-a0d3-8e08fdf3e86b",
+      "restaurantId": "rest-020",
+      "name": "เมนูโซดา",
+      "category": "Drink",
+      "price": 20,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-417f9e8c-31e4-4d2d-9bf7-db596f11577a",
+      "restaurantId": "rest-020",
+      "name": "น้ำสมุนไพร",
+      "category": "Drink",
+      "price": 22,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-ad996f53-f895-446e-b35e-194e0fe2a809",
+      "restaurantId": "rest-020",
+      "name": "เครื่องดื่ม",
+      "category": "Drink",
+      "price": 49,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-4f7519ee-2eb2-49a6-9e37-7bbde9f027c6",
+      "restaurantId": "rest-020",
+      "name": "อเมริกาโน่",
+      "category": "Drink",
+      "price": 35,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-3033e05d-62f9-4bd1-8f16-0130ff67e6eb",
+      "restaurantId": "rest-020",
+      "name": "เอสเปสโซ่ เย็น",
+      "category": "Drink",
+      "price": 40,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-e11ebaec-7061-4ffc-b33f-23aa6e7758d4",
+      "restaurantId": "rest-020",
+      "name": "คาปูชิโน่เย็น",
+      "category": "Drink",
+      "price": 45,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-9a00442b-db0a-41cd-8719-862c8d39335e",
+      "restaurantId": "rest-020",
+      "name": "มอคค่าเย็น",
+      "category": "Drink",
+      "price": 45,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-dcd30e74-72d8-44f1-9796-54030601117a",
+      "restaurantId": "rest-020",
+      "name": "ลาเต้เย็น",
+      "category": "Drink",
+      "price": 45,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-91dfe13c-e70b-4321-8bd8-ecb7d947423f",
+      "restaurantId": "rest-020",
+      "name": "สเลอร์ปี้ชาไทย",
+      "category": "Drink",
+      "price": 40,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-6b620bd0-559c-4c23-b587-afdc4263fa33",
+      "restaurantId": "rest-020",
+      "name": "น้ำพันซ์",
+      "category": "Drink",
+      "price": 30,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-dd1b875a-071d-4708-8bbf-11fc5f9c6bf9",
+      "restaurantId": "rest-020",
+      "name": "น้ำดื่ม",
+      "category": "Drink",
+      "price": 12,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-7afee2bb-f1cb-47e4-98a1-73e86941bef6",
+      "restaurantId": "rest-020",
+      "name": "น้ำแข็งเปล่า",
+      "category": "Drink",
+      "price": 3,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-d9546181-803e-4dce-9fb0-2a65d017c5b5",
+      "restaurantId": "rest-020",
+      "name": "วาฟเฟิล",
+      "category": "Add-On",
+      "price": 40,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-3fcb68a7-1f61-4697-8820-c7d360b47e32",
+      "restaurantId": "rest-020",
+      "name": "ไอศครีม",
+      "category": "Add-On",
+      "price": 20,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-0e9dc343-9623-4291-95f5-cf54baee1175",
+      "restaurantId": "rest-020",
+      "name": "เพิ่ม Topping",
+      "category": "Add-On",
+      "price": 5,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-1ff99fd1-0fbe-4a1a-a5c6-3e2790943e15",
+      "restaurantId": "rest-020",
+      "name": "เพิ่ม Topping 10",
+      "category": "Add-On",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-8b9d6991-d410-4b0d-b68b-0c2b1ca28028",
+      "restaurantId": "rest-020",
+      "name": "Topping A",
+      "category": "Add-On",
+      "price": 15,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-67c66dfc-acbc-45d5-a35c-5d8fd5453c7a",
+      "restaurantId": "rest-020",
+      "name": "Delivery",
+      "category": "Delivery",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-717f7ca7-d75b-4c7e-8e49-94d76216e07d",
+      "restaurantId": "rest-021",
+      "name": "ส้มตำไทย ปู ปลาร้า",
+      "category": "Add-On",
+      "price": 59,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-e67445e9-dbb3-46b2-8f82-2dfcdf0f8869",
+      "restaurantId": "rest-021",
+      "name": "ตำซั่ว /ตำหอยดอง",
+      "category": "Add-On",
+      "price": 59,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-5942d222-9cb6-46e4-bcce-4075067e4273",
+      "restaurantId": "rest-021",
+      "name": "ตำแตง",
+      "category": "Add-On",
+      "price": 59,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-d559fea4-a2e8-4adb-9854-a29d52beb727",
+      "restaurantId": "rest-021",
+      "name": "ตำไทย/ตำข้าวโพด",
+      "category": "Add-On",
+      "price": 69,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-a0462bc3-4179-48ab-a63f-19042a6bb6d8",
+      "restaurantId": "rest-021",
+      "name": "ตำกุ้งสด",
+      "category": "Add-On",
+      "price": 89,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-19608532-38c8-4b6e-b066-9b3b1c5ab4f6",
+      "restaurantId": "rest-021",
+      "name": "ตำปูม้า",
+      "category": "Add-On",
+      "price": 120,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-376b40fa-97ea-40ae-8eb8-a813a6911b95",
+      "restaurantId": "rest-021",
+      "name": "ส้มตำป่า",
+      "category": "Add-On",
+      "price": 69,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-9d1c3ac0-adb4-4d50-a68c-a962948758a5",
+      "restaurantId": "rest-021",
+      "name": "น้ำตกหมู ลาบหมู",
+      "category": "Drink",
+      "price": 79,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-954db263-da8c-4e10-b5a4-3860f5f4943f",
+      "restaurantId": "rest-021",
+      "name": "ลาบเนื้อ",
+      "category": "Add-On",
+      "price": 100,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-c1129a13-de79-436d-8c84-51258b2cbe2b",
+      "restaurantId": "rest-021",
+      "name": "คอหมูย่าง",
+      "category": "Add-On",
+      "price": 79,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-d9ee28a9-2a6e-4c3e-bded-c7831d4edcb6",
+      "restaurantId": "rest-021",
+      "name": "ซุปหน่อไม้",
+      "category": "Add-On",
+      "price": 59,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-c1b10a7b-177a-4d7e-adc2-18e771002456",
+      "restaurantId": "rest-021",
+      "name": "ยำต่างๆ",
+      "category": "Add-On",
+      "price": 59,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-fc5ddc77-ac1e-4d4b-a699-59b7900449f1",
+      "restaurantId": "rest-021",
+      "name": "ยำหมูยอ",
+      "category": "Add-On",
+      "price": 79,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-72d81d05-4b4c-46e0-9119-440c1d0033b0",
+      "restaurantId": "rest-021",
+      "name": "ยำรวมมิตรทะเล",
+      "category": "Add-On",
+      "price": 120,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-61dc56e3-fb3f-4638-adc5-cefe5747ad53",
+      "restaurantId": "rest-021",
+      "name": "ยำสามกรอบ",
+      "category": "Add-On",
+      "price": 79,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-55e53620-3299-4ae3-aa86-3a8677299f29",
+      "restaurantId": "rest-021",
+      "name": "ลูกชิ้นไม้ละ",
+      "category": "Add-On",
+      "price": 12,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-f1295eb0-6645-4637-be1d-b70ec4a40f4d",
+      "restaurantId": "rest-021",
+      "name": "ขนมจีน/ข้าวเหนียว",
+      "category": "Drink",
+      "price": 12,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-0555df4e-bab2-447a-9575-bebd5e9ba006",
+      "restaurantId": "rest-021",
+      "name": "ไก่ย่าง",
+      "category": "Add-On",
+      "price": 12,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-f9622c97-0fa6-4ab3-998a-2c34b881877c",
+      "restaurantId": "rest-021",
+      "name": "Delivery",
+      "category": "Delivery",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-a5c533fa-967b-41bd-a508-1cea9c87f9ce",
+      "restaurantId": "rest-022",
+      "name": "ไก่คาราเกะ",
+      "category": "Add-On",
+      "price": 45,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-64731d86-3d4d-488c-91f1-b6c0a9eada25",
+      "restaurantId": "rest-022",
+      "name": "ไก่คาราเกะ M",
+      "category": "Add-On",
+      "price": 65,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-048a201d-13ad-42bd-b5ab-4059104d8875",
+      "restaurantId": "rest-022",
+      "name": "ไก่คาราเกะ L",
+      "category": "Add-On",
+      "price": 85,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-6a422f3a-88a8-4f4f-ab28-8e1766fab6bd",
+      "restaurantId": "rest-022",
+      "name": "ข้าวไก่คาราเกะ",
+      "category": "Main",
+      "price": 55,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-16dc545b-a540-42ba-be14-1ec2d457a7fd",
+      "restaurantId": "rest-022",
+      "name": "มาม่าไก่แซ่บ",
+      "category": "Add-On",
+      "price": 55,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-16cd8ba0-37e0-4128-bfdd-b0a17604e5f1",
+      "restaurantId": "rest-022",
+      "name": "ไก่คาราเกะ ยำแซ่บ",
+      "category": "Add-On",
+      "price": 50,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-225dee16-a537-41a4-8485-ba6afbd43fde",
+      "restaurantId": "rest-022",
+      "name": "ชุดไก่คาราเกะราดซอส",
+      "category": "Add-On",
+      "price": 60,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-2bffcb47-e839-4508-80f1-792f8159214e",
+      "restaurantId": "rest-022",
+      "name": "ใส่กล่องกลับบ้านเพิ่ม",
+      "category": "Other",
+      "price": 7,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-014c03e7-1822-485f-a437-83cb310c8727",
+      "restaurantId": "rest-022",
+      "name": "Delivery",
+      "category": "Delivery",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-d3c51f23-3aee-48fe-922d-762cceab6a49",
+      "restaurantId": "rest-023",
+      "name": "น้ำดื่ม อควาฟิน่า",
+      "category": "Drink",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-8260e0c5-84b3-405d-90fb-b3317e51d3ab",
+      "restaurantId": "rest-023",
+      "name": "เป๊ปซี่ (16 Oz.)",
+      "category": "Drink",
+      "price": 25,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-9c447822-0404-4314-bde4-fa401a4631c9",
+      "restaurantId": "rest-023",
+      "name": "เป๊ปซี่ (22 Oz.)",
+      "category": "Drink",
+      "price": 30,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-93941e74-c074-4029-93b1-117bd068d38b",
+      "restaurantId": "rest-023",
+      "name": "เป๊ปซี่ ไม่มีน้ำตาล (16 Oz.)",
+      "category": "Drink",
+      "price": 25,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-671c7d85-e4ad-412c-88b3-5f5fb963aab7",
+      "restaurantId": "rest-023",
+      "name": "เป๊ปซี่ ไม่มีน้ำตาล (22 Oz.)",
+      "category": "Drink",
+      "price": 30,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-9091d986-03fd-4c27-a98f-750ca9ebf028",
+      "restaurantId": "rest-023",
+      "name": "มิรินด้า รสส้ม (16 Oz.)",
+      "category": "Drink",
+      "price": 25,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-ec7c60ed-daed-4a66-bfbd-acdd5fd3089c",
+      "restaurantId": "rest-023",
+      "name": "มิรินด้า รสส้ม (22 Oz.)",
+      "category": "Drink",
+      "price": 30,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-fe8e0848-6a3f-4452-b99e-dda3c584eb25",
+      "restaurantId": "rest-023",
+      "name": "มิรินด้า รสสตรอว์เบอร์รี่ (16 Oz.)",
+      "category": "Drink",
+      "price": 25,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-21ac4d5b-d717-49a4-9b42-04538cd6666e",
+      "restaurantId": "rest-023",
+      "name": "มิรินด้า รสสตรอว์เบอร์รี่ (22 Oz.)",
+      "category": "Drink",
+      "price": 30,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-7953e3fc-abee-4029-88a6-b64912675edf",
+      "restaurantId": "rest-023",
+      "name": "เซเว่นอัพ (16 Oz.)",
+      "category": "Drink",
+      "price": 25,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-7cba4c95-0415-4139-a5e0-8675e7e549de",
+      "restaurantId": "rest-023",
+      "name": "เซเว่นอัพ (22 Oz.)",
+      "category": "Drink",
+      "price": 30,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-51646fa5-045b-4622-9ca5-0a1794ced5a7",
+      "restaurantId": "rest-023",
+      "name": "ลิปตันชามะนาว (16 Oz.)",
+      "category": "Drink",
+      "price": 25,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-12308e6d-1c74-4d17-839d-83c6fb31202a",
+      "restaurantId": "rest-023",
+      "name": "ลิปตันชามะนาว (22 Oz.)",
+      "category": "Drink",
+      "price": 30,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-8ebfb9b5-7ee8-4e06-b0f2-357949ece373",
+      "restaurantId": "rest-023",
+      "name": "น้ำฝรั่ง (16 Oz.)",
+      "category": "Drink",
+      "price": 25,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-0a36de4c-b7ab-4cd0-8e24-3b36aa42e1a4",
+      "restaurantId": "rest-023",
+      "name": "น้ำฝรั่ง (22 Oz.)",
+      "category": "Drink",
+      "price": 30,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-9086b6be-0a8b-43bd-8bd5-1e613e0811f9",
+      "restaurantId": "rest-023",
+      "name": "น้ำอัญชันมะนาว (16 Oz.)",
+      "category": "Drink",
+      "price": 25,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-0425a955-14ca-4c2e-8f9c-1e20482f62c6",
+      "restaurantId": "rest-023",
+      "name": "น้ำอัญชันมะนาว (22 Oz.)",
+      "category": "Drink",
+      "price": 30,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-16c40297-0866-4172-abfb-a7009699900e",
+      "restaurantId": "rest-023",
+      "name": "น้ำเก๊กฮวย (16 Oz.)",
+      "category": "Drink",
+      "price": 25,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-42b1a96f-64a8-40d1-9275-52f316f4f9b0",
+      "restaurantId": "rest-023",
+      "name": "น้ำเก๊กฮวย (22 Oz.)",
+      "category": "Drink",
+      "price": 30,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-cfde26d6-71ac-427f-8aef-aa02aa3b2c06",
+      "restaurantId": "rest-023",
+      "name": "น้ำชาเขียว (16 Oz.)",
+      "category": "Drink",
+      "price": 25,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-c75e0a33-d3da-447a-99c2-61280ed5f7f1",
+      "restaurantId": "rest-023",
+      "name": "น้ำชาเขียว (22 Oz.)",
+      "category": "Drink",
+      "price": 30,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-ce5ae37a-a30d-4e77-862f-4420d3546964",
+      "restaurantId": "rest-023",
+      "name": "ชานมเย็น (16 Oz.)",
+      "category": "Drink",
+      "price": 40,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-69b69ee6-c4e6-4108-aace-b822c9bc832b",
+      "restaurantId": "rest-023",
+      "name": "ชานมเย็น (22 Oz.)",
+      "category": "Drink",
+      "price": 45,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-3b59099c-d283-400b-9e23-9b8d699a8a4c",
+      "restaurantId": "rest-023",
+      "name": "นมชมพู (16 Oz.)",
+      "category": "Drink",
+      "price": 40,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-e22a6d5e-7b38-483d-876f-1eff0a678177",
+      "restaurantId": "rest-023",
+      "name": "นมชมพู (22 Oz.)",
+      "category": "Drink",
+      "price": 45,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-e7e70b1e-bf59-47b6-b9f4-a1b361c12838",
+      "restaurantId": "rest-023",
+      "name": "Pepsi can 245ml",
+      "category": "Drink",
+      "price": 25,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-d91a1670-5745-4791-9b59-2a42b6df4c73",
+      "restaurantId": "rest-023",
+      "name": "Pepsi Max can 245ml",
+      "category": "Drink",
+      "price": 25,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-de349c73-3483-4e21-9618-840d05e4940e",
+      "restaurantId": "rest-023",
+      "name": "7 Up Zero sugar",
+      "category": "Drink",
+      "price": 25,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-ec04f50f-854b-4f3c-b602-7133b31e42bc",
+      "restaurantId": "rest-023",
+      "name": "ที พลัส ชาอู่หลง สูตรกลมกล่อม 500ml",
+      "category": "Drink",
+      "price": 30,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-27efea56-a46d-49b7-b740-f14c5352ff8d",
+      "restaurantId": "rest-023",
+      "name": "ที พลัส ชาอู่หลง ฮันนี่เลม่อน 500ml",
+      "category": "Drink",
+      "price": 30,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-81cce099-a459-4dfc-bbce-dabd29f51c82",
+      "restaurantId": "rest-023",
+      "name": "ที พลัส ชาเขียวอู่หลง สูตรไม่ม่น้ำตาล 500ml",
+      "category": "Drink",
+      "price": 30,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-a9d75875-364b-46e6-af48-a4927ec39651",
+      "restaurantId": "rest-023",
+      "name": "สปอนเซอร์",
+      "category": "Drink",
+      "price": 20,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-c1e99517-eb36-4581-ae9e-e297108f96d6",
+      "restaurantId": "rest-023",
+      "name": "โซดาสิงห์",
+      "category": "Drink",
+      "price": 20,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-c05362ca-dd4d-4d0c-9b19-6be5efbac05f",
+      "restaurantId": "rest-023",
+      "name": "ไฮเนเก้น 0% Alcohol",
+      "category": "Add-On",
+      "price": 60,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-925c062b-7138-4900-a1ba-0f71816143e8",
+      "restaurantId": "rest-023",
+      "name": "Bundaberg Root Beer 375ml",
+      "category": "Drink",
+      "price": 85,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-abfc1f7a-33c0-4825-97d9-2ab706187d82",
+      "restaurantId": "rest-023",
+      "name": "Bundaberg Ginger Beer 375ml",
+      "category": "Drink",
+      "price": 85,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-88459185-1be6-4b1b-b085-467348d2c419",
+      "restaurantId": "rest-023",
+      "name": "ORANGINA",
+      "category": "Drink",
+      "price": 90,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-b662f647-9622-45e7-b7d5-3368d92c1bec",
+      "restaurantId": "rest-023",
+      "name": "เบียร์ช้าง 320ml",
+      "category": "Drink",
+      "price": 60,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-b8957e2f-2afb-43f6-902d-14e962fa6e8b",
+      "restaurantId": "rest-023",
+      "name": "เบียร์สิงห์ 320ml",
+      "category": "Drink",
+      "price": 70,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-5944ed89-0292-4723-8d91-6c462380e4b5",
+      "restaurantId": "rest-023",
+      "name": "เบียร์ไฮเนเก้น",
+      "category": "Drink",
+      "price": 85,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-a3787c94-5de0-4d51-bcc0-292e028750b1",
+      "restaurantId": "rest-023",
+      "name": "น้ำมะพร้าว",
+      "category": "Drink",
+      "price": 50,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-2376070b-d038-4e99-a955-3a32594a996a",
+      "restaurantId": "rest-023",
+      "name": "น้ำส้ม",
+      "category": "Drink",
+      "price": 55,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-66f29234-c3ad-49d7-9cc5-a6eb0e83327e",
+      "restaurantId": "rest-023",
+      "name": "Singha Lemon Soda",
+      "category": "Add-On",
+      "price": 25,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-93ce7b88-daac-4a4c-a79d-c63d5ffe0c05",
+      "restaurantId": "rest-023",
+      "name": "Singha Red Lemon Soda",
+      "category": "Add-On",
+      "price": 25,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-ece9af82-7f1d-4273-8698-17a0ce81d743",
+      "restaurantId": "rest-023",
+      "name": "Singha Plum Lemon Soda",
+      "category": "Add-On",
+      "price": 25,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-b39bd5ff-2a7b-4567-ab91-1e0fb3c41487",
+      "restaurantId": "rest-023",
+      "name": "ใส่กล่องกลับบ้านเพิ่ม",
+      "category": "Other",
+      "price": 7,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    },
+    {
+      "id": "menu-84d852de-1f4b-4154-822d-e7451ec26568",
+      "restaurantId": "rest-023",
+      "name": "Delivery",
+      "category": "Delivery",
+      "price": 10,
+      "createdAt": "2026-03-31T14:54:04.194Z"
+    }
+  ],
   "standardDishes": [],
   "menuMappings": [],
   "uploads": [],

@@ -24,6 +24,7 @@ export interface MockMenuItem {
   restaurantId: string;
   name: string;
   category: string;
+  price?: number;
   createdAt: string;
 }
 
