@@ -100,32 +100,37 @@ export default function SellTransactionsPage() {
 
   const columns: ColumnDef<SellTransaction, unknown>[] = [
     { accessorKey: "transactionId", header: t.sellTransactions.transactionId },
-    { accessorKey: "dateTime", header: t.sellTransactions.dateTime },
-    { accessorKey: "shopNumber", header: t.sellTransactions.shopNumber },
+    { accessorKey: "date", header: "DATE" },
+    { accessorKey: "time", header: "TIME" },
+    { accessorKey: "sysBatch", header: "SYS BATCH" },
+    { accessorKey: "shopNumber", header: "SHOP ID" },
+    { accessorKey: "slipNo", header: "SLIP NO" },
+    { accessorKey: "shopName", header: "SHOP NAMES" },
+    { accessorKey: "itemCode", header: "ITEM CODE" },
+    { accessorKey: "itemName", header: "ITEM NAMES" },
     {
-      accessorKey: "totalAmount",
-      header: t.sellTransactions.totalAmount,
+      accessorKey: "pricing",
+      header: "PRICING",
       cell: ({ row }) => {
-        const amount = row.original.totalAmount;
-        return typeof amount === 'number' ? amount.toFixed(2) : "-";
+        const amount = parseFloat(row.getValue("pricing") || "0");
+        const formatted = new Intl.NumberFormat("en-US", {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        }).format(amount);
+        return <div className="font-medium">{formatted}</div>;
       },
     },
-    { accessorKey: "paymentMethod", header: t.sellTransactions.paymentMethod },
+    { accessorKey: "quantity", header: "QUANTITY" },
     {
-      accessorKey: "status",
-      header: t.sellTransactions.status,
+      accessorKey: "total",
+      header: "TOTALS",
       cell: ({ row }) => {
-        const currentStatus = row.original.status || "Unknown";
-        let statusStyles = "bg-slate-100 text-slate-800";
-        if (currentStatus.toLowerCase() === "completed") statusStyles = "bg-green-100 text-green-800";
-        if (currentStatus.toLowerCase() === "failed") statusStyles = "bg-red-100 text-red-800";
-        if (currentStatus.toLowerCase() === "pending") statusStyles = "bg-amber-100 text-amber-800";
-        
-        return (
-          <span className={`px-2 py-1 text-xs font-medium rounded ${statusStyles}`}>
-            {currentStatus}
-          </span>
-        );
+        const amount = parseFloat(row.getValue("total") || "0");
+        const formatted = new Intl.NumberFormat("en-US", {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2,
+        }).format(amount);
+        return <div className="font-medium">{formatted}</div>;
       },
     },
   ];
@@ -208,7 +213,7 @@ export default function SellTransactionsPage() {
       {/* Sample Format Modal */}
       {showFormatModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40" onClick={() => setShowFormatModal(false)}>
-          <div className="bg-white rounded-xl shadow-2xl w-full max-w-lg mx-4 overflow-hidden" onClick={(e) => e.stopPropagation()}>
+          <div className="bg-white rounded-xl shadow-2xl w-full max-w-4xl mx-4 overflow-hidden" onClick={(e) => e.stopPropagation()}>
             <div className="flex items-center justify-between px-5 py-4 border-b border-slate-100">
               <div className="flex items-center gap-2">
                 <svg className="h-5 w-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -234,23 +239,43 @@ export default function SellTransactionsPage() {
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-slate-100">
-                      <tr><td className="px-3 py-2 font-mono text-blue-600">Transaction ID</td><td className="px-3 py-2 text-slate-600">Unique ID (e.g. TX001)</td></tr>
-                      <tr><td className="px-3 py-2 font-mono text-blue-600">Date/Time</td><td className="px-3 py-2 text-slate-600">Timestamp</td></tr>
-                      <tr><td className="px-3 py-2 font-mono text-blue-600">Shop No.</td><td className="px-3 py-2 text-slate-600">Shop Number</td></tr>
-                      <tr><td className="px-3 py-2 font-mono text-blue-600">Total Amount</td><td className="px-3 py-2 text-slate-600">Amount</td></tr>
-                      <tr><td className="px-3 py-2 font-mono text-blue-600">Payment Method</td><td className="px-3 py-2 text-slate-600">E.g. Cash, Credit Card</td></tr>
-                      <tr><td className="px-3 py-2 font-mono text-blue-600">Status</td><td className="px-3 py-2 text-slate-600">Optional (Completed/Failed)</td></tr>
+                      <tr><td className="px-3 py-2 font-mono text-blue-600">SYS_BATCH</td><td className="px-3 py-2 text-slate-600">Batch ID</td></tr>
+                      <tr><td className="px-3 py-2 font-mono text-blue-600">SHOP_ID</td><td className="px-3 py-2 text-slate-600">Shop Number</td></tr>
+                      <tr><td className="px-3 py-2 font-mono text-blue-600">SLIP_NO</td><td className="px-3 py-2 text-slate-600">Slip Number</td></tr>
+                      <tr><td className="px-3 py-2 font-mono text-blue-600">SHOP_NAMES</td><td className="px-3 py-2 text-slate-600">Shop Name</td></tr>
+                      <tr><td className="px-3 py-2 font-mono text-blue-600">ITEM_CODE</td><td className="px-3 py-2 text-slate-600">Item Code</td></tr>
+                      <tr><td className="px-3 py-2 font-mono text-blue-600">ITEM_NAMES</td><td className="px-3 py-2 text-slate-600">Item Name</td></tr>
+                      <tr><td className="px-3 py-2 font-mono text-blue-600">PRICING</td><td className="px-3 py-2 text-slate-600">Price per unit</td></tr>
+                      <tr><td className="px-3 py-2 font-mono text-blue-600">QUANTITY</td><td className="px-3 py-2 text-slate-600">Quantity</td></tr>
+                      <tr><td className="px-3 py-2 font-mono text-blue-600">TOTALS</td><td className="px-3 py-2 text-slate-600">Total Price</td></tr>
+                      <tr><td className="px-3 py-2 font-mono text-blue-600">DATE</td><td className="px-3 py-2 text-slate-600">Date (M/D/YYYY)</td></tr>
+                      <tr><td className="px-3 py-2 font-mono text-blue-600">TIME</td><td className="px-3 py-2 text-slate-600">Time (HH:MM:SS)</td></tr>
                     </tbody>
                   </table>
                 </div>
               </div>
               <div>
-                <p className="text-sm text-slate-500 mb-2">Example content:</p>
-                <pre className="bg-slate-900 text-green-400 text-xs rounded-lg p-4 overflow-x-auto leading-relaxed font-mono">
-{`Transaction ID,Date/Time,Shop No.,Total Amount,Payment Method,Status
-TX001,2026-04-01 10:00:00,803201,150.50,Cash,Completed
-TX002,2026-04-01 10:05:30,803202,60.00,PromptPay,Completed`}
-                </pre>
+                <p className="text-sm text-slate-500 mb-2">Example format:</p>
+                <div className="overflow-x-auto rounded-lg">
+                  <table className="w-full text-xs text-left bg-slate-900 text-green-400 font-mono whitespace-nowrap">
+                    <thead>
+                      <tr className="border-b border-slate-700">
+                        <th className="p-2">SYS_BATCH</th><th className="p-2">SHOP_ID</th><th className="p-2">SLIP_NO</th>
+                        <th className="p-2">SHOP_NAMES</th><th className="p-2">ITEM_CODE</th><th className="p-2">ITEM_NAMES</th>
+                        <th className="p-2">PRICING</th><th className="p-2">QUANTITY</th><th className="p-2">TOTALS</th>
+                        <th className="p-2">DATE</th><th className="p-2">TIME</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="p-2">8594</td><td className="p-2">803201</td><td className="p-2">256753</td>
+                        <td className="p-2">ข้าวขาหมู</td><td className="p-2">V10032400011</td><td className="p-2">ข้าวราดไส้พะโล้</td>
+                        <td className="p-2">60</td><td className="p-2">2</td><td className="p-2">120</td>
+                        <td className="p-2">1/1/2025</td><td className="p-2">10:39:50</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
             <div className="px-5 py-3 bg-slate-50 border-t border-slate-100 flex justify-end">

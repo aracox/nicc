@@ -86,11 +86,17 @@ export interface MockInsightReport {
 
 export interface MockSellTransaction {
   id: string;
-  transactionId: string;
+  sysBatch: string;
   shopNumber: string;
-  totalAmount: number;
-  paymentMethod: string;
-  status: string;
+  slipNo: string;
+  shopName: string;
+  itemCode: string;
+  itemName: string;
+  pricing: number;
+  quantity: number;
+  total: number;
+  date: string;
+  time: string;
   dateTime: string;
   createdAt: string;
 }
