@@ -1,0 +1,5 @@
+Transaction ID,Date/Time,Shop No.,Total Amount,Payment Method,Status
+TX1001,2026-04-01 12:30:00,803201,250.00,PromptPay,Completed
+TX1002,2026-04-01 12:35:10,804101,120.00,Cash,Completed
+TX1003,2026-04-01 12:40:05,803203,80.50,Credit Card,Failed
+TX1004,2026-04-01 12:45:22,805500,45.00,TrueMoney,Completed

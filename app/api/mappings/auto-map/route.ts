@@ -5,38 +5,6 @@ import { randomUUID } from "crypto";
 
 export const dynamic = "force-dynamic";
 
-/**
- * Basic character/word intersection similarity
- */
-function calculateSimilarity(str1: string, str2: string): number {
-  const clean1 = str1.trim().replace(/\s+/g, "");
-  const clean2 = str2.trim().replace(/\s+/g, "");
-  
-  if (clean1 === clean2) return 1.0;
-  if (clean1.includes(clean2) || clean2.includes(clean1)) return 0.85;
-
-  // character bigram similarity
-  function getBigrams(str: string) {
-    const bigrams = new Set<string>();
-    for (let i = 0; i < str.length - 1; i++) {
-      bigrams.add(str.substring(i, i + 2));
-    }
-    return bigrams;
-  }
-
-  const bg1 = getBigrams(clean1);
-  const bg2 = getBigrams(clean2);
-  if (bg1.size === 0 || bg2.size === 0) return 0;
-  
-  let intersection = 0;
-  for (const bg of Array.from(bg1)) {
-    if (bg2.has(bg)) intersection++;
-  }
-  
-  const union = bg1.size + bg2.size - intersection;
-  return intersection / union;
-}
-
 export async function POST(_request: NextRequest) {
   try {
     const session = await getSession();
@@ -55,18 +23,13 @@ export async function POST(_request: NextRequest) {
     const distinctUnmappedNames = new Set(unmappedItems.map(m => m.name));
 
     for (const menuName of Array.from(distinctUnmappedNames)) {
-      let bestMatch: { id: string, name: string, score: number } | null = null;
+      const cleanMenuName = menuName.trim().toLowerCase();
       
-      for (const dish of data.standardDishes) {
-        const score = calculateSimilarity(menuName, dish.name);
-        if (score > 0.75) { // Stricter threshold for acceptable match
-          if (!bestMatch || score > bestMatch.score) {
-            bestMatch = { id: dish.id, name: dish.name, score };
-          }
-        }
-      }
+      const exactMatchDish = data.standardDishes.find(
+        (dish) => dish.name.trim().toLowerCase() === cleanMenuName
+      );
 
-      if (bestMatch) {
+      if (exactMatchDish) {
          // Auto-map all unmapped items that share this name
          const matchingItems = unmappedItems.filter(m => m.name === menuName);
          for (const item of matchingItems) {
@@ -74,7 +37,7 @@ export async function POST(_request: NextRequest) {
              id: randomUUID(),
              restaurantId: item.restaurantId,
              menuItemId: item.id,
-             standardDishId: bestMatch.id,
+             standardDishId: exactMatchDish.id,
              portionMultiplier: 1,
              createdAt: new Date().toISOString(),
              menuItem: {
@@ -85,8 +48,8 @@ export async function POST(_request: NextRequest) {
                createdAt: item.createdAt
              },
              standardDish: {
-               id: bestMatch.id,
-               name: bestMatch.name,
+               id: exactMatchDish.id,
+               name: exactMatchDish.name,
                cuisineType: "Thai",
                createdAt: new Date().toISOString()
              }

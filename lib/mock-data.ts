@@ -15,6 +15,7 @@ export interface MockRestaurant {
   name: string;
   shopNumber: string;
   customerNo: string;
+  actFlag?: string;
   status: "ONBOARDED" | "PENDING" | "INACTIVE";
   createdAt: string;
 }
@@ -25,6 +26,9 @@ export interface MockMenuItem {
   name: string;
   category: string;
   price?: number;
+  itemCode?: string;
+  itemButton?: string;
+  actFlag?: string;
   createdAt: string;
 }
 
@@ -80,6 +84,17 @@ export interface MockInsightReport {
   restaurant: { id: string; name: string };
 }
 
+export interface MockSellTransaction {
+  id: string;
+  transactionId: string;
+  shopNumber: string;
+  totalAmount: number;
+  paymentMethod: string;
+  status: string;
+  dateTime: string;
+  createdAt: string;
+}
+
 export interface MockData {
   foodCourts: MockFoodCourt[];
   restaurants: MockRestaurant[];
@@ -88,6 +103,7 @@ export interface MockData {
   menuMappings: MockMapping[];
   uploads: MockUpload[];
   insightReports: MockInsightReport[];
+  sellTransactions: MockSellTransaction[];
 }
 
 // ── Store Helper ─────────────────────────────
@@ -106,7 +122,9 @@ export const getMockData = (): MockData => {
   // In dev, always read from disk to allow manual edits and process sync
   if (process.env.NODE_ENV !== "production" || !globalForMock.mockData) {
     if (fs.existsSync(JSON_PATH)) {
-      globalForMock.mockData = JSON.parse(fs.readFileSync(JSON_PATH, "utf8"));
+      const data = JSON.parse(fs.readFileSync(JSON_PATH, "utf8"));
+      if (!data.sellTransactions) data.sellTransactions = [];
+      globalForMock.mockData = data;
     } else {
       // Fallback/Initial state
       globalForMock.mockData = {
@@ -117,6 +135,7 @@ export const getMockData = (): MockData => {
         menuMappings: [],
         uploads: [],
         insightReports: [],
+        sellTransactions: [],
       };
     }
   }
@@ -138,4 +157,5 @@ export const standardDishes = getMockData().standardDishes;
 export const menuMappings = getMockData().menuMappings;
 export const uploads = getMockData().uploads;
 export const insightReports = getMockData().insightReports;
+export const sellTransactions = getMockData().sellTransactions;
 export const unmappedMenuItems: any[] = [];

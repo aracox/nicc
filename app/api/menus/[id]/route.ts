@@ -39,3 +39,39 @@ export async function DELETE(
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }
+
+export async function PATCH(
+  request: NextRequest,
+  { params }: { params: Promise<{ id: string }> }
+) {
+  try {
+    const session = await getSession();
+    if (session?.user?.role !== "ADMIN") {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+
+    const { id } = await params;
+    const body = await request.json();
+    const data = getMockData();
+
+    const item = data.menuItems.find((m) => m.id === id);
+    if (!item) {
+      return NextResponse.json({ error: "Menu item not found" }, { status: 404 });
+    }
+
+    if (body.category) {
+      item.category = body.category;
+    }
+    
+    // Can expand to name and price if needed later
+    if (body.name) item.name = body.name;
+    if (body.price !== undefined) item.price = body.price;
+
+    saveMockData(data);
+    return NextResponse.json({ success: true, item });
+  } catch (error) {
+    console.error("PATCH /api/menus/[id] error:", error);
+    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+  }
+}
+

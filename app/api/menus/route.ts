@@ -10,9 +10,14 @@ export async function GET(request: NextRequest) {
     const shopId = searchParams.get("shopId");
     const minPrice = searchParams.get("minPrice");
     const maxPrice = searchParams.get("maxPrice");
+    const category = searchParams.get("category");
 
     const data = getMockData();
     let filtered = [...data.menuItems];
+
+    if (category) {
+      filtered = filtered.filter((m) => m.category === category);
+    }
 
     if (q) {
       const lower = q.toLowerCase();

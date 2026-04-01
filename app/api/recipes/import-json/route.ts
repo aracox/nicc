@@ -43,7 +43,7 @@ export async function POST(request: NextRequest) {
       const newDish: MockStandardDish = {
         id: newDishId,
         name: parsedName,
-        cuisineType: item.category ? item.category.trim() : "Thai",
+        cuisineType: "Thai",
         createdAt: new Date().toISOString(),
         _count: { ingredients: item.ingredients.length },
         ingredients: [],
@@ -59,21 +59,6 @@ export async function POST(request: NextRequest) {
 
         if (rawQty && !isNaN(parseFloat(rawQty))) {
           qty = parseFloat(rawQty);
-        } else {
-          // Extract from the name string e.g. "หมูบด 200กรัม" -> "หมูบด", 200, "กรัม"
-          const match = ingredientName.match(/^(.*?)\s*(\d+(?:\.\d+)?|\d+\/\d+)\s*(.*?)$/);
-          if (match && match[1].trim().length > 0) {
-            ingredientName = match[1].trim();
-            const numStr = match[2];
-            if (numStr.includes('/')) {
-              const [num, den] = numStr.split('/');
-              qty = parseFloat(num) / parseFloat(den);
-            } else {
-              qty = parseFloat(numStr);
-            }
-            unit = match[3] ? match[3].trim() : "unit";
-            if (unit === "") unit = "unit"; // Default to unit if completely empty
-          }
         }
 
         const newIngredient: MockIngredient = {

@@ -33,13 +33,27 @@ export async function POST(request: NextRequest) {
     });
 
     // 2. Parse Restaurants
+    let insertedCount = 0;
+    const seenShopNumbers = new Set<string>();
+
     rows.forEach((line, idx) => {
-      const parts = line.split(",");
+      // Robust CSV split ignoring commas inside quotes
+      const parts = line.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
       if (parts.length < 3) return;
 
-      const shopNumber = parts[0].trim();
-      const shopName = parts[1].trim();
-      const customerNo = parts[2].trim();
+      const shopNumber = parts[0].trim().replace(/^"|"$/g, "");
+      const shopName = parts[1].trim().replace(/^"|"$/g, "");
+      const customerNo = parts[2].trim().replace(/^"|"$/g, "");
+      const actFlag = parts[3]?.trim().replace(/^"|"$/g, "") || "Y";
+
+      if (actFlag.toUpperCase() === "N") {
+        return; // Skip if Act Flag is 'N'
+      }
+
+      if (seenShopNumbers.has(shopNumber)) {
+        return; // Skip duplicate shop numbers
+      }
+      seenShopNumbers.add(shopNumber);
 
       data.restaurants.push({
         id: `rest-${fcId}-${String(idx + 1).padStart(3, "0")}`,
@@ -47,15 +61,17 @@ export async function POST(request: NextRequest) {
         name: shopName,
         shopNumber,
         customerNo,
+        actFlag: actFlag.toUpperCase(),
         status: "ONBOARDED",
         createdAt: new Date().toISOString(),
       });
+      insertedCount++;
     });
 
     // 3. Save to JSON store
     saveMockData(data);
 
-    return NextResponse.json({ success: true, foodCourtName });
+    return NextResponse.json({ success: true, foodCourtName, count: insertedCount });
   } catch (error) {
     console.error("CSV Import error:", error);
     return NextResponse.json({ error: "Failed to import CSV" }, { status: 500 });

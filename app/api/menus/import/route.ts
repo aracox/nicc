@@ -148,18 +148,22 @@ export async function POST(request: NextRequest) {
     const now = new Date().toISOString();
 
     for (const line of dataLines) {
-      const parts = line.split(",");
-      if (parts.length < 4) continue;
+      // Use regex to split by comma but ignore commas inside quotes
+      const parts = line.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
+      if (parts.length < 7) continue;
 
-      const shopNumber = parts[0].trim();
-
-      // Handle item names that may contain commas
-      const itemName = parts.length === 4
-        ? parts[2].trim()
-        : parts.slice(2, parts.length - 1).join(",").trim();
-
-      const priceStr = parts[parts.length - 1].trim();
+      const shopNumber = parts[0].replace(/^"|"$/g, "").trim();
+      const itemCode = parts[1].replace(/^"|"$/g, "").trim();
+      const itemButton = parts[2].replace(/^"|"$/g, "").trim();
+      const actFlag = parts[3].replace(/^"|"$/g, "").trim().toUpperCase();
+      const itemName = parts[5].replace(/^"|"$/g, "").trim();
+      const priceStr = parts[6].replace(/^"|"$/g, "").trim();
       const price = parseFloat(priceStr.replace(/[^0-9.-]+/g, ""));
+
+      if (actFlag === "N") {
+        skippedCount++;
+        continue;
+      }
 
       if (!shopNumber || !itemName) continue;
 
@@ -181,6 +185,9 @@ export async function POST(request: NextRequest) {
         id: `menu-${crypto.randomUUID()}`,
         restaurantId: rest.id,
         name: itemName,
+        itemCode: itemCode || undefined,
+        itemButton: itemButton || undefined,
+        actFlag: actFlag || "Y",
         category: detectCategory(itemName),
         price: isNaN(price) ? undefined : price,
         createdAt: now,

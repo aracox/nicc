@@ -23,6 +23,7 @@ interface Restaurant {
   name: string;
   shopNumber: string;
   customerNo: string;
+  actFlag?: string;
   foodCourtId?: string;
   status: "ONBOARDED" | "PENDING" | "INACTIVE";
   createdAt: string;
@@ -52,6 +53,7 @@ export default function RestaurantsPage() {
   const [search, setSearch] = useState("");
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [isImporting, setIsImporting] = useState(false);
+  const [showFormatModal, setShowFormatModal] = useState(false);
 
   // Layout protects this route; we assume logged-in user is admin for this mock
   const isAdmin = true;
@@ -89,14 +91,12 @@ export default function RestaurantsPage() {
 
     setIsImporting(true);
     try {
-      const text = await file.text();
+      const formData = new FormData();
+      formData.append("file", file);
+
       const response = await fetch("/api/restaurants/import", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          fileName: file.name,
-          csvText: text,
-        }),
+        body: formData,
       });
 
       if (!response.ok) {
@@ -104,7 +104,7 @@ export default function RestaurantsPage() {
       }
 
       const result = await response.json();
-      alert(`Successfully imported ${result.count} restaurants for ${result.foodCourt.name}`);
+      alert(`Successfully imported ${result.count} restaurants for ${result.foodCourtName}`);
       
       // Invalidate and refetch
       queryClient.invalidateQueries({ queryKey: ["food-courts"] });
@@ -160,6 +160,7 @@ export default function RestaurantsPage() {
     { accessorKey: "shopNumber", header: "Shop No." },
     { accessorKey: "name", header: t.common.name },
     { accessorKey: "customerNo", header: "Customer No." },
+    { accessorKey: "actFlag", header: "Act Flag" },
     {
       accessorKey: "status",
       header: t.common.status,
@@ -207,6 +208,15 @@ export default function RestaurantsPage() {
               </svg>
               Import CSV
             </Button>
+            <button
+              onClick={() => setShowFormatModal(true)}
+              className="flex items-center justify-center h-8 w-8 rounded-full text-slate-400 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+              title="View sample file format"
+            >
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </button>
           </div>
         )}
       </div>
@@ -274,6 +284,11 @@ export default function RestaurantsPage() {
                 <p className="text-sm">
                   <span className="text-slate-500">Customer No.:</span> {detail.customerNo}
                 </p>
+                {detail.actFlag && (
+                  <p className="text-sm">
+                    <span className="text-slate-500">Act Flag:</span> {detail.actFlag}
+                  </p>
+                )}
                 <div className="flex items-center gap-2 pt-1">
                   <span className="text-sm text-slate-500">{t.common.status}:</span>{" "}
                   {isAdmin ? (
@@ -355,6 +370,66 @@ export default function RestaurantsPage() {
             </div>
           </div>
         </Card>
+      )}
+
+      {/* Sample Format Modal */}
+      {showFormatModal && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/40" onClick={() => setShowFormatModal(false)}>
+          <div className="bg-white rounded-xl shadow-2xl w-full max-w-lg mx-4 overflow-hidden" onClick={(e) => e.stopPropagation()}>
+            <div className="flex items-center justify-between px-5 py-4 border-b border-slate-100">
+              <div className="flex items-center gap-2">
+                <svg className="h-5 w-5 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <h3 className="text-base font-semibold text-slate-800">Sample CSV Format</h3>
+              </div>
+              <button onClick={() => setShowFormatModal(false)} className="text-slate-400 hover:text-slate-600 transition-colors">
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div className="px-5 py-4 space-y-4">
+              <div>
+                <p className="text-sm text-slate-500 mb-2">The CSV file must have <strong>4 columns</strong> in this exact order:</p>
+                <div className="overflow-x-auto rounded-lg border border-slate-200">
+                  <table className="w-full text-sm">
+                    <thead className="bg-slate-50">
+                      <tr>
+                        <th className="px-3 py-2 text-left font-medium text-slate-600">#</th>
+                        <th className="px-3 py-2 text-left font-medium text-slate-600">Column</th>
+                        <th className="px-3 py-2 text-left font-medium text-slate-600">Description</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-slate-100">
+                      <tr><td className="px-3 py-2 text-slate-400">1</td><td className="px-3 py-2 font-mono text-blue-600">Shop Number</td><td className="px-3 py-2 text-slate-600">e.g. A01</td></tr>
+                      <tr><td className="px-3 py-2 text-slate-400">2</td><td className="px-3 py-2 font-mono text-blue-600">Shop Name</td><td className="px-3 py-2 text-slate-600">e.g. Chicken Rice</td></tr>
+                      <tr><td className="px-3 py-2 text-slate-400">3</td><td className="px-3 py-2 font-mono text-blue-600">Customer No.</td><td className="px-3 py-2 text-slate-600">e.g. CUST001</td></tr>
+                      <tr><td className="px-3 py-2 text-slate-400">4</td><td className="px-3 py-2 font-mono text-blue-600">Act Flag</td><td className="px-3 py-2 text-slate-600">Y or N (N will be skipped)</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div>
+                <p className="text-sm text-slate-500 mb-2">Example file content:</p>
+                <pre className="bg-slate-900 text-green-400 text-xs rounded-lg p-4 overflow-x-auto leading-relaxed font-mono">
+{`A01,Chicken Rice,CUST001,Y
+A02,Noodle Soup,CUST002,N
+A03,Som Tum,CUST003,Y
+`}
+                </pre>
+              </div>
+              <p className="text-xs text-blue-600 bg-blue-50 border border-blue-200 rounded-lg px-3 py-2">
+                💡 The <strong>file name</strong> (e.g. <code>Centralworld.csv</code>) will be used as the <strong>Food Court Name</strong>.
+              </p>
+            </div>
+            <div className="px-5 py-3 bg-slate-50 border-t border-slate-100 flex justify-end">
+              <button onClick={() => setShowFormatModal(false)} className="text-sm px-4 py-1.5 rounded-lg bg-slate-200 hover:bg-slate-300 text-slate-700 transition-colors">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );

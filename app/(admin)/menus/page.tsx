@@ -17,6 +17,9 @@ interface MenuItem {
   name: string;
   category: string;
   price?: number;
+  itemCode?: string;
+  itemButton?: string;
+  actFlag?: string;
   shopNumber: string;
   restaurantName: string;
 }
@@ -27,6 +30,7 @@ export default function MenusPage() {
   const fileInputRef = useRef<HTMLInputElement>(null);
   
   const [search, setSearch] = useState("");
+  const [categoryId, setCategoryId] = useState("");
   const [foodCourtId, setFoodCourtId] = useState("");
   const [shopId, setShopId] = useState("");
   const [minPrice, setMinPrice] = useState("");
@@ -40,13 +44,14 @@ export default function MenusPage() {
 
   const params = new URLSearchParams();
   if (search) params.set("q", search);
+  if (categoryId) params.set("category", categoryId);
   if (foodCourtId) params.set("foodCourtId", foodCourtId);
   if (shopId) params.set("shopId", shopId);
   if (minPrice) params.set("minPrice", minPrice);
   if (maxPrice) params.set("maxPrice", maxPrice);
 
   const { data: menus = [], isLoading } = useQuery({
-    queryKey: ["menus", search, foodCourtId, shopId, minPrice, maxPrice],
+    queryKey: ["menus", search, categoryId, foodCourtId, shopId, minPrice, maxPrice],
     queryFn: () =>
       apiFetch<MenuItem[]>(`/api/menus?${params.toString()}`),
   });
@@ -133,7 +138,42 @@ export default function MenusPage() {
     { accessorKey: "shopNumber", header: t.menus.shopNo },
     { accessorKey: "restaurantName", header: t.menus.shopName },
     { accessorKey: "name", header: t.common.name },
-    { accessorKey: "category", header: t.menus.category },
+    {
+      accessorKey: "category",
+      header: t.menus.category,
+      cell: ({ row }) => {
+        if (!isAdmin) return <span className="px-2 py-1 text-xs font-medium rounded bg-slate-100 text-slate-800">{row.original.category}</span>;
+        return (
+          <select
+            value={row.original.category || ""}
+            onChange={async (e) => {
+              const newCategory = e.target.value;
+              try {
+                const res = await fetch(`/api/menus/${row.original.id}`, {
+                  method: "PATCH",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify({ category: newCategory }),
+                });
+                if (res.ok) {
+                  queryClient.invalidateQueries({ queryKey: ["menus"] });
+                } else {
+                  throw new Error("Failed to update check");
+                }
+              } catch (error) {
+                alert("Failed to update category");
+              }
+            }}
+            className="text-sm border border-slate-200 rounded px-2 py-1 bg-white hover:bg-slate-50 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors cursor-pointer text-slate-700 w-full"
+          >
+            <option value="Main">Main</option>
+            <option value="Add-On">Add-On</option>
+            <option value="Drink">Drink</option>
+            <option value="Other">Other</option>
+            <option value="Delivery">Delivery</option>
+          </select>
+        );
+      },
+    },
     {
       accessorKey: "price",
       header: t.menus.price,
@@ -142,6 +182,8 @@ export default function MenusPage() {
         return p !== undefined && p !== null ? p.toFixed(2) : "-";
       },
     },
+    { accessorKey: "actFlag", header: t.menus.actFlag || "Act Flag" },
+    { accessorKey: "itemButton", header: t.menus.itemButton || "Item Button" },
     {
       id: "actions",
       header: t.common.actions || "Actions",
@@ -222,6 +264,20 @@ export default function MenusPage() {
           onChange={(e) => setSearch(e.target.value)}
         />
         <Select
+          label={t.menus.category || "Category"}
+          value={categoryId}
+          onChange={(e) => setCategoryId(e.target.value)}
+          placeholder={t.menus.allCategories || "All Categories"}
+          options={[
+            { value: "Main", label: "Main" },
+            { value: "Add-On", label: "Add-On" },
+            { value: "Drink", label: "Drink" },
+            { value: "Other", label: "Other" },
+            { value: "Delivery", label: "Delivery" },
+          ]}
+          className="w-40"
+        />
+        <Select
           label={t.menus.foodCourt}
           value={foodCourtId}
           onChange={(e) => {
@@ -292,7 +348,7 @@ export default function MenusPage() {
             </div>
             <div className="px-5 py-4 space-y-4">
               <div>
-                <p className="text-sm text-slate-500 mb-2">The CSV file must have <strong>4 columns</strong> in this exact order:</p>
+                <p className="text-sm text-slate-500 mb-2">The CSV file must have <strong>7 columns</strong> in this exact order:</p>
                 <div className="overflow-x-auto rounded-lg border border-slate-200">
                   <table className="w-full text-sm">
                     <thead className="bg-slate-50">
@@ -303,10 +359,13 @@ export default function MenusPage() {
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-slate-100">
-                      <tr><td className="px-3 py-2 text-slate-400">1</td><td className="px-3 py-2 font-mono text-blue-600">เลขร้านค้า</td><td className="px-3 py-2 text-slate-600">Shop Number</td></tr>
-                      <tr><td className="px-3 py-2 text-slate-400">2</td><td className="px-3 py-2 font-mono text-blue-600">ชื่อร้านค้า</td><td className="px-3 py-2 text-slate-600">Shop Name</td></tr>
-                      <tr><td className="px-3 py-2 text-slate-400">3</td><td className="px-3 py-2 font-mono text-blue-600">รายการไอเทม</td><td className="px-3 py-2 text-slate-600">Menu Item Name</td></tr>
-                      <tr><td className="px-3 py-2 text-slate-400">4</td><td className="px-3 py-2 font-mono text-blue-600">ราคา</td><td className="px-3 py-2 text-slate-600">Price</td></tr>
+                      <tr><td className="px-3 py-2 text-slate-400">1</td><td className="px-3 py-2 font-mono text-blue-600">เลขร้านค้า</td><td className="px-3 py-2 text-slate-600">Shop Number (e.g. 803201)</td></tr>
+                      <tr><td className="px-3 py-2 text-slate-400">2</td><td className="px-3 py-2 font-mono text-blue-600">รหัสไอเทม</td><td className="px-3 py-2 text-slate-600">Item Code</td></tr>
+                      <tr><td className="px-3 py-2 text-slate-400">3</td><td className="px-3 py-2 font-mono text-blue-600">ปุ่มไอเทม</td><td className="px-3 py-2 text-slate-600">Item Button</td></tr>
+                      <tr><td className="px-3 py-2 text-slate-400">4</td><td className="px-3 py-2 font-mono text-blue-600">Act Flag</td><td className="px-3 py-2 text-slate-600">Act Flag (Y/N)</td></tr>
+                      <tr><td className="px-3 py-2 text-slate-400">5</td><td className="px-3 py-2 font-mono text-blue-600">ชื่อร้านค้า</td><td className="px-3 py-2 text-slate-600">Shop Name</td></tr>
+                      <tr><td className="px-3 py-2 text-slate-400">6</td><td className="px-3 py-2 font-mono text-blue-600">รายการไอเทม</td><td className="px-3 py-2 text-slate-600">Menu Item Name</td></tr>
+                      <tr><td className="px-3 py-2 text-slate-400">7</td><td className="px-3 py-2 font-mono text-blue-600">ราคา</td><td className="px-3 py-2 text-slate-600">Price</td></tr>
                     </tbody>
                   </table>
                 </div>
@@ -314,12 +373,15 @@ export default function MenusPage() {
               <div>
                 <p className="text-sm text-slate-500 mb-2">Example file content:</p>
                 <pre className="bg-slate-900 text-green-400 text-xs rounded-lg p-4 overflow-x-auto leading-relaxed font-mono">
-{`เลขร้านค้า,ชื่อร้านค้า,รายการไอเทม,ราคา
-803201,ร้านข้าวขาหมู,ข้าวขาหมู,60.00
-803201,ร้านข้าวขาหมู,ข้าวขาหมูพิเศษ,80.00
-803202,ร้านผัดไทย,ผัดไทยกุ้ง,70.00`}
+{`เลขร้านค้า,รหัสไอเทม,ปุ่มไอเทม,Act Flag,ชื่อร้านค้า,รายการไอเทม,ราคา
+803201,ITEM001,BTN01,Y,ร้านข้าวขาหมู,ข้าวขาหมู,60.00
+803201,ITEM002,BTN02,Y,ร้านข้าวขาหมู,ข้าวขาหมูพิเศษ,80.00
+803202,ITEM105,BTN05,N,ร้านผัดไทย,ผัดไทยกุ้ง,70.00`}
                 </pre>
               </div>
+              <p className="text-xs text-amber-600 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2">
+                ⚠️ Rows with <strong>Act Flag: N</strong> will be automatically skipped during import.
+              </p>
               <p className="text-xs text-amber-600 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2">
                 ⚠️ The <strong>Shop Number</strong> must match an existing shop in the system. Rows with unrecognised shop numbers will be skipped.
               </p>
