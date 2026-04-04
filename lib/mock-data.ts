@@ -153,13 +153,16 @@ function loadTransactions(): MockSellTransaction[] {
   return all;
 }
 
-/** Save transactions, grouping into per-month files */
+/** Max records per file — keeps each JSON comfortably under 100 MB */
+const MAX_RECORDS_PER_FILE = 80_000;
+
+/** Save transactions, grouping into per-month files (chunked if large) */
 function saveTransactions(transactions: MockSellTransaction[]): void {
   if (!fs.existsSync(TX_DIR)) {
     fs.mkdirSync(TX_DIR, { recursive: true });
   }
 
-  // Group by month bucket
+  // Group by month bucket (derived from dateTime/createdAt)
   const byMonth: Record<string, MockSellTransaction[]> = {};
   for (const tx of transactions) {
     const m = txMonth(tx);
@@ -167,24 +170,33 @@ function saveTransactions(transactions: MockSellTransaction[]): void {
     byMonth[m].push(tx);
   }
 
-  // Write each bucket
-  for (const [month, txs] of Object.entries(byMonth)) {
-    writeJsonArray(path.join(TX_DIR, `sell-transactions-${month}.json`), txs);
+  // Delete ALL existing transaction files before rewriting to avoid stale chunks
+  if (fs.existsSync(TX_DIR)) {
+    for (const f of fs.readdirSync(TX_DIR)) {
+      if (f.startsWith("sell-transactions-") && f.endsWith(".json")) {
+        fs.unlinkSync(path.join(TX_DIR, f));
+      }
+    }
   }
 
-  // Remove any existing month files that are now empty (safety clean-up)
-  if (fs.existsSync(TX_DIR)) {
-    const existingFiles = fs.readdirSync(TX_DIR).filter((f) => f.startsWith("sell-transactions-") && f.endsWith(".json"));
-    for (const file of existingFiles) {
-      const month = file.replace("sell-transactions-", "").replace(".json", "");
-      if (!byMonth[month]) {
-        fs.unlinkSync(path.join(TX_DIR, file));
+  // Write each month — split into chunks if too large
+  for (const [month, txs] of Object.entries(byMonth)) {
+    if (txs.length <= MAX_RECORDS_PER_FILE) {
+      // Single file for this month
+      writeJsonArray(path.join(TX_DIR, `sell-transactions-${month}.json`), txs);
+    } else {
+      // Split into part files: sell-transactions-YYYY-MM-P1.json, P2.json, …
+      const parts = Math.ceil(txs.length / MAX_RECORDS_PER_FILE);
+      for (let p = 0; p < parts; p++) {
+        const chunk = txs.slice(p * MAX_RECORDS_PER_FILE, (p + 1) * MAX_RECORDS_PER_FILE);
+        writeJsonArray(path.join(TX_DIR, `sell-transactions-${month}-P${p + 1}.json`), chunk);
       }
     }
   }
 }
 
 // ── Store Helper ─────────────────────────────────
+
 
 /**
  * Singleton Pattern for In-Memory State Sync

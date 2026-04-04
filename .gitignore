@@ -50,6 +50,5 @@ next-env.d.ts
 # Mock data — monolith is replaced by split files
 lib/mock-data.json
 
-# Transaction data is too large for git (bulk POS records)
-# Master data files (lib/data/*.json) are committed normally
-lib/data/transactions/
+# Transaction data — split into monthly/chunked files, all under 100MB and committed
+# (lib/data/transactions/*.json are committed to git)
