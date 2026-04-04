@@ -11,11 +11,17 @@ import { useI18n } from "@/lib/i18n";
 
 interface SellTransaction {
   id: string;
-  transactionId: string;
+  sysBatch: string;
   shopNumber: string;
-  totalAmount: number;
-  paymentMethod: string;
-  status: string;
+  slipNo: string;
+  shopName: string;
+  itemCode: string;
+  itemName: string;
+  pricing: number;
+  quantity: number;
+  total: number;
+  date: string;
+  time: string;
   dateTime: string;
   createdAt: string;
 }
@@ -99,7 +105,11 @@ export default function SellTransactionsPage() {
   };
 
   const columns: ColumnDef<SellTransaction, unknown>[] = [
-    { accessorKey: "transactionId", header: t.sellTransactions.transactionId },
+    { accessorKey: "id", header: t.sellTransactions.transactionId, cell: ({ row }) => {
+      // Show first 8 chars of uuid since it's long, or the whole thing if preferred
+      const val = row.getValue("id") as string;
+      return <div className="font-mono text-xs text-slate-500">{val.length > 8 ? val.substring(0, 8) + "..." : val}</div>;
+    }},
     { accessorKey: "date", header: "DATE" },
     { accessorKey: "time", header: "TIME" },
     { accessorKey: "sysBatch", header: "SYS BATCH" },

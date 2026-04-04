@@ -24,19 +24,27 @@ export async function POST(request: NextRequest) {
 
     const data = getMockData();
 
-    // 1. Create Food Court
-    const fcId = `fc-${String(data.foodCourts.length + 1).padStart(3, "0")}`;
-    data.foodCourts.push({
-      id: fcId,
-      name: foodCourtName,
-      createdAt: new Date().toISOString(),
-    });
+    // 1. Create or reuse Food Court
+    let fc = data.foodCourts.find((f) => f.name === foodCourtName);
+    if (!fc) {
+      fc = {
+        id: `fc-${String(data.foodCourts.length + 1).padStart(3, "0")}`,
+        name: foodCourtName,
+        createdAt: new Date().toISOString(),
+      };
+      data.foodCourts.push(fc);
+    }
+    const fcId = fc.id;
 
-    // 2. Parse Restaurants
+    // 2. Parse Restaurants and pick one row per shop number.
+    // Rule: prefer Act Flag = Y. If same flag, keep latest row in the file.
     let insertedCount = 0;
-    const seenShopNumbers = new Set<string>();
+    const selectedByShop = new Map<
+      string,
+      { shopNumber: string; shopName: string; customerNo: string; actFlag: string }
+    >();
 
-    rows.forEach((line, idx) => {
+    rows.forEach((line) => {
       // Robust CSV split ignoring commas inside quotes
       const parts = line.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
       if (parts.length < 3) return;
@@ -46,22 +54,42 @@ export async function POST(request: NextRequest) {
       const customerNo = parts[2].trim().replace(/^"|"$/g, "");
       const actFlag = parts[3]?.trim().replace(/^"|"$/g, "") || "Y";
 
-      if (actFlag.toUpperCase() === "N") {
-        return; // Skip if Act Flag is 'N'
+      if (!shopNumber || !shopName) return;
+      const normalizedActFlag = actFlag.toUpperCase();
+      if (normalizedActFlag !== "Y") return;
+      const candidate = {
+        shopNumber,
+        shopName,
+        customerNo,
+        actFlag: normalizedActFlag || "Y",
+      };
+
+      const prev = selectedByShop.get(shopNumber);
+      if (!prev) {
+        selectedByShop.set(shopNumber, candidate);
+        return;
       }
 
-      if (seenShopNumbers.has(shopNumber)) {
-        return; // Skip duplicate shop numbers
+      const prevScore = prev.actFlag === "Y" ? 1 : 0;
+      const nextScore = candidate.actFlag === "Y" ? 1 : 0;
+      if (nextScore > prevScore) {
+        selectedByShop.set(shopNumber, candidate);
+      } else if (nextScore === prevScore) {
+        selectedByShop.set(shopNumber, candidate);
       }
-      seenShopNumbers.add(shopNumber);
+    });
 
+    // Replace restaurants in this food court to keep it in sync with latest import file
+    data.restaurants = data.restaurants.filter((r) => r.foodCourtId !== fcId);
+
+    Array.from(selectedByShop.values()).forEach((row, idx) => {
       data.restaurants.push({
         id: `rest-${fcId}-${String(idx + 1).padStart(3, "0")}`,
         foodCourtId: fcId,
-        name: shopName,
-        shopNumber,
-        customerNo,
-        actFlag: actFlag.toUpperCase(),
+        name: row.shopName,
+        shopNumber: row.shopNumber,
+        customerNo: row.customerNo,
+        actFlag: row.actFlag,
         status: "ONBOARDED",
         createdAt: new Date().toISOString(),
       });

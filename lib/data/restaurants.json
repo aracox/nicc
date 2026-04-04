@@ -1,0 +1,222 @@
+[
+  {
+    "id": "rest-fc-001-001",
+    "foodCourtId": "fc-001",
+    "name": "ข้าวขาหมู",
+    "shopNumber": "803201",
+    "customerNo": "25032000131",
+    "actFlag": "Y",
+    "status": "ONBOARDED",
+    "createdAt": "2026-04-02T18:53:19.391Z"
+  },
+  {
+    "id": "rest-fc-001-002",
+    "foodCourtId": "fc-001",
+    "name": "ครัวคุณแม่",
+    "shopNumber": "803202",
+    "customerNo": "25032000072",
+    "actFlag": "Y",
+    "status": "ONBOARDED",
+    "createdAt": "2026-04-02T18:53:19.392Z"
+  },
+  {
+    "id": "rest-fc-001-003",
+    "foodCourtId": "fc-001",
+    "name": "ก๋วยเตี๋ยวเนื้อตุ๋น",
+    "shopNumber": "803204",
+    "customerNo": "25032000091",
+    "actFlag": "Y",
+    "status": "ONBOARDED",
+    "createdAt": "2026-04-02T18:53:19.392Z"
+  },
+  {
+    "id": "rest-fc-001-004",
+    "foodCourtId": "fc-001",
+    "name": "ChouNan",
+    "shopNumber": "803205",
+    "customerNo": "25032000011",
+    "actFlag": "Y",
+    "status": "ONBOARDED",
+    "createdAt": "2026-04-02T18:53:19.392Z"
+  },
+  {
+    "id": "rest-fc-001-005",
+    "foodCourtId": "fc-001",
+    "name": "ราดหน้า,สุกี้",
+    "shopNumber": "803206",
+    "customerNo": "565836",
+    "actFlag": "Y",
+    "status": "ONBOARDED",
+    "createdAt": "2026-04-02T18:53:19.392Z"
+  },
+  {
+    "id": "rest-fc-001-006",
+    "foodCourtId": "fc-001",
+    "name": "เจมส์กะเพราถาด",
+    "shopNumber": "803207",
+    "customerNo": "25032000077",
+    "actFlag": "Y",
+    "status": "ONBOARDED",
+    "createdAt": "2026-04-02T18:53:19.392Z"
+  },
+  {
+    "id": "rest-fc-001-007",
+    "foodCourtId": "fc-001",
+    "name": "ก๋วยเตี๋ยวเรือ",
+    "shopNumber": "803208",
+    "customerNo": "25032000012",
+    "actFlag": "Y",
+    "status": "ONBOARDED",
+    "createdAt": "2026-04-02T18:53:19.392Z"
+  },
+  {
+    "id": "rest-fc-001-008",
+    "foodCourtId": "fc-001",
+    "name": "ข้าวหมกไก่ย่างบังฟารุก",
+    "shopNumber": "803209",
+    "customerNo": "25032000065",
+    "actFlag": "Y",
+    "status": "ONBOARDED",
+    "createdAt": "2026-04-02T18:53:19.392Z"
+  },
+  {
+    "id": "rest-fc-001-009",
+    "foodCourtId": "fc-001",
+    "name": "ข้าวทิพย์อาหารชุด",
+    "shopNumber": "803210",
+    "customerNo": "25032000074",
+    "actFlag": "Y",
+    "status": "ONBOARDED",
+    "createdAt": "2026-04-02T18:53:19.392Z"
+  },
+  {
+    "id": "rest-fc-001-010",
+    "foodCourtId": "fc-001",
+    "name": "ก๋วยเตี๋ยวเป็ด",
+    "shopNumber": "803211",
+    "customerNo": "543983",
+    "actFlag": "Y",
+    "status": "ONBOARDED",
+    "createdAt": "2026-04-02T18:53:19.392Z"
+  },
+  {
+    "id": "rest-fc-001-011",
+    "foodCourtId": "fc-001",
+    "name": "ข้าวผัดกระทะเหล็ก",
+    "shopNumber": "803212",
+    "customerNo": "538668",
+    "actFlag": "Y",
+    "status": "ONBOARDED",
+    "createdAt": "2026-04-02T18:53:19.392Z"
+  },
+  {
+    "id": "rest-fc-001-012",
+    "foodCourtId": "fc-001",
+    "name": "ข้าวแกง",
+    "shopNumber": "803216",
+    "customerNo": "25032000081",
+    "actFlag": "Y",
+    "status": "ONBOARDED",
+    "createdAt": "2026-04-02T18:53:19.392Z"
+  },
+  {
+    "id": "rest-fc-001-013",
+    "foodCourtId": "fc-001",
+    "name": "สกายลักค์",
+    "shopNumber": "803217",
+    "customerNo": "563542",
+    "actFlag": "Y",
+    "status": "ONBOARDED",
+    "createdAt": "2026-04-02T18:53:19.392Z"
+  },
+  {
+    "id": "rest-fc-001-014",
+    "foodCourtId": "fc-001",
+    "name": "ลูกชิ้นทิพย์",
+    "shopNumber": "803218",
+    "customerNo": "512280",
+    "actFlag": "Y",
+    "status": "ONBOARDED",
+    "createdAt": "2026-04-02T18:53:19.392Z"
+  },
+  {
+    "id": "rest-fc-001-015",
+    "foodCourtId": "fc-001",
+    "name": "อาหารนานาชาติ",
+    "shopNumber": "803220",
+    "customerNo": "25032000117",
+    "actFlag": "Y",
+    "status": "ONBOARDED",
+    "createdAt": "2026-04-02T18:53:19.392Z"
+  },
+  {
+    "id": "rest-fc-001-016",
+    "foodCourtId": "fc-001",
+    "name": "เครื่องดื่มทุกชนิด",
+    "shopNumber": "803221",
+    "customerNo": "25032000129",
+    "actFlag": "Y",
+    "status": "ONBOARDED",
+    "createdAt": "2026-04-02T18:53:19.392Z"
+  },
+  {
+    "id": "rest-fc-001-017",
+    "foodCourtId": "fc-001",
+    "name": "ก๋วยเตี๋ยวลูกชิ้นปลา",
+    "shopNumber": "803222",
+    "customerNo": "25032000099",
+    "actFlag": "Y",
+    "status": "ONBOARDED",
+    "createdAt": "2026-04-02T18:53:19.392Z"
+  },
+  {
+    "id": "rest-fc-001-018",
+    "foodCourtId": "fc-001",
+    "name": "จีฟาไฉข้าวมันไก่สิงคโปร์",
+    "shopNumber": "803223",
+    "customerNo": "25032000090",
+    "actFlag": "Y",
+    "status": "ONBOARDED",
+    "createdAt": "2026-04-02T18:53:19.392Z"
+  },
+  {
+    "id": "rest-fc-001-019",
+    "foodCourtId": "fc-001",
+    "name": "Habu Cha",
+    "shopNumber": "803224",
+    "customerNo": "25032000073",
+    "actFlag": "Y",
+    "status": "ONBOARDED",
+    "createdAt": "2026-04-02T18:53:19.392Z"
+  },
+  {
+    "id": "rest-fc-001-020",
+    "foodCourtId": "fc-001",
+    "name": "ส้มตำ อาหารอีสาน",
+    "shopNumber": "803225",
+    "customerNo": "25032000086",
+    "actFlag": "Y",
+    "status": "ONBOARDED",
+    "createdAt": "2026-04-02T18:53:19.392Z"
+  },
+  {
+    "id": "rest-fc-001-021",
+    "foodCourtId": "fc-001",
+    "name": "โทริมารุ คาราอาเกะ",
+    "shopNumber": "803226",
+    "customerNo": "25032000080",
+    "actFlag": "Y",
+    "status": "ONBOARDED",
+    "createdAt": "2026-04-02T18:53:19.392Z"
+  },
+  {
+    "id": "rest-fc-001-022",
+    "foodCourtId": "fc-001",
+    "name": "เฮงปังปั๊วะ",
+    "shopNumber": "803227",
+    "customerNo": "25032000083",
+    "actFlag": "Y",
+    "status": "ONBOARDED",
+    "createdAt": "2026-04-02T18:53:19.392Z"
+  }
+]

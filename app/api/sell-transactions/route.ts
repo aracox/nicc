@@ -11,10 +11,12 @@ export async function GET(request: Request) {
   if (query) {
     transactions = transactions.filter(
       (tx) =>
-        tx.transactionId.toLowerCase().includes(query) ||
-        tx.shopNumber.toLowerCase().includes(query) ||
-        tx.paymentMethod.toLowerCase().includes(query) ||
-        tx.status.toLowerCase().includes(query)
+        (tx.shopNumber && tx.shopNumber.toLowerCase().includes(query)) ||
+        (tx.shopName && tx.shopName.toLowerCase().includes(query)) ||
+        (tx.sysBatch && tx.sysBatch.toLowerCase().includes(query)) ||
+        (tx.slipNo && tx.slipNo.toLowerCase().includes(query)) ||
+        (tx.itemCode && tx.itemCode.toLowerCase().includes(query)) ||
+        (tx.itemName && tx.itemName.toLowerCase().includes(query))
     );
   }
 

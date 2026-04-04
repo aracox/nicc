@@ -46,3 +46,10 @@ next-env.d.ts
 
 # claude code
 .claude/
+
+# Mock data — monolith is replaced by split files
+lib/mock-data.json
+
+# Transaction data is too large for git (bulk POS records)
+# Master data files (lib/data/*.json) are committed normally
+lib/data/transactions/

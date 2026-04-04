@@ -32,7 +32,7 @@ export async function POST(request: Request) {
       });
 
       // Simple CSV split (not handling commas inside quotes)
-      const sysBatch = record['SYS_BATCH']?.trim();
+      const sysBatch = record['SYS_BATCH']?.trim() || 'BATCH-UNKNOWN';
       const shopNumber = record['SHOP_ID']?.trim();
       const slipNo = record['SLIP_NO']?.trim();
       const shopName = record['SHOP_NAMES']?.trim();
@@ -48,7 +48,7 @@ export async function POST(request: Request) {
       const quantity = parseInt(quantityStr, 10);
       const total = parseFloat(totalStr);
 
-      if (!sysBatch || !shopNumber || !slipNo || !date || !time) {
+      if (!shopNumber || !slipNo || !date || !time) {
         continue;
       }
       
