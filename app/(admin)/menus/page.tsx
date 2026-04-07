@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { type ColumnDef } from "@tanstack/react-table";
 import { apiFetch } from "@/lib/api";
@@ -27,12 +28,22 @@ interface MenuItem {
 export default function MenusPage() {
   const { t } = useI18n();
   const queryClient = useQueryClient();
+  const searchParams = useSearchParams();
   const fileInputRef = useRef<HTMLInputElement>(null);
   
   const [search, setSearch] = useState("");
   const [categoryId, setCategoryId] = useState("");
   const [foodCourtId, setFoodCourtId] = useState("");
   const [shopId, setShopId] = useState("");
+
+  // Sync state with URL params on mount
+  useEffect(() => {
+    const fc = searchParams.get("foodCourtId");
+    const shop = searchParams.get("shopId");
+    if (fc) setFoodCourtId(fc);
+    if (shop) setShopId(shop);
+  }, [searchParams]);
+
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
   const [isImporting, setIsImporting] = useState(false);

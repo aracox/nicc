@@ -214,6 +214,18 @@ const th: Translations = {
     accessControl: "การจัดการสิทธิ์การเข้าถึง",
     placeholder: "การจัดการบทบาทผู้ใช้ สิทธิ์ และทีมจะพร้อมใช้งานในเวอร์ชันถัดไป",
   },
+  inventory: {
+    title: "การจัดการสต็อกวัตถุดิบ",
+    initialStock: "ปริมาณเริ่มต้น",
+    usage: "ใช้ไป (ตามสูตร)",
+    remaining: "คงเหลือ",
+    lastUpdated: "อัปเดตล่าสุด",
+    manageStock: "จัดการสต็อก",
+    addIngredient: "เพิ่มวัตถุดิบลงสต็อก",
+    lowStock: "สินค้าใกล้หมด",
+    outOfStock: "สินค้าหมด",
+    saveSuccess: "อัปเดตสต็อกวัตถุดิบสำเร็จ",
+  },
 } as const;
 
 export default th;

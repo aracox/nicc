@@ -101,6 +101,15 @@ export interface MockSellTransaction {
   createdAt: string;
 }
 
+export interface MockRestaurantInventory {
+  id: string;
+  restaurantId: string;
+  ingredientName: string;
+  initialStock: number;
+  unit: string;
+  updatedAt: string;
+}
+
 export interface MockData {
   foodCourts: MockFoodCourt[];
   restaurants: MockRestaurant[];
@@ -110,6 +119,7 @@ export interface MockData {
   uploads: MockUpload[];
   insightReports: MockInsightReport[];
   sellTransactions: MockSellTransaction[];
+  inventory: MockRestaurantInventory[];
 }
 
 // ── File Paths ───────────────────────────────────
@@ -220,6 +230,7 @@ export const getMockData = (): MockData => {
         uploads: [],
         insightReports: [],
         sellTransactions: [],
+        inventory: [],
       };
     } else {
       globalForMock.mockData = {
@@ -230,6 +241,7 @@ export const getMockData = (): MockData => {
         menuMappings:   readJsonArray<MockMapping>(path.join(DATA_DIR, "menu-mappings.json")),
         uploads:        readJsonArray<MockUpload>(path.join(DATA_DIR, "uploads.json")),
         insightReports: readJsonArray<MockInsightReport>(path.join(DATA_DIR, "insight-reports.json")),
+        inventory:      readJsonArray<MockRestaurantInventory>(path.join(DATA_DIR, "inventory.json")),
         sellTransactions: loadTransactions(),
       };
     }
@@ -253,6 +265,7 @@ export const saveMockData = (data: MockData) => {
   writeJsonArray(path.join(DATA_DIR, "menu-mappings.json"),   data.menuMappings);
   writeJsonArray(path.join(DATA_DIR, "uploads.json"),         data.uploads);
   writeJsonArray(path.join(DATA_DIR, "insight-reports.json"), data.insightReports);
+  writeJsonArray(path.join(DATA_DIR, "inventory.json"),       data.inventory);
 
   // Write transactions split by month
   saveTransactions(data.sellTransactions);

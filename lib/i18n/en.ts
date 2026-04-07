@@ -212,6 +212,18 @@ const en = {
     accessControl: "Access Control Settings",
     placeholder: "User roles, permissions, and team management settings will be available here in a future release.",
   },
+  inventory: {
+    title: "Inventory Tracking",
+    initialStock: "Initial Stock",
+    usage: "Usage (BOM)",
+    remaining: "Remaining",
+    lastUpdated: "Last Updated",
+    manageStock: "Manage Stock",
+    addIngredient: "Add Ingredient to Inventory",
+    lowStock: "Low Stock",
+    outOfStock: "Out of Stock",
+    saveSuccess: "Inventory updated successfully.",
+  },
 } as const;
 
 export default en;

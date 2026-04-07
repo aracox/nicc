@@ -1,0 +1,338 @@
+[
+  {
+    "id": "inv-rest-fc-001-001-ข้าวสวย",
+    "restaurantId": "rest-fc-001-001",
+    "ingredientName": "ข้าวสวย",
+    "initialStock": 50000,
+    "unit": "กรัม",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-001-เนื้อขาหมู/คากิ",
+    "restaurantId": "rest-fc-001-001",
+    "ingredientName": "เนื้อขาหมู/คากิ",
+    "initialStock": 50000,
+    "unit": "กรัม",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-001-น้ำพะโล้",
+    "restaurantId": "rest-fc-001-001",
+    "ingredientName": "น้ำพะโล้",
+    "initialStock": 50000,
+    "unit": "มิลลิลิตร",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-001-หมูกรอบ",
+    "restaurantId": "rest-fc-001-001",
+    "ingredientName": "หมูกรอบ",
+    "initialStock": 50000,
+    "unit": "กรัม",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-001-น้ำราด",
+    "restaurantId": "rest-fc-001-001",
+    "ingredientName": "น้ำราด",
+    "initialStock": 50000,
+    "unit": "มิลลิลิตร",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-001-วัตถุดิบหลัก-(ขาหมูเปล่า)",
+    "restaurantId": "rest-fc-001-001",
+    "ingredientName": "วัตถุดิบหลัก (ขาหมูเปล่า)",
+    "initialStock": 50000,
+    "unit": "กรัม",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-001-เครื่องปรุง/ซอส",
+    "restaurantId": "rest-fc-001-001",
+    "ingredientName": "เครื่องปรุง/ซอส",
+    "initialStock": 50000,
+    "unit": "กรัม",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-001-วัตถุดิบหลัก-(ขาหมูรวมทุกอย่าง)",
+    "restaurantId": "rest-fc-001-001",
+    "ingredientName": "วัตถุดิบหลัก (ขาหมูรวมทุกอย่าง)",
+    "initialStock": 50000,
+    "unit": "กรัม",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-001-วัตถุดิบหลัก-(คากิเปล่า)",
+    "restaurantId": "rest-fc-001-001",
+    "ingredientName": "วัตถุดิบหลัก (คากิเปล่า)",
+    "initialStock": 50000,
+    "unit": "กรัม",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-001-วัตถุดิบหลัก-(หมูกรอบเปล่า)",
+    "restaurantId": "rest-fc-001-001",
+    "ingredientName": "วัตถุดิบหลัก (หมูกรอบเปล่า)",
+    "initialStock": 50000,
+    "unit": "กรัม",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-001-วัตถุดิบหลัก-(เพิ่มไส้)",
+    "restaurantId": "rest-fc-001-001",
+    "ingredientName": "วัตถุดิบหลัก (เพิ่มไส้)",
+    "initialStock": 50000,
+    "unit": "กรัม",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-001-ไข่ไก่/ไข่เป็ด",
+    "restaurantId": "rest-fc-001-001",
+    "ingredientName": "ไข่ไก่/ไข่เป็ด",
+    "initialStock": 300,
+    "unit": "ฟอง",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-001-น้ำมันพืช",
+    "restaurantId": "rest-fc-001-001",
+    "ingredientName": "น้ำมันพืช",
+    "initialStock": 50000,
+    "unit": "มิลลิลิตร",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-001-วัตถุดิบหลัก-(หมูกรอบ)",
+    "restaurantId": "rest-fc-001-001",
+    "ingredientName": "วัตถุดิบหลัก (หมูกรอบ)",
+    "initialStock": 50000,
+    "unit": "กรัม",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-003-ข้าวสวย",
+    "restaurantId": "rest-fc-001-003",
+    "ingredientName": "ข้าวสวย",
+    "initialStock": 50000,
+    "unit": "กรัม",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-003-ไข่",
+    "restaurantId": "rest-fc-001-003",
+    "ingredientName": "ไข่",
+    "initialStock": 300,
+    "unit": "ฟอง",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-003-หมูสับ",
+    "restaurantId": "rest-fc-001-003",
+    "ingredientName": "หมูสับ",
+    "initialStock": 50000,
+    "unit": "กรัม",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-003-ใบกะเพรา",
+    "restaurantId": "rest-fc-001-003",
+    "ingredientName": "ใบกะเพรา",
+    "initialStock": 50000,
+    "unit": "กรัม",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-003-ซอสผัดกะเพรา",
+    "restaurantId": "rest-fc-001-003",
+    "ingredientName": "ซอสผัดกะเพรา",
+    "initialStock": 50000,
+    "unit": "กรัม",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-003-เนื้อสัตว์",
+    "restaurantId": "rest-fc-001-003",
+    "ingredientName": "เนื้อสัตว์",
+    "initialStock": 50000,
+    "unit": "กรัม",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-003-น้ำซุป",
+    "restaurantId": "rest-fc-001-003",
+    "ingredientName": "น้ำซุป",
+    "initialStock": 50000,
+    "unit": "มิลลิลิตร",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-003-ผัก/เครื่องต้ม",
+    "restaurantId": "rest-fc-001-003",
+    "ingredientName": "ผัก/เครื่องต้ม",
+    "initialStock": 50000,
+    "unit": "กรัม",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-003-เนื้อสัตว์-(หมู/ทะเล)",
+    "restaurantId": "rest-fc-001-003",
+    "ingredientName": "เนื้อสัตว์ (หมู/ทะเล)",
+    "initialStock": 50000,
+    "unit": "กรัม",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-003-ผักยำ-(หอมใหญ่/ขึ้นฉ่าย/มะเขือเทศ)",
+    "restaurantId": "rest-fc-001-003",
+    "ingredientName": "ผักยำ (หอมใหญ่/ขึ้นฉ่าย/มะเขือเทศ)",
+    "initialStock": 50000,
+    "unit": "กรัม",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-003-น้ำยำ",
+    "restaurantId": "rest-fc-001-003",
+    "ingredientName": "น้ำยำ",
+    "initialStock": 50000,
+    "unit": "มิลลิลิตร",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-003-ไข่ไก่/ไข่เป็ด",
+    "restaurantId": "rest-fc-001-003",
+    "ingredientName": "ไข่ไก่/ไข่เป็ด",
+    "initialStock": 300,
+    "unit": "ฟอง",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-003-น้ำมันพืช",
+    "restaurantId": "rest-fc-001-003",
+    "ingredientName": "น้ำมันพืช",
+    "initialStock": 50000,
+    "unit": "มิลลิลิตร",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-016-ข้าวสวย",
+    "restaurantId": "rest-fc-001-016",
+    "ingredientName": "ข้าวสวย",
+    "initialStock": 50000,
+    "unit": "กรัม",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-016-เส้น",
+    "restaurantId": "rest-fc-001-016",
+    "ingredientName": "เส้น",
+    "initialStock": 50000,
+    "unit": "กรัม",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-016-น้ำซุป/น้ำราดหน้า",
+    "restaurantId": "rest-fc-001-016",
+    "ingredientName": "น้ำซุป/น้ำราดหน้า",
+    "initialStock": 50000,
+    "unit": "มิลลิลิตร",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-016-เนื้อวัว",
+    "restaurantId": "rest-fc-001-016",
+    "ingredientName": "เนื้อวัว",
+    "initialStock": 50000,
+    "unit": "กรัม",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-016-ลูกชิ้น",
+    "restaurantId": "rest-fc-001-016",
+    "ingredientName": "ลูกชิ้น",
+    "initialStock": 50000,
+    "unit": "กรัม",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-016-ผักบุ้ง/ถั่วงอก",
+    "restaurantId": "rest-fc-001-016",
+    "ingredientName": "ผักบุ้ง/ถั่วงอก",
+    "initialStock": 50000,
+    "unit": "กรัม",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-016-น้ำจิ้ม",
+    "restaurantId": "rest-fc-001-016",
+    "ingredientName": "น้ำจิ้ม",
+    "initialStock": 50000,
+    "unit": "มิลลิลิตร",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-016-วัตถุดิบหลัก-(เนื้อลวก)",
+    "restaurantId": "rest-fc-001-016",
+    "ingredientName": "วัตถุดิบหลัก (เนื้อลวก)",
+    "initialStock": 50000,
+    "unit": "กรัม",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-016-เครื่องปรุง/ซอส",
+    "restaurantId": "rest-fc-001-016",
+    "ingredientName": "เครื่องปรุง/ซอส",
+    "initialStock": 50000,
+    "unit": "กรัม",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-016-วัตถุดิบหลัก-(เอ็นตุ๋น)",
+    "restaurantId": "rest-fc-001-016",
+    "ingredientName": "วัตถุดิบหลัก (เอ็นตุ๋น)",
+    "initialStock": 50000,
+    "unit": "กรัม",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-016-วัตถุดิบหลัก-(อาหารทานเล่น)",
+    "restaurantId": "rest-fc-001-016",
+    "ingredientName": "วัตถุดิบหลัก (อาหารทานเล่น)",
+    "initialStock": 50000,
+    "unit": "กรัม",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-016-ใบกะเพรา",
+    "restaurantId": "rest-fc-001-016",
+    "ingredientName": "ใบกะเพรา",
+    "initialStock": 50000,
+    "unit": "กรัม",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-016-ซอสผัดกะเพรา",
+    "restaurantId": "rest-fc-001-016",
+    "ingredientName": "ซอสผัดกะเพรา",
+    "initialStock": 50000,
+    "unit": "กรัม",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-016-ไข่ไก่/ไข่เป็ด",
+    "restaurantId": "rest-fc-001-016",
+    "ingredientName": "ไข่ไก่/ไข่เป็ด",
+    "initialStock": 300,
+    "unit": "ฟอง",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  },
+  {
+    "id": "inv-rest-fc-001-016-น้ำมันพืช",
+    "restaurantId": "rest-fc-001-016",
+    "ingredientName": "น้ำมันพืช",
+    "initialStock": 50000,
+    "unit": "มิลลิลิตร",
+    "updatedAt": "2026-04-07T02:32:31.837Z"
+  }
+]

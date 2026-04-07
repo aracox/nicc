@@ -19,6 +19,12 @@ const updateSchema = z.object({
   status: z.enum(["ONBOARDED", "PENDING", "INACTIVE"]).optional(),
 });
 
+const inventorySchema = z.object({
+  ingredientName: z.string().min(1),
+  initialStock: z.number().min(0),
+  unit: z.string().min(1),
+});
+
 // ── Handlers ──────────────────────────────────────────────────────────
 
 async function handleGetRestaurants(request: NextRequest) {
@@ -121,6 +127,78 @@ async function handleImportRestaurants(request: NextRequest) {
   return NextResponse.json({ success: true, foodCourtName, count: insertedCount });
 }
 
+async function handleGetInventory(id: string) {
+  const data = getMockData();
+  const restaurant = data.restaurants.find((r) => r.id === id);
+  if (!restaurant) return NextResponse.json({ error: "Restaurant not found" }, { status: 404 });
+
+  const rInventory = data.inventory.filter((inv) => inv.restaurantId === id);
+  const rTransactions = data.sellTransactions.filter((tx) => tx.shopNumber === restaurant.shopNumber);
+  const rMappings = data.menuMappings.filter((m) => m.restaurantId === id);
+
+  // Calculate usage
+  const usageMap: Record<string, number> = {};
+  
+  for (const tx of rTransactions) {
+    // Find the mapping for this item
+    // In our system, itemCode in transaction should match itemCode in MenuItem which is linked to Mapping
+    const mapping = rMappings.find((m) => m.menuItem.id === tx.itemCode || m.menuItem.name === tx.itemName);
+    if (!mapping) continue;
+
+    const dish = data.standardDishes.find((d) => d.id === mapping.standardDishId);
+    if (!dish) continue;
+
+    for (const ing of dish.ingredients) {
+      const totalUsed = tx.quantity * mapping.portionMultiplier * ing.qty;
+      usageMap[ing.ingredientName] = (usageMap[ing.ingredientName] || 0) + totalUsed;
+    }
+  }
+
+  const result = rInventory.map((inv) => ({
+    ...inv,
+    usedQty: usageMap[inv.ingredientName] || 0,
+    remainingQty: Math.max(0, inv.initialStock - (usageMap[inv.ingredientName] || 0)),
+  }));
+
+  return NextResponse.json(result);
+}
+
+async function handleUpdateInventory(request: NextRequest, id: string) {
+  const session = await (await import("@/lib/auth")).getSession();
+  if (!session || session.user.role !== "ADMIN") return NextResponse.json({ error: "Unauthorized" }, { status: 403 });
+
+  const body = await request.json();
+  const parsed = inventorySchema.safeParse(body);
+  if (!parsed.success) return NextResponse.json({ error: "Validation failed", details: parsed.error.issues }, { status: 400 });
+
+  const data = getMockData();
+  const restaurant = data.restaurants.find((r) => r.id === id);
+  if (!restaurant) return NextResponse.json({ error: "Restaurant not found" }, { status: 404 });
+
+  // Upsert
+  const existingIdx = data.inventory.findIndex(
+    (inv) => inv.restaurantId === id && inv.ingredientName === parsed.data.ingredientName
+  );
+
+  if (existingIdx > -1) {
+    data.inventory[existingIdx] = {
+      ...data.inventory[existingIdx],
+      ...parsed.data,
+      updatedAt: new Date().toISOString(),
+    };
+  } else {
+    data.inventory.push({
+      id: `inv-${Math.random().toString(36).substr(2, 9)}`,
+      restaurantId: id,
+      ...parsed.data,
+      updatedAt: new Date().toISOString(),
+    });
+  }
+
+  saveMockData(data);
+  return NextResponse.json({ success: true });
+}
+
 // ── Route exports ─────────────────────────────────────────────────────
 
 export async function GET(
@@ -131,6 +209,7 @@ export async function GET(
   try {
     if (segments.length === 0) return await handleGetRestaurants(request);
     if (segments.length === 1) return await handleGetRestaurantById(segments[0]);
+    if (segments.length === 2 && segments[1] === "inventory") return await handleGetInventory(segments[0]);
     return NextResponse.json({ error: "Not found" }, { status: 404 });
   } catch (error) {
     console.error("GET /api/restaurants error:", error);
@@ -146,6 +225,7 @@ export async function POST(
   try {
     if (segments.length === 0) return await handleCreateRestaurant(request);
     if (segments[0] === "import") return await handleImportRestaurants(request);
+    if (segments.length === 2 && segments[1] === "inventory") return await handleUpdateInventory(request, segments[0]);
     return NextResponse.json({ error: "Not found" }, { status: 404 });
   } catch (error) {
     console.error("POST /api/restaurants error:", error);
