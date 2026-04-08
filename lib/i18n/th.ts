@@ -33,6 +33,7 @@ const th: Translations = {
     recipes: "สูตรอาหาร",
     insights: "รายงานเชิงลึก",
     sellTransactions: "บันทึกการขาย",
+    notifications: "จัดการแจ้งเตือน",
     settings: "ตั้งค่า",
   },
   dashboard: {

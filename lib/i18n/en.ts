@@ -31,6 +31,7 @@ const en = {
     recipes: "Recipes",
     insights: "Insights",
     sellTransactions: "Sell Transaction",
+    notifications: "Notifications",
     settings: "Settings",
   },
   dashboard: {
