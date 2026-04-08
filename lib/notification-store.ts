@@ -3,7 +3,7 @@
  * Resets on server restart — fine for dev/testing.
  */
 
-export type NotiType = "insight" | "alert" | "info";
+export type NotiType = "insight" | "info";
 export type NotiStatus = "DRAFT" | "PENDING_REVIEW" | "SENT" | "REJECTED";
 export type NotiSource = "MANUAL" | "AUTO";
 

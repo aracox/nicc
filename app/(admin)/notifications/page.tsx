@@ -36,7 +36,6 @@ const SHOPS = (restaurantsData as { shopNumber: string; name: string }[]).map((r
 
 const TYPE_OPTIONS = [
   { value: "insight", label: "Insight" },
-  { value: "alert", label: "Alert" },
   { value: "info", label: "Info" },
 ];
 

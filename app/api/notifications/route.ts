@@ -10,7 +10,7 @@ import restaurantsData from "@/lib/data/restaurants.json";
 
 const PORTAL_WEBHOOK = process.env.PORTAL_WEBHOOK_URL ?? "http://localhost:3001/api/webhook/notifications";
 
-const VALID_TYPES: NotiType[] = ["insight", "alert", "info"];
+const VALID_TYPES: NotiType[] = ["insight", "info"];
 
 function shopName(shopNumber: string): string {
   const r = (restaurantsData as { shopNumber: string; name: string }[])
