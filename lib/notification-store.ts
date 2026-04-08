@@ -22,7 +22,11 @@ export interface ManagedNotification {
   rejectionNote?: string;
 }
 
-const store: ManagedNotification[] = [];
+const g = globalThis as typeof globalThis & {
+  _niccNotiStore?: ManagedNotification[];
+};
+if (!g._niccNotiStore) g._niccNotiStore = [];
+const store = g._niccNotiStore;
 
 function newId() {
   return `${Date.now()}-${Math.random().toString(36).slice(2, 7)}`;
