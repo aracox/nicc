@@ -9,7 +9,11 @@ import {
 } from "@/lib/notification-store";
 import restaurantsData from "@/lib/data/restaurants.json";
 
-const PORTAL_WEBHOOK = process.env.PORTAL_WEBHOOK_URL ?? "http://localhost:3001/api/webhook/notifications";
+const PORTAL_WEBHOOK =
+  process.env.PORTAL_WEBHOOK_URL ??
+  (process.env.VERCEL === "1"
+    ? "https://restaurant-portal-six.vercel.app/api/webhook/notifications"
+    : "http://localhost:3001/api/webhook/notifications");
 
 const VALID_TYPES: NotiType[] = ["insight", "info"];
 
