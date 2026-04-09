@@ -269,26 +269,32 @@ export const getMockData = (): MockData => {
 };
 
 export const saveMockData = (data: MockData) => {
+  // Always update in-memory first — this never fails
   globalForMock.mockData = data;
 
-  // Ensure data directory exists
-  if (!fs.existsSync(DATA_DIR)) {
-    fs.mkdirSync(DATA_DIR, { recursive: true });
+  // File writes are best-effort: they work locally but silently no-op on
+  // read-only filesystems (e.g. Vercel serverless). In-memory state above
+  // keeps the process consistent for the lifetime of the function instance.
+  try {
+    if (!fs.existsSync(DATA_DIR)) {
+      fs.mkdirSync(DATA_DIR, { recursive: true });
+    }
+
+    writeJsonArray(path.join(DATA_DIR, "food-courts.json"),     data.foodCourts);
+    writeJsonArray(path.join(DATA_DIR, "restaurants.json"),     data.restaurants);
+    writeJsonArray(path.join(DATA_DIR, "menu-items.json"),      data.menuItems);
+    writeJsonArray(path.join(DATA_DIR, "standard-dishes.json"), data.standardDishes);
+    writeJsonArray(path.join(DATA_DIR, "menu-mappings.json"),   data.menuMappings);
+    writeJsonArray(path.join(DATA_DIR, "uploads.json"),         data.uploads);
+    writeJsonArray(path.join(DATA_DIR, "insight-reports.json"), data.insightReports);
+    writeJsonArray(path.join(DATA_DIR, "inventory.json"),       data.inventory);
+    writeJsonArray(path.join(DATA_DIR, "notifications.json"),   data.notifications);
+
+    // Write transactions split by month
+    saveTransactions(data.sellTransactions);
+  } catch {
+    // Read-only filesystem (Vercel) — in-memory update already applied above
   }
-
-  // Write each master data section to its own file
-  writeJsonArray(path.join(DATA_DIR, "food-courts.json"),     data.foodCourts);
-  writeJsonArray(path.join(DATA_DIR, "restaurants.json"),     data.restaurants);
-  writeJsonArray(path.join(DATA_DIR, "menu-items.json"),      data.menuItems);
-  writeJsonArray(path.join(DATA_DIR, "standard-dishes.json"), data.standardDishes);
-  writeJsonArray(path.join(DATA_DIR, "menu-mappings.json"),   data.menuMappings);
-  writeJsonArray(path.join(DATA_DIR, "uploads.json"),         data.uploads);
-  writeJsonArray(path.join(DATA_DIR, "insight-reports.json"), data.insightReports);
-  writeJsonArray(path.join(DATA_DIR, "inventory.json"),       data.inventory);
-  writeJsonArray(path.join(DATA_DIR, "notifications.json"),   data.notifications);
-
-  // Write transactions split by month
-  saveTransactions(data.sellTransactions);
 };
 
 // ── Legacy Exports (for minimal breakage) ─────
