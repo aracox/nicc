@@ -39,6 +39,7 @@ export async function PATCH(
           title: n.title,
           body: n.body,
           type: n.type,
+          ...(n.chartData ? { chartData: n.chartData } : {}),
         }),
       });
       if (!res.ok) {

@@ -65,14 +65,27 @@ function ManualForm({ onSent }: { onSent: () => void }) {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [type, setType] = useState<NotiType>("info");
+  const [chartDataRaw, setChartDataRaw] = useState("");
   const [sending, setSending] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const [fieldErrors, setFieldErrors] = useState({ shopNumber: false, title: false, body: false });
 
   async function handleSend() {
-    if (!shopNumber || !title || !body) {
+    const fe = { shopNumber: !shopNumber, title: !title, body: !body };
+    setFieldErrors(fe);
+    if (fe.shopNumber || fe.title || fe.body) {
       setError("Please fill in all fields.");
       return;
+    }
+    let chartData: unknown = undefined;
+    if (type === "insight" && chartDataRaw.trim()) {
+      try {
+        chartData = JSON.parse(chartDataRaw);
+      } catch {
+        setError("Chart Data JSON is invalid.");
+        return;
+      }
     }
     setError("");
     setSuccess("");
@@ -80,13 +93,15 @@ function ManualForm({ onSent }: { onSent: () => void }) {
     try {
       await apiFetch("/api/notifications", {
         method: "POST",
-        body: JSON.stringify({ shopNumber, title, body, type, source: "MANUAL" }),
+        body: JSON.stringify({ shopNumber, title, body, type, source: "MANUAL", ...(chartData ? { chartData } : {}) }),
       });
       setSuccess("Notification sent successfully.");
       setTitle("");
       setBody("");
       setShopNumber("");
       setType("info");
+      setChartDataRaw("");
+      setFieldErrors({ shopNumber: false, title: false, body: false });
       onSent();
     } catch (e) {
       setError(String(e));
@@ -106,7 +121,8 @@ function ManualForm({ onSent }: { onSent: () => void }) {
           options={SHOPS}
           placeholder="Select shop..."
           value={shopNumber}
-          onChange={(e) => setShopNumber(e.target.value)}
+          onChange={(e) => { setShopNumber(e.target.value); setFieldErrors((p) => ({ ...p, shopNumber: false })); }}
+          error={fieldErrors.shopNumber}
         />
         <Select
           label="Type"
@@ -119,7 +135,8 @@ function ManualForm({ onSent }: { onSent: () => void }) {
             label="Title"
             placeholder="e.g. ยอดขายสัปดาห์นี้พร้อมแล้ว"
             value={title}
-            onChange={(e) => setTitle(e.target.value)}
+            onChange={(e) => { setTitle(e.target.value); setFieldErrors((p) => ({ ...p, title: false })); }}
+            error={fieldErrors.title ? " " : undefined}
           />
         </div>
         <div className="flex flex-col gap-1 sm:col-span-2">
@@ -128,10 +145,28 @@ function ManualForm({ onSent }: { onSent: () => void }) {
             rows={3}
             placeholder="Notification message body..."
             value={body}
-            onChange={(e) => setBody(e.target.value)}
-            className="rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:border-cpx-blue focus:outline-none focus:ring-1 focus:ring-cpx-blue resize-none"
+            onChange={(e) => { setBody(e.target.value); setFieldErrors((p) => ({ ...p, body: false })); }}
+            className={`rounded-md border px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-1 resize-none ${
+              fieldErrors.body
+                ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+                : "border-slate-300 focus:border-cpx-blue focus:ring-cpx-blue"
+            }`}
           />
         </div>
+        {type === "insight" && (
+          <div className="flex flex-col gap-1 sm:col-span-2">
+            <label className="text-sm font-medium text-slate-700">
+              Chart Data <span className="text-xs font-normal text-slate-400">(optional JSON)</span>
+            </label>
+            <textarea
+              rows={5}
+              placeholder={`{"chartType":"bar|pie","items":[{"label":"Pad Thai","value":45},{"label":"Green Curry","value":32}]}`}
+              value={chartDataRaw}
+              onChange={(e) => setChartDataRaw(e.target.value)}
+              className="rounded-md border border-slate-300 px-3 py-2 font-mono text-xs text-slate-900 placeholder:text-slate-400 focus:border-cpx-blue focus:outline-none focus:ring-1 focus:ring-cpx-blue resize-none"
+            />
+          </div>
+        )}
       </div>
 
       {error && (

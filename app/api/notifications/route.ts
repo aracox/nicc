@@ -5,6 +5,7 @@ import {
   type NotiStatus,
   type NotiSource,
   type NotiType,
+  type ChartData,
 } from "@/lib/notification-store";
 import restaurantsData from "@/lib/data/restaurants.json";
 
@@ -41,14 +42,21 @@ export async function GET(request: NextRequest) {
  * Manual notifications are sent immediately; auto notifications saved as PENDING_REVIEW.
  */
 export async function POST(request: NextRequest) {
-  let body: Record<string, string>;
+  let body: Record<string, unknown>;
   try {
     body = await request.json();
   } catch {
     return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
   }
 
-  const { shopNumber, title, body: msgBody, type, source = "MANUAL" } = body;
+  const { shopNumber, title, body: msgBody, type, source = "MANUAL", chartData } = body as {
+    shopNumber: string;
+    title: string;
+    body: string;
+    type?: string;
+    source?: string;
+    chartData?: ChartData;
+  };
 
   if (!shopNumber || !title || !msgBody) {
     return NextResponse.json(
@@ -69,6 +77,7 @@ export async function POST(request: NextRequest) {
     title,
     body: msgBody,
     type: notiType,
+    ...(chartData ? { chartData } : {}),
     source: isManual ? "MANUAL" : "AUTO",
     status: isManual ? "SENT" : "PENDING_REVIEW",
     ...(isManual ? { sentAt: new Date().toISOString() } : {}),
@@ -80,7 +89,7 @@ export async function POST(request: NextRequest) {
       const res = await fetch(PORTAL_WEBHOOK, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ shopNumber, title, body: msgBody, type: notiType }),
+        body: JSON.stringify({ shopNumber, title, body: msgBody, type: notiType, chartData }),
       });
       if (!res.ok) {
         console.error("Portal webhook failed:", res.status);

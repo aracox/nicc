@@ -9,12 +9,14 @@ interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   label?: string;
   options: SelectOption[];
   placeholder?: string;
+  error?: boolean;
 }
 
 export function Select({
   label,
   options,
   placeholder,
+  error,
   className = "",
   id,
   ...props
@@ -29,7 +31,11 @@ export function Select({
       )}
       <select
         id={selectId}
-        className={`rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:border-cpx-blue focus:outline-none focus:ring-1 focus:ring-cpx-blue transition-colors ${className}`}
+        className={`rounded-md border bg-white px-3 py-2 text-sm text-slate-900 focus:outline-none focus:ring-1 transition-colors ${
+          error
+            ? "border-red-500 focus:border-red-500 focus:ring-red-500"
+            : "border-slate-300 focus:border-cpx-blue focus:ring-cpx-blue"
+        } ${className}`}
         {...props}
       >
         {placeholder && (

@@ -110,6 +110,22 @@ export interface MockRestaurantInventory {
   updatedAt: string;
 }
 
+export interface MockNotification {
+  id: string;
+  shopNumber: string;
+  shopName: string;
+  title: string;
+  body: string;
+  type: "insight" | "info";
+  chartData?: { chartType: "bar" | "pie"; items: { label: string; value: number }[] };
+  source: "MANUAL" | "AUTO";
+  status: "DRAFT" | "PENDING_REVIEW" | "SENT" | "REJECTED";
+  createdAt: string;
+  sentAt?: string;
+  rejectedAt?: string;
+  rejectionNote?: string;
+}
+
 export interface MockData {
   foodCourts: MockFoodCourt[];
   restaurants: MockRestaurant[];
@@ -120,6 +136,7 @@ export interface MockData {
   insightReports: MockInsightReport[];
   sellTransactions: MockSellTransaction[];
   inventory: MockRestaurantInventory[];
+  notifications: MockNotification[];
 }
 
 // ── File Paths ───────────────────────────────────
@@ -231,6 +248,7 @@ export const getMockData = (): MockData => {
         insightReports: [],
         sellTransactions: [],
         inventory: [],
+        notifications: [],
       };
     } else {
       globalForMock.mockData = {
@@ -242,6 +260,7 @@ export const getMockData = (): MockData => {
         uploads:        readJsonArray<MockUpload>(path.join(DATA_DIR, "uploads.json")),
         insightReports: readJsonArray<MockInsightReport>(path.join(DATA_DIR, "insight-reports.json")),
         inventory:      readJsonArray<MockRestaurantInventory>(path.join(DATA_DIR, "inventory.json")),
+        notifications:  readJsonArray<MockNotification>(path.join(DATA_DIR, "notifications.json")),
         sellTransactions: loadTransactions(),
       };
     }
@@ -266,6 +285,7 @@ export const saveMockData = (data: MockData) => {
   writeJsonArray(path.join(DATA_DIR, "uploads.json"),         data.uploads);
   writeJsonArray(path.join(DATA_DIR, "insight-reports.json"), data.insightReports);
   writeJsonArray(path.join(DATA_DIR, "inventory.json"),       data.inventory);
+  writeJsonArray(path.join(DATA_DIR, "notifications.json"),   data.notifications);
 
   // Write transactions split by month
   saveTransactions(data.sellTransactions);

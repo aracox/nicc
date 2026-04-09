@@ -1,0 +1,112 @@
+[
+  {
+    "shopNumber": "803202",
+    "shopName": "ครัวคุณแม่",
+    "title": "df",
+    "body": "gfgddfgd",
+    "type": "info",
+    "source": "MANUAL",
+    "status": "SENT",
+    "sentAt": "2026-04-09T05:56:20.181Z",
+    "id": "1775714180181-bm6mj",
+    "createdAt": "2026-04-09T05:56:20.181Z"
+  },
+  {
+    "shopNumber": "803201",
+    "shopName": "ข้าวขาหมู",
+    "title": "test pie",
+    "body": "weekly....",
+    "type": "insight",
+    "chartData": {
+      "chartType": "pie",
+      "items": [
+        {
+          "label": "Pad Thai",
+          "value": 45
+        },
+        {
+          "label": "Green CurIy",
+          "value": 32
+        }
+      ]
+    },
+    "source": "MANUAL",
+    "status": "SENT",
+    "sentAt": "2026-04-09T05:49:11.778Z",
+    "id": "1775713751778-dhomi",
+    "createdAt": "2026-04-09T05:49:11.778Z"
+  },
+  {
+    "shopNumber": "803201",
+    "shopName": "ข้าวขาหมู",
+    "title": "test",
+    "body": "12345",
+    "type": "insight",
+    "chartData": {
+      "chartType": "bar|pie",
+      "items": [
+        {
+          "label": "Pad Thai",
+          "value": 45
+        },
+        {
+          "label": "Green CurIy",
+          "value": 32
+        }
+      ]
+    },
+    "source": "MANUAL",
+    "status": "SENT",
+    "sentAt": "2026-04-09T05:45:29.921Z",
+    "id": "1775713529921-emcxr",
+    "createdAt": "2026-04-09T05:45:29.921Z"
+  },
+  {
+    "shopNumber": "803201",
+    "shopName": "ข้าวขาหมู",
+    "title": "222",
+    "body": "22222",
+    "type": "info",
+    "source": "MANUAL",
+    "status": "SENT",
+    "sentAt": "2026-04-09T05:32:31.035Z",
+    "id": "1775712751035-ti6zx",
+    "createdAt": "2026-04-09T05:32:31.035Z"
+  },
+  {
+    "shopNumber": "803201",
+    "shopName": "ข้าวขาหมู",
+    "title": "1111",
+    "body": "11111",
+    "type": "info",
+    "source": "MANUAL",
+    "status": "SENT",
+    "sentAt": "2026-04-09T05:29:21.091Z",
+    "id": "1775712561091-bhkoh",
+    "createdAt": "2026-04-09T05:29:21.091Z"
+  },
+  {
+    "shopNumber": "803201",
+    "shopName": "ข้าวขาหมู",
+    "title": "testt",
+    "body": "13242",
+    "type": "info",
+    "source": "MANUAL",
+    "status": "SENT",
+    "sentAt": "2026-04-09T05:27:26.829Z",
+    "id": "1775712446830-we4fy",
+    "createdAt": "2026-04-09T05:27:26.830Z"
+  },
+  {
+    "shopNumber": "803201",
+    "shopName": "ข้าวขาหมู",
+    "title": "test",
+    "body": "test",
+    "type": "info",
+    "source": "MANUAL",
+    "status": "SENT",
+    "sentAt": "2026-04-09T05:22:03.479Z",
+    "id": "1775712123479-yyw7k",
+    "createdAt": "2026-04-09T05:22:03.479Z"
+  }
+]

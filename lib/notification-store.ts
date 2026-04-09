@@ -1,40 +1,27 @@
-/**
- * In-memory notification store for nicc.
- * Resets on server restart — fine for dev/testing.
- */
+import { getMockData, saveMockData, type MockNotification } from "@/lib/mock-data";
 
 export type NotiType = "insight" | "info";
 export type NotiStatus = "DRAFT" | "PENDING_REVIEW" | "SENT" | "REJECTED";
 export type NotiSource = "MANUAL" | "AUTO";
 
-export interface ManagedNotification {
-  id: string;
-  shopNumber: string;
-  shopName: string;
-  title: string;
-  body: string;
-  type: NotiType;
-  source: NotiSource;
-  status: NotiStatus;
-  createdAt: string;
-  sentAt?: string;
-  rejectedAt?: string;
-  rejectionNote?: string;
+export interface ChartItem {
+  label: string;
+  value: number;
 }
 
-const g = globalThis as typeof globalThis & {
-  _niccNotiStore?: ManagedNotification[];
-};
-if (!g._niccNotiStore) g._niccNotiStore = [];
-const store = g._niccNotiStore;
+export interface ChartData {
+  chartType: "bar" | "pie";
+  items: ChartItem[];
+}
+
+export type ManagedNotification = MockNotification;
 
 function newId() {
   return `${Date.now()}-${Math.random().toString(36).slice(2, 7)}`;
 }
 
 export function createNotification(
-  payload: Omit<ManagedNotification, "id" | "createdAt" | "status">
-    & { status?: NotiStatus },
+  payload: Omit<ManagedNotification, "id" | "createdAt" | "status"> & { status?: NotiStatus },
 ): ManagedNotification {
   const n: ManagedNotification = {
     ...payload,
@@ -42,7 +29,9 @@ export function createNotification(
     status: payload.status ?? "DRAFT",
     createdAt: new Date().toISOString(),
   };
-  store.unshift(n);
+  const data = getMockData();
+  data.notifications.unshift(n);
+  saveMockData(data);
   return n;
 }
 
@@ -51,7 +40,7 @@ export function listNotifications(opts?: {
   source?: NotiSource;
   shopNumber?: string;
 }): ManagedNotification[] {
-  return store.filter((n) => {
+  return getMockData().notifications.filter((n) => {
     if (opts?.status && n.status !== opts.status) return false;
     if (opts?.source && n.source !== opts.source) return false;
     if (opts?.shopNumber && n.shopNumber !== opts.shopNumber) return false;
@@ -60,15 +49,17 @@ export function listNotifications(opts?: {
 }
 
 export function getNotification(id: string): ManagedNotification | undefined {
-  return store.find((n) => n.id === id);
+  return getMockData().notifications.find((n) => n.id === id);
 }
 
 export function updateNotification(
   id: string,
   patch: Partial<Pick<ManagedNotification, "status" | "sentAt" | "rejectedAt" | "rejectionNote">>,
 ): ManagedNotification | null {
-  const idx = store.findIndex((n) => n.id === id);
+  const data = getMockData();
+  const idx = data.notifications.findIndex((n) => n.id === id);
   if (idx === -1) return null;
-  store[idx] = { ...store[idx], ...patch };
-  return store[idx];
+  data.notifications[idx] = { ...data.notifications[idx], ...patch };
+  saveMockData(data);
+  return data.notifications[idx];
 }
